@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Technical documentation page for the FreeCodeCamp's Responsive Web Design Certification.">
+    <title>Kivy Documentation Page</title>	
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header><img src="https://kivy.org/doc/stable/_static/logo-kivy.png">KIVY</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#Installation">Installation</a>
+        </li>
+        <li><a class="nav-link" href="#Kivy_language">Kivy language</a></li>
+        <li><a class="nav-link" href="#Graphical_interfaces">Graphical interfaces</a></li>
+        <li>
+          <a class="nav-link" href="#Kivy_properties">Kivy properties</a>
+        </li>
+        <li><a class="nav-link" href="#Kivy_layouts">Kivy layouts</a></li>
+        <li><a class="nav-link" href="#Kivy_vs_PyQt">Kivy vs PyQt</a></li>
+        <li><a class="nav-link" href="#Summary">Summary</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Kivy is an open source and multiplatform Python framework that allows developing applications with complex functionalities, friendly user interface and multitouch properties, all this from an intuitive tool, oriented to generate prototypes quickly and with efficient designs that help to have reusable and easy-to-deploy codes.
+          </p>
+          <p>
+            Kivy has been developed using Python and Cython, is based on OpenGL ES 2 and supports a large number of input devices, in the same way, the tool is equipped with an extensive library of widgets that help add multiple functionalities.
+          </p>
+          <p>
+            This powerful framework allows to generate base code that can be used in applications that run on:
+          </p>
+          <ul>
+            <li>Desktop computers: OS X, Linux, Windows.</li>
+            <li>iOS devices: iPad, iPhone.</li>
+            <li>Android devices: tablets, phones.</li>
+            <li>Any other touch-enabled professional/homebrew devices supporting TUIO (Tangible User Interface Objects).</li>
+          </ul>
+          <p>
+            Its excellent stability, great documentation, wide community, and powerful API make it a very useful framework for most Python programmers.
+          </p>
+          <p>
+            Kivy empowers you with the freedom to write your code once and have it run as-is on different platforms.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Installation">
+        <header>Installation</header>
+        <article>
+          <p>
+            The easiest way to install Kivy is with pip, which installs Kivy using either a pre-compiled wheel, if available, otherwise from source. Kivy provides pre-compiled wheels for the supported Python versions on Windows, OS X, Linux, and RPi. Alternatively, installing from source is required for newer Python versions not listed above or if the wheels do not work or fail to run properly.
+          </p>
+          <p>
+            Before Kivy can be installed, Python and pip needs to be pre-installed. Then, start a new terminal that has Python available. In the terminal, update pip and other installation dependencies so you have the latest version as follows (for linux users you may have to substitute python3 instead of python and also add a --user flag in the subsequent commands outside the virtual environment):
+          </p>
+          <code>
+            python -m pip install --upgrade pip setuptools virtualenv
+          </code>
+          <p>
+            Create a new virtual environment for your Kivy project. A virtual environment will prevent possible installation conflicts with other Python versions and packages. It’s optional but strongly recommended.
+          </p>
+          <p>
+            To create the virtual environment named kivy_venv in your current directory:
+          </p>
+          <code>
+            python -m virtualenv kivy_venv
+          </code>
+          <p>
+            Activate the virtual environment. You will have to do this step from the current directory every time you start a new terminal. This sets up the environment so the new kivy_venv Python is used.
+          </p>
+          <code>
+            source kivy_venv/bin/activate
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Kivy_language">
+        <header>Kivy language</header>
+        <article>
+          <p>
+            The Kivy language is a language dedicated to describing user interface and interactions. You could compare this language to Qt’s QML, but we included new concepts such as rule definitions (which are somewhat akin to what you may know from CSS), templating and so on.
+          </p>
+          <p>
+            The language consists of several constructs that you can use:
+          </p>
+          <ul>
+            <li>Rules: A rule is similar to a CSS rule. A rule applies to specific widgets (or classes thereof) in your widget tree and modifies them in a certain way. You can use rules to specify interactive behaviour or use them to add graphical representations of the widgets they apply to. You can target a specific class of widgets (similar to the CSS concept of a class) by using the cls attribute (e.g. cls=MyTestWidget).</li>
+            <li>Root widget: You can use the language to create your entire user interface. A kv file must contain only one root widget at most.</li>
+            <li>Dynamic classes: Dynamic classes let you create new widgets and rules on-the-fly, without any Python declaration.</li>
+          </ul>
+          <p>
+            A Kivy language file must have .kv as filename extension.
+          </p>
+          <p>
+            The content of the file should always start with the Kivy header, where version must be replaced with the Kivy language version you’re using. For example, using Kivy 1.0 version the header would be:
+          </p>
+          <code>
+            #:kivy `1.0`
+            # content here
+          </code>
+          <p>
+            The content can contain rule definitions, a root widget, dynamic class definitions and templates:
+          </p>
+          <code>
+            # Syntax of a rule definition. Note that several Rules can share the same
+            # definition (as in CSS). Note the braces: they are part of the definition.
+            &lt;Rule1,Rule2&gt;:
+            &nbsp;&nbsp;# .. definitions ..
+
+            # Syntax for creating a root widget:
+            RootClassName:
+            &nbsp;&nbsp;# .. definitions ..
+
+            # Syntax for creating a dynamic class:
+            &lt;NewWidget@BaseClass&gt;:
+            &nbsp;&nbsp;# .. definitions ..
+          </code>
+          <p>
+            Regardless of whether it’s a rule, root widget or dynamic class what you’re defining, the definition should look like this:
+          </p>
+          <code>
+            # With the braces it's a rule. Without them, it's a root widget.
+            &lt;ClassName&gt;:
+            &nbsp;&nbsp;prop1: value1
+            &nbsp;&nbsp;prop2: value2
+
+            &nbsp;&nbsp;canvas:
+            &nbsp;&nbsp;&nbsp;&nbsp;CanvasInstruction1:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvasprop1: value1
+            &nbsp;&nbsp;&nbsp;&nbsp;CanvasInstruction2:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvasprop2: value2
+
+            &nbsp;&nbsp;AnotherClass:
+            &nbsp;&nbsp;&nbsp;&nbsp;prop3: value1
+          </code>
+          <p>
+            Here prop1 and prop2 are the properties of ClassName and prop3 is the property of AnotherClass. If the widget doesn’t have a property with the given name, an ObjectProperty will be automatically created and added to the widget.
+          </p>
+          <p>
+            AnotherClass will be created and added as a child of the ClassName instance.
+          </p>
+          <ul>
+            <li>The indentation is important and must be consistent. The spacing must be a multiple of the number of spaces used on the first indented line. Spaces are encouraged: mixing tabs and spaces is not recommended.</li>
+            <li>The value of a property must be given on a single line (for now at least).</li>
+            <li>Keep class names capitalized to avoid syntax errors.</li>
+            <li>The canvas property is special: you can put graphics instructions in it to create a graphical representation of the current class.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Graphical_interfaces">
+        <header>Graphical interfaces</header>
+        <article>
+          <p>
+            To create a Kivy interface, you must first import the Kivy application module into your program using the following statement:
+          </p>
+          <code>
+            from kivy.app import App
+          </code>
+          <p>
+            To get started with a simple application, import Label from kivy.uix.label:
+          </p>
+          <code>
+            from kivy.uix.label import Label
+          </code>
+          <p>
+            Now the application's main part:
+          </p>
+          <code>
+            class FirstKivy(App):
+
+            &nbsp;&nbsp;def build(self):
+
+            &nbsp;&nbsp;&nbsp;&nbsp;return Label(text="Hello world!")
+          </code>
+          <p>
+            In the above code snippet, a class inherits from the App class. Then, to compile the application, we have to return a widget in the build () function. In the above code, we have returned a label with the text "Hello world".
+          </p>
+          <p>
+            The last step is to call this function. You can create an object of the class or just write the following declaration:
+          </p>
+          <code>
+            FirstKivy().run()
+          </code>
+          <p>
+            The complete Python file is structured as follows:
+          </p>
+          <code>
+            from kivy.app import App
+            from kivy.uix.label import Label
+
+            class FirstKivy(App):
+            &nbsp;&nbsp;def build(self):
+            &nbsp;&nbsp;&nbsp;&nbsp;return Label(text="Hello world!")
+
+            FirstKivy().run()
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Kivy_properties">
+        <header>Kivy properties</header>
+        <article>
+          <p>
+            Kivy introduces a new way of declaring properties within a class. Before:
+          </p>
+          <code>
+            class MyClass(object):
+            &nbsp;&nbsp;def __init__(self):
+            &nbsp;&nbsp;&nbsp;&nbsp;super(MyClass, self).__init__()
+            &nbsp;&nbsp;&nbsp;&nbsp;self.numeric_var = 1
+          </code>
+          <p>
+            After, using Kivy’s properties:
+          </p>
+          <code>
+            class MyClass(EventDispatcher):
+            &nbsp;&nbsp;numeric_var = NumericProperty(1)
+          </code>
+          <p>
+            These properties implement the Observer pattern. They help you to:
+          </p>
+          <ul>
+            <li>Easily manipulate widgets defined in the Kv language</li>
+            <li>Automatically observe any changes and dispatch functions/code accordingly</li>
+            <li>Check and validate values</li>
+            <li>Optimize memory management</li>
+          </ul>
+          <p>
+            To use them, you have to declare them at class level. That is, directly in the class, not in any method of the class. A property is a class attribute that will automatically create instance attributes. Each property by default provides an on_<propertyname> event that is called whenever the property’s state/value changes.
+          </p>
+          <p>
+            Kivy provides the following properties:
+          </p>
+          <ul>
+            <li>NumericProperty</li>
+            <li>StringProperty</li>
+            <li>ListProperty</li>
+            <li>ObjectProperty</li>
+            <li>BooleanProperty</li>
+            <li>BoundedNumericProperty</li>
+            <li>OptionProperty</li>
+            <li>ReferenceListProperty</li>
+            <li>AliasProperty</li>
+            <li>DictProperty</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Kivy_layouts">
+        <header>Kivy layouts</header>
+        <article>
+          <p>
+            Layouts are containers used to arrange widgets in a particular manner.
+          </p>
+          <ul>
+            <li>
+              AnchorLayout: Widgets can be anchored to the ‘top’, ‘bottom’, ‘left’, ‘right’ or ‘center’.
+            </li>
+            <li>
+              BoxLayout: Widgets are arranged sequentially, in either a ‘vertical’ or a ‘horizontal’ orientation.
+            </li>
+            <li>
+              FloatLayout: Widgets are essentially unrestricted.
+            </li>
+            <li>
+              RelativeLayout: Child widgets are positioned relative to the layout.
+            </li>
+            <li>
+              GridLayout: Widgets are arranged in a grid defined by the rows and cols properties.
+            </li>
+            <li>
+              PageLayout: Used to create simple multi-page layouts, in a way that allows easy flipping from one page to another using borders. 
+            </li>
+            <li>
+              ScatterLayout: Widgets are positioned similarly to a RelativeLayout, but they can be translated, rotated and scaled.
+            </li>
+            <li>
+              StackLayout: Widgets are stacked in a lr-tb (left to right then top to bottom) or tb-lr order. 
+            </li>
+          </ul>
+          <p>
+            When you add a widget to a layout, the following properties are used to determine the widget’s size and position, depending on the type of layout:
+          </p>
+          <ul>
+            <li>
+              size_hint: defines the size of a widget as a fraction of the parents size. Values are restricted to the range 0.0 - 1.0 i.e. 0.01 = 1/100th of the parent size (1%) and 1. = same size (100%).
+            </li>
+            <li>
+              pos_hint: is used to place the widget relative to the parent 
+            </li>
+          </ul>
+          <p>
+            The size_hint and pos_hint are used to calculate a widget’s size and position only if the value(s) are not set to None. If you set these values to None, the layout will not position/size the widget and you can specify the values (x, y, width, height) directly in screen coordinates.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Kivy_vs_PyQt">
+        <header>Kivy vs PyQt</header>
+        <article>
+          <p>
+            Like Kivy, PyQt is also used to create GUI applications, but PyQt is best known for desktop applications.
+          </p>
+          <p>
+            Although we talk about Kivy here for creating desktop apps, Kivy is commonly used for mobile apps due to Kivy's widgets' multitouch capabilities.
+          </p>
+          <p>
+            The PyQt library is available in other programming languages ​​like C ++, while Kivy is only available in Python.
+          </p>
+          <p>
+            Kivy uses OpenGL interfaces to draw widgets directly on the screen, so you can also create games with good graphics.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Summary">
+        <header>Summary</header>
+        <article>
+          <p>
+            Kivy is an open source Python library for rapid cross-platform user interface development. Kivy applications can be developed for Linux, Windows, OS X, Android, and iOS using the same codebase.
+          </p>
+          <p>
+            Graphics are rendered through OpenGL ES 2 rather than through native widgets, leading to a fairly uniform appearance across all operating systems.
+          </p>
+          <p>
+            Developing interfaces in Kivy optionally involves the use of kvlang, a small language that supports python-like expressions and python interoperability. Using kvlang can dramatically simplify user interface development compared to using Python alone.
+          </p>
+          <p>
+            Kivy is free to use (currently under the MIT license) and professionally supported.
+          </p>
+          <p>
+            More documentation in the Kivy's official website 
+            <a href="https://kivy.org/#home" target="_blank">Kivy website</a>
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

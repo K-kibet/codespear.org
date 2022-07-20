@@ -1,0 +1,140 @@
+:root {
+  --light: #fffeee;
+  --dark: #e7e6d6;
+}
+body {
+  margin: 0;
+  background-color: var(--light);
+}
+.flex-container-columns{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-content: end;
+}
+
+.navbar {
+  top: 0;
+  left:0;
+  padding: 0;
+  margin: 0;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 0px 5px 30px;
+    margin: 0;
+    font-weight: 500;
+  }
+.navbar li a:hover {
+  background-color: #e7e6d6;
+}
+#nav-title {padding-left: 30px;}
+
+.main {
+  padding: 20px;
+}
+code {
+  display: block;
+  margin: 10px 25px;
+  background-color: var(--dark);
+  padding: 7px;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+}
+a {
+ text-decoration: none;
+ color: #801da3;
+  font-weight: 600;
+}
+a:hover {
+  color: #500a69;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+td, th {
+    border: 2px solid black;
+    text-align: left;
+    padding: 8px;
+}
+th {
+  background-color: var(--dark);
+}
+
+#footer {
+  background-color: var(--dark);
+  padding: 10px;
+}
+#footer p {
+  margin: 0;
+  padding: 0;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  
+    .navbar {
+      bottom: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      position: fixed;
+      font-size: 20px;
+      border-right: 1px solid;
+    }
+    .main {
+      margin-left: 27%;
+      position: relative;
+    }
+    .navbar li a {
+      border-top: 1px solid;
+    }
+  }
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main {
+    padding: 2.5vw;
+    width: 95%;
+  }
+  .navbar {
+    width: 100vw;
+    font-size: 14px;
+  }
+  .navbar li a {
+    border-bottom: 1px solid;
+    padding: 5px 10px;
+  }
+  #nav-title {
+    border-bottom: 1px solid;
+    margin:0;
+    padding: 5px 10px;
+  }
+  #title {display: none;}
+}

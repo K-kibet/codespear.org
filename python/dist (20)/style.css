@@ -1,0 +1,33 @@
+img {
+  width: 500px;
+  height: 250px;
+  position: flex;
+}
+
+h1 {
+  font-family: monospace;
+  text-align: left;
+}
+
+p {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+h3 {
+  font-family: monospace;
+  text-align: left;
+}
+
+li {
+  font-family: sans-serif;
+  font-size: 100%;
+}
+
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+strong {
+  font-size: 125%;
+}

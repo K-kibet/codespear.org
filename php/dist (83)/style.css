@@ -1,0 +1,291 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+
+    #navbar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+        
+    #navbar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: -20px;
+        font-size: 36px;
+    }
+    
+    .nav-header h1 {
+        font-family: 'Oswald', monospace;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(8, 62, 112, 0.5);
+    }
+    
+    #navbar ul {
+        height: 88%;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    #navbar li {
+        color: #4d4e53;
+        list-style: none;
+        position: relative;
+        width: 100%;
+    }
+    
+    
+    #navbar a {
+        display: block;
+        padding: 10px 30px;
+        color: #4d4e53;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #navbar a:hover {
+        color: rgba(0, 0, 205, .5);
+        font-weight: bolder;
+        text-decoration: underline;
+        transition: all .3s;
+
+    }
+    
+    
+    #main-doc {
+        position: absolute;
+        margin-top: 30px 0px 0px 0px;
+        padding: 5px;
+    }
+    
+    .main-section {
+        margin-bottom: 150px;
+    }
+    
+    .main-section hr {
+        width: 150px;
+        margin: 30px auto 30px auto;
+        border: 2px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        background-color: rgba(226, 32, 26, .5);
+    }
+    
+    .main-section h2 {
+        font-family: 'Oswald', monospace;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(8, 62, 112, 0.3);
+    }
+    
+    .main-section h3 {
+        font-family: 'Oswald', monospace;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .main-section h3:hover {
+        transition: all .3s;
+        font-size: 38px;
+        text-decoration: underline;
+    }
+    
+    
+    .main-section li{
+        list-style: none;
+        text-align: justify;
+        font-family: 'Source Sans Pro' ,sans-serif;
+    }
+    
+    .main-section p{
+        text-align: justify;
+        font-family: 'Source Sans Pro' ,sans-serif;
+    }
+    
+    .sub-article  {
+        border: 1px solid black;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .sub-article:hover  {
+        border: 1px solid rgba(0, 0, 205, .5);
+        background-color: rgba(8, 62, 112, 0.15);
+        transition: all .9s;
+    }
+    
+    .code {
+        display: block;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    
+    .main-section span {
+        color: rgb(236, 84, 84);
+    } 
+
+
+
+
+@media screen and (min-width: 520px){
+    .menu {
+        display: none;
+    }
+    #navbar {
+        position: fixed;
+        width: 250px;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 100%;
+        padding-left: 10px;
+        border-right: 1px solid gray;
+        background-color: rgba(225, 239, 252, .5);
+    }
+
+    #navbar .closebtn {
+        display: none;
+    }
+    .nav-header h1 {
+        font-family: 'Oswald', monospace;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(8, 62, 112, 0.5);
+    }
+    
+    #navbar ul {
+        height: 88%;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-left: 30px;
+    }
+    
+    #navbar li {
+        color: #4d4e53;
+        list-style: none;
+        position: relative;
+        width: 100%;
+    }
+
+    
+    
+    
+    #navbar a {
+        display: block;
+        padding: 10px 30px;
+        color: #4d4e53;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #navbar a:hover {
+        color: rgba(0, 0, 205, .5);
+        font-weight: bolder;
+        text-decoration: underline;
+        transition: all .3s;
+
+    }
+
+
+    #main-doc {
+        position: absolute;
+        margin-left: 310px;
+        padding: 20px;
+        margin-bottom: 110px;
+    }
+    
+    .main-section {
+        margin-bottom: 150px;
+    }
+    
+    .main-section hr {
+        width: 300px;
+        margin: 30px auto 30px auto;
+        border: 2px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        background-color: rgba(226, 32, 26, .5);
+    }
+    
+    
+    .main-section h2 {
+        font-family: 'Oswald', monospace;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(8, 62, 112, 0.3);
+    }
+    
+    .main-section h3 {
+        font-family: 'Oswald', monospace;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .main-section h3:hover {
+        transition: all .3s;
+        font-size: 38px;
+        text-decoration: underline;
+    }
+    
+    
+    .main-section li{
+        list-style: none;
+        text-align: justify;
+        font-family: 'Source Sans Pro' ,sans-serif;
+    }
+    
+    .main-section p{
+        text-align: justify;
+        font-family: 'Source Sans Pro' ,sans-serif;
+    }
+    
+    
+    .sub-article  {
+        border: 1px solid black;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .sub-article:hover  {
+        border: 1px solid rgba(0, 0, 205, .5);
+        background-color: rgba(8, 62, 112, 0.15);
+        transition: all .9s;
+    }
+    
+    .code {
+        display: block;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    
+    .main-section span {
+        color: rgb(236, 84, 84);
+    }
+
+    
+
+}

@@ -1,0 +1,73 @@
+:root {
+		--main-doc-wid: 80%;/*80%*/
+		--nav-ht: 100vh;/*100vh*/
+		--nav-wid: 20%;/*20%*/
+		--pos: fixed;/*fixed*/
+		--ta: left;/*left*/
+	}
+	@media (max-width:  850px) {
+		:root {
+			--main-doc-wid: 100%;/*100%*/
+			--nav-ht: 30vh;/*30vh*/
+			--nav-wid: 100%;/*100%*/
+			--pos: sticky;/*sticky*/
+			--ta: center;/*center*/
+	}
+	}
+	#main-doc {
+		width: var(--main-doc-wid);
+		position: relative;
+		float: right;
+	}
+	#navbar {
+		height: var(--nav-ht);
+		overflow-y: auto;
+		overflow-x: hidden;
+		word-wrap: normal;
+		width: var(--nav-wid);
+		border-right: 1px black solid;
+		border-left: 1px black solid;
+		position: var(--pos);
+		word-wrap: break-word;
+		top: 0px;
+		left: 0;
+		text-align: var(--ta);
+	}
+	header {
+		font-size: 25px;
+		font-weight: bold;
+		font-family: system-ui;
+		padding: 15px;
+	}
+	p {
+		font-size: 20px;
+		margin-left: 30px;
+		margin-right: 30px;
+		text-align: justify;
+		word-wrap: break-word;
+	}
+	code {
+		font-size: 16px;
+		display: block;
+		background: lightgray;
+		margin-left: 30px;
+		margin-right: 30px;
+		padding: 5px;
+	}
+	.dummy {
+		color: black;
+	}
+
+	.main-section {
+
+	}
+	.nav-link {
+		font-family: sans-serif;
+		font-size: 20px;
+		display: block;
+		border-top: 1px solid black;
+		padding: 10px;
+		text-decoration: none;
+		color: black;
+		font-style: italic;
+	}

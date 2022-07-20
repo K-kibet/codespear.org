@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - PHP documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+
+        <header class="nav-header"><h1>PHP documentation</h1></header>
+        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+            <li><a href="#PHP_introduction" class="nav-link">PHP Introduction</a></li>
+            <li><a href="#PHP_Syntax" class="nav-link">PHP Syntax</a></li>
+            <li><a href="#PHP_comment" class="nav-link">PHP Comment</a></li>
+            <li><a href="#Variables" class="nav-link">Variables</a></li>
+            <li><a href="#Echo_Print" class="nav-link">Echo Print</a></li>
+        </ul>
+
+    </nav>
+    
+    <main id="main-doc">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="menu">&#9776;</span>
+        <section class="main-section" id="PHP_introduction">
+
+            <header><h2>PHP Introduction</h2></header>
+            <hr>
+
+            <h3>What is PHP?</h3>
+            <div class="sub-article">
+                <ul>
+                    <li><strong>PHP</strong> is an acronym for <strong>"PHP: Hypertext Preprocessor"</strong></li>
+                    <li><strong>PHP</strong> is a widely-used, open source scripting language</li>
+                    <li><strong>PHP</strong> scripts are executed on the server</li>
+                    <li><strong>PHP</strong> is free to download and use</li>
+                </ul>
+            </div>
+            
+            <hr>
+
+            <h3>What You Should Already Know</h3>
+
+            <div class="sub-article">
+                <ul>
+                    <li><strong>HTML</strong></li>
+                    <li><strong>CSS</strong></li>
+                    <li><strong>Javascript</strong></li>
+                </ul>
+            </div>
+            <hr>
+
+            <h3>What can PHP do?</h3>
+
+            <div class="sub-article">
+                <p>
+                    PHP can generate dynamic page content, can create, open, read, write, delete, and close files on the server,
+                    can collect form data, send and receive cookies, can add, delete, modify data in your database can be used to control user-access and
+                    can encrypt data.
+                </p>
+            </div>
+            <hr>
+
+            
+            <h3>Why PHP?</h3>
+
+            <div class="sub-article">
+                <p>
+                    A good benefit of using PHP is that it can interact with many different database languages including MySQL. Both PHP and MySQL are compatible with an Apache server which is also free to license.
+                    Due to all these languages being free it is cheap and easy to setup and create a website using PHP.PHP also has very good online documentation with a good framework of functions in place. This makes 
+                    the language relatively easy to learn and very well supported online.
+                </p>
+            </div>
+            
+
+        </section>
+
+        <section class="main-section" id="PHP_Syntax">
+
+            <header><h2>PHP Syntax</h2></header>
+            <hr>
+
+            <h3>Basic PHP syntax</h3>
+
+            <div class="sub-article">
+                <p>A PHP script can be placed anywhere in the document.</p>
+                <p>A PHP script starts with <code> &lt?php </code> and ends with <code>?></code> example:</p>
+                <code class="code"> &lt?php //code here ?></code>
+            </div>
+            <hr>
+
+            <h3>PHP case sensitivity</h3>
+            
+            <div class="sub-article">
+                <p>In PHP, keywords (e.g. <span>if</span>, <span>else</span>, <span>while</span>, <span>echo</span>, etc.), classes, functions, and user-defined functions are not case-sensitive.</p>
+
+                <p>However variable names are case sensitive <span>$color</span> is not equivalent to <span>$Color</span></p>
+
+                <p><span>$</span> is the way to refer to variables in PHP</p>
+            </div>
+
+
+        </section>
+
+        <section class="main-section" id="PHP_comment">
+
+            <header><h2>PHP Comment</h2></header>
+            <hr>
+
+            <h3>Comments in PHP</h3>
+
+            <div class="sub-article">
+                <p>
+                    A comment in PHP code is a line that is not executed as a part of the program. 
+                    Its only purpose is to be read by someone who is looking at the code.
+                </p>
+
+                <p>
+                    Comments can be used to:
+                </p>
+
+                <ul>
+                    <li>Let others understand your code</li>
+                    <br>
+                    <li>
+                        Remind yourself of what you did - Most programmers have experienced coming back to their own work a year or two later and having to re-figure out what they did. 
+                        Comments can remind you of what you were thinking when you wrote the code
+                    </li>
+                </ul>
+
+                <p>PHP supports several ways of commenting:</p>
+                <code class="code"> &lt?php <br>// This is a single-line comment <br># This is also a single-line comment <br> ?></code>
+                <br>
+                <code class="code"> &lt?php <br> /* <br> This is a multiple-lines <br> comment block that spans over <br> multiple lines <br> */ <br> ?></code>
+            </div>
+
+        </section>
+
+        <section class="main-section" id="Variables">
+
+            <header><h2>Variables</h2></header>
+            <hr>
+
+            <h3>Creating (Declaring) PHP Variables</h3>
+
+            <div class="sub-article">
+                <p>
+                    In PHP, a variable starts with the <code>$</code> sign, followed by the name of the variable: <br>
+                    <code>
+                        &lt?php <br> $var <br> $txt = "hello world" <br> $num = 123 <br> ?>
+                    </code> <br>
+                    After the execution of the statements above, the variable <span>$var</span> will be a empty variable, <span>$txt</span> will
+                    hold the value "hello world"  and <span>$num</span> a value of 123.
+                </p>
+            </div>
+            <hr>
+
+            <h3>PHP Variables</h3>
+
+            <div class="sub-article">
+                <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume).</p>
+
+                <p>Rules for PHP variables:</p>
+                <ul>
+                    <li>A variable starts with the <span>$</span> sign, followed by the name of the variable</li>
+                    <li>A variable name must start with a letter or the underscore character</li>
+                    <li>A variable name cannot start with a number/li>
+                    <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+                    <li>Variable names are case-sensitive ($age and $AGE are two different variables)</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="main-section" id="Echo_Print">
+
+            <header><h2>Echo Print</h2></header>
+            <hr>
+
+            <h3>PHP echo and print Statements</h3>
+
+            <div class="sub-article">
+                <p>
+                    <span>echo</span> and <span>print</span> re more or less the same. They are both used to output data to the screen.
+                    The differences are small: <span>echo</span> has no return value while <span>print</span> has a return value of 1 so it can be used 
+                    in expressions. echo can take multiple parameters (although such usage is rare) 
+                    while print can take one argument. <span>echo</span> is marginally faster than <span>print</span>.
+                </p>
+            </div>
+            <hr>
+
+            <h3>The PHP echo Statement</h3>
+
+            <div class="sub-article">
+                <p>
+                    The <span>echo</span> statement can be used with or without parentheses: <span>echo</span> or <span>echo()</span>. <br>
+                    <code>&lt?php <br>
+                        echo "PHP is Fun!"; <br>
+                        echo "Hello world!"; <br>
+                        echo "I'm about to learn PHP!"; <br>
+                        echo "This ", "string ", "was ", "made ", "with multiple parameters."; <br>
+                        ?>
+                    </code> <br>
+                </p>
+            </div>
+            <hr>
+
+            <h3>The PHP print Statement</h3>
+
+            <div class="sub-article">
+                <p>
+                    The <span>print</span> statement can be used with or without parentheses: <span>print</span> or <span>print()</span>. <br>
+                    <code>
+                        &lt?php <br>
+                        $txt1 = "Learn PHP"; <br>
+                        t2 = " with Jim lao"; <br>
+                        $x = 5; <br>
+                        $y = 4; <br> <br>
+                        print  $txt1 ; <br>
+                        print "Study PHP at " . $txt2 ; <br>
+                        print $x + $y;<br>
+                        ?>
+                    </code>
+                </p>
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

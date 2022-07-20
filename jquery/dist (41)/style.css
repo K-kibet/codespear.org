@@ -1,0 +1,180 @@
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: row;
+  background-color: #505963;
+}
+
+/* -- Text-decoration: none to links */
+
+.nav-link {
+  text-decoration: none;
+  color: #a6abb1;
+  display:block;
+}
+
+/* Header & Navbar CSS */
+
+header {
+  position: fixed;
+  background-color: #2c3137;
+  color: #a6abb1;
+  text-align: center;
+  width: 35vh;
+  height: 100vh;
+}
+
+#navbar {
+  margin-top: 10%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+header h1 {
+  margin: 3%;
+  margin-top: 10%;
+}
+
+#navbar ul li {
+  list-style: none;
+  font-size: 23px;
+  margin-top: 5%;
+  padding: 3% 0 3% 0;
+  width: 100;
+  text-align: center;
+}
+
+#navbar ul li:hover {
+  background-color: #3f464e;
+  cursor: pointer;
+}
+
+
+/* Main Doc CSS */
+
+#main-doc {
+  display: grid;
+  grid-template-columns: 35vh auto;
+  margin-left: 2%;
+  margin-top: 1.5%;
+  color: #242424;
+  width: 96%;
+}
+
+#main-doc-content {
+  grid-column-start: 2;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#main-doc-content h1 {
+  font-size: 35px;
+}
+
+#main-doc-content h2 {
+  margin-top: 3%;
+}
+
+#main-doc-content p {
+  font-size: 18px;
+  margin-top: 1%;
+}
+
+#main-doc-content code {
+  display: block;
+  width: 95%;
+  background-color: #dcdcdc;
+  padding: 2%;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+#main-doc-content ul {
+  margin-left: 20px;
+  font-size: 18px;
+  margin-top: 1%;
+}
+
+#main-doc-content li {
+  margin-top: 0.8%;
+}
+
+.main-section {
+  margin-top: 4%;
+}
+
+#introduction {
+  margin: 0;
+}
+
+
+@media only screen and (min-width : 320px) and (max-width : 850px) {
+
+  body {
+    display: block;
+    background-color: #505963;
+  }
+
+  header {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  #navbar {
+    margin: 0;
+    margin-bottom: 5%;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+  }
+
+
+
+  header h1 {
+    margin: 1%;
+    margin-top: 2%;
+  }
+
+  #main-doc-content code {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 100%;
+    background-color: #dcdcdc;
+    padding: 2%;
+    font-size: 18px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+
+
+
+
+  #main-doc {
+    display: block;
+    grid-template-columns: auto;
+  }
+
+
+}

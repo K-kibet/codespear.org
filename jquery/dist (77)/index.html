@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div id="container">
+<nav id="navbar">
+  <header>
+    <h1>JQuery Documentation<h1>
+  </header>
+      <hr>
+      <p> <a class="nav-link" href="#Overview">Overview</a></p><hr>
+      <p><a class="nav-link" href="#History">History</a></p><hr>
+      <p><a class="nav-link" href="#Popularity">Popularity</a></p><hr>
+       <p><a class="nav-link" href="#Features">Features</a></p><hr>
+      <p><a class="nav-link" href="#Distribution">Distribution</a></p><hr>
+      <p> <a class="nav-link" href="#Interface">Interface</a></p><hr>
+       <p> <a class="nav-link" href="#Ajax">Ajax</a></p><hr>
+      <p><a class="nav-link" href="#Jquery_PlugIns">JQuery PlugIns</a></p><hr>
+      <p><a class="nav-link" href="#Creating_new_DOM_elements">Creating new DOM elements</a></p><hr>
+      <p> <a class="nav-link" href="#Testing_framework">	Testing framework</a></p><hr>
+      <p> <a class="nav-link" href="#Reference">	Reference</a></p>
+      
+</nav>
+<main id="main-doc">
+  <section id="Overview" class="main-section">
+    <header>Overview</header>
+    <article>
+      <p>Query, at its core, is a Document Object Model (DOM) manipulation library. The DOM is a tree-structure representation of all the elements of a Web page. JQuery simplifies the syntax for finding, selecting, and manipulating these DOM elements. For example, JQuery can be used for finding an element in the document with a certain property (e.g. all elements with an h1 tag), changing one or more of its attributes (e.g. color, visibility), or making it respond to an event (e.g. a mouse click).
+<br/><br/>
+JQuery also provides a paradigm for event handling that goes beyond basic DOM element selection and manipulation. The event assignment and the event callback function definition are done in a single step in a single location in the code. JQuery also aims to incorporate other highly used JavaScript functionality (e.g. fade ins and fade outs when hiding elements, animations by manipulating CSS properties).
+      </p>
+      <p>
+        The principles of developing with JQuery are:
+      </p>
+      <ul>
+        <li>Separation of JavaScript and HTML: The JQuery library provides simple syntax for adding event handlers to the DOM using JavaScript, rather than adding HTML event attributes to call JavaScript functions. Thus, it encourages developers to completely separate JavaScript code from HTML markup.</li>
+        <li>Brevity and clarity: jQuery promotes brevity and clarity with features like "chainable" functions and shorthand function names.</li>
+        <li>Elimination of cross-browser incompatibilities: The JavaScript engines of different browsers differ slightly so JavaScript code that works for one browser may not work for another. Like other <code>"JavaScript" </code>toolkits, jQuery handles all these cross-browser inconsistencies and provides a consistent interface that works across different browsers.</li>
+        <li>Extensibility: New events, elements, and methods can be easily added and then reused as a plugin.</li>
+      </ul>
+    </article>
+  </section>
+  <section id="History" class="main-section">
+    <header>History</header>
+    <article>
+      <p>JQuery was originally created in January 2006 at BarCamp NYC by John Resig, influenced by Dean Edwards' earlier cssQuery library.[10][11] It is currently maintained by a team of developers led by Timmy Willison (with the JQuery selector engine, Sizzle, being led by Richard Gibson).[12]</p>
+      <p>JQuery was originally licensed under the CC BY-SA 2.5, and relicensed to the MIT license in 2006.[13] At the end of 2006, it was dual-licensed under GPL and MIT licenses.[14] As this led to some confusion, in 2012 the GPL was dropped and is now only licensed under the MIT license.[15]</p>
+      <ul>
+        <li>In 2015, <code>JQuery</code> was used on 63% of the top 1 million websites (according to BuiltWith), and 17% of all Internet websites.[16]</li>
+        <li>In 2017, JQuery was used on 69.2% of the top 1 million websites (according to Libscore).</li>
+        <li>In 2018, JQuery was used on 73% of the top 1 million websites, and by 22.4% of all websites (according to BuiltWith)</li>
+      </ul>
+      
+    </article>
+  </section>
+  <section id="Popularity" class="main-section">
+    <header>Popularity</header>
+    <article>
+      <p>Even that the percentage of usage is so high, it's discouraged to use the library in new projects, in favor of declarative frameworks like React, Angular or Vue. There are even websites that show, how to use native APIs and that you actually don't need JQuery.[18] Also the 73% usage don't correlate with actual interest that is constantly dropping.</p>
+    </article>
+  </section>
+  <section id="Features" class="main-section">
+    <header>Features</header>
+    <article>
+      <p>Query includes the following features:
+        <hr>DOM element selections using the multi-browser open source selector engine Sizzle, a spin-off of the jQuery project[20]<hr>
+DOM manipulation based on CSS selectors that uses elements' names and attributes, such as id and class, as criteria to select nodes in the<hr> DOM
+Events
+Effects and animations
+Ajax
+Deferred and Promise objects to control asynchronous processing
+JSON parsing<hr>
+Extensibility through plug-ins
+Utilities, such as feature detection
+Compatibility methods that are natively available in modern browsers, but need fallbacks for older browsers, such as <code>JQuery.inArray() and jQuery.each().</code>
+Cross-browser support</p>
+    <strong>Browser support</strong>
+    <p>JQuery 3.0 & newer supports "current−1 versions" (meaning the current stable version of the browser and the version that preceded it) of Firefox (and ESR), Chrome, Safari, and Edge as well as Internet Explorer 9 & newer. On mobile it supports iOS 7 & newer and Android 4.0 & newer.</p>
+     
+    </article>
+  </section>
+  <section id="Distribution" class="main-section">
+    <header>Distribution</header>
+    <article>
+      <p>The JQuery library is typically distributed as a single JavaScript file that defines all its interfaces, including DOM, Events, and Ajax functions. It can be included within a Web page by linking to a local copy, or by linking to one of the many copies available from public servers. jQuery has a content delivery network (CDN) hosted by MaxCDN.[22] Google in Google Hosted Libraries service and Microsoft host the library as well.[23][24]</p>
+      <p><hr>Example of linking a copy of the library locally (from the same server that hosts the Web page):<br><code>script src="jquery.js">/script></code></p>
+      <p>Example of linking a copy of the library from jQuery's public CDN:</p><br>
+      <code>script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">script</code><hr>
+    </article>
+  </section>
+  <section id="Interface" class="main-section">
+    <header>Interface</header>
+    <article>
+      <p><strong>Functions</strong>
+jQuery provides two kinds of functions, static utility functions and jQuery object methods. Each has its own usage style.
+
+Both are accessed through jQuery's main identifier: JQuery. This identifier has an alias named $.[25] All functions can be accessed through either of these two names.</p>
+      <p><strong>JQuery methods</strong>
+The JQuery function is a factory for creating a jQuery object that represents one or more DOM nodes. JQuery objects have methods to manipulate these nodes. These methods (sometimes called commands), are chainable as each method also returns a JQuery object.</p>
+    </article>
+  </section>
+  <section id="Ajax" class="main-section">
+    <header>Ajax</header>
+    <article>
+      <p>It is possible to make Ajax requests (with cross-browser support) with $.ajax() to load and manipulate remote data.</p>
+    </article>
+  </section>
+  <section id="Jquery_PlugIns" class="main-section">
+    <header>JQuery PlugIns</header>
+    <article>
+      <p>JQuery's architecture allows developers to create plug-in code to extend its function. There are thousands of JQuery plug-ins available on the Web[28] that cover a range of functions, such as Ajax helpers, Web services, datagrids, dynamic lists, XML and XSLT tools, drag and drop, events, cookie handling, and modal windows.</p>
+    </article>
+  </section>
+  <section id="Creating_new_DOM_elements" class="main-section">
+    <header>Creating new DOM elements</header>
+    <article>
+      <p>Besides accessing existing DOM nodes through JQuery, it is also possible to create new DOM nodes, if the string passed as the argument to $() factory looks like HTML. For example, the below code finds an HTML select element, and creates a new option element with value "VAG" and label "Volkswagen", which is then appended to the select menu:</p>
+    </article>
+  </section>
+  <section id="Testing_framework" class="main-section">
+    <header>Testing framework</header>
+    <article>
+      <p>QUnit is a test automation framework used to test the JQuery project. The JQuery team developed it as an in-house unit testing library.[37] The JQuery team uses it to test its code and plugins, but it can test any generic JavaScript code, including server-side JavaScript code.[37]
+<br><br>
+As of 2011, the jQuery Testing Team uses QUnit with TestSwarm to test each JQuery codebase release.</p>
+    </article>
+  </section>
+    <section id="Reference" class="main-section">
+    <header>Reference</header>
+    <article>
+      <p>All the documentation in this page is taken from <a href="https://en.wikipedia.org/wiki/JQuery#See_also">wiki..</a></p>
+    </article>
+  </section>
+ 
+</main>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Php  - Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <nav id="navbar">
+  <header>PHP Documentation</header>
+  <ul> 
+    <a class="nav-link menu" href="#Php_Introduction" rel="internal"><li>Php Introduction</li></a>
+    <a class="nav-link menu" href="#Php_Install" rel="internal"><li>Php Install</li></a>
+    <a class="nav-link menu" href="#Php_Syntax" rel="internal"><li>Php Syntax</li></a>
+    <a class="nav-link menu" href="#Php_Variables" rel="internal"><li>Php variables</li></a>
+    <a class="nav-link menu" href="#Php_Echo_Print" rel="internal"><li>Php Echo Print</li></a>
+    <a class="nav-link menu" href="#Php_Data_Types" rel="internal"><li>Php Data Types</li></a>
+    <a class="nav-link menu" href="#Php_Strings" rel="internal"><li>Php Strings</li></a>
+    <a class="nav-link menu" href="#Php_Constants" rel="internal"><li>Php Constants</li></a>
+    <a class="nav-link menu" href="#Php_Operators" rel="internal"><li>Php Operators</li></a>
+    <a class="nav-link menu" href="#Php_Conditions" rel="internal"><li>Php Conditions</li></a>
+    <a class="nav-link menu" href="#Php_Switch" rel="internal"><li>Php Switch</li></a>
+    <a class="nav-link menu" href="#Php_While_Loops" rel="internal"><li>Php While Loops</li></a>
+    <a class="nav-link menu" href="#Php_Functions" rel="internal"><li>Php Functions</li></a>
+    <a class="nav-link menu" href="#Php_Arrays" rel="internal"><li>Php Arrays</li></a>
+    <a class="nav-link menu" href="#Php_Sortings_Arrays" rel="internal"><li>Php Sortings Arrays</li></a>
+    <a class="nav-link menu" href="#Php_Superglobals" rel="internal"><li>Php Superglobals</li></a>
+    <a class="nav-link menu" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+
+<main id="main-doc">
+    <div >
+    <img class="logo col-1 col-2 col-4 col-6 col-10 col-12" id="header-img" src="http://www.developersacademy.org/blog/wp-content/uploads/2018/04/php-1024x538.png" alt="php image"/>
+  </div>
+  <section class="main-section" id="Php_Introduction">
+    <header>Php Introduction</header>
+    <article>  
+      <p>PHP is a popular general-purpose scripting language that is especially suited to web development.
+Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
+<li>PHP is a widely-used, free, and efficient alternative to competitors such as Microsoft's ASP.</li>
+<li>PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.</li>
+      </article>
+    </section>
+  
+  <section class="main-section" id="Php_Install">
+    <header>Php Install</header>
+    <article>
+      <strong> What Do I Need? </strong>
+      <p>To start using PHP, you can:</p>
+      <li>Use a Web Host With PHP Support</li>
+      <p>If your server has activated support for PHP you do not need to do anything.
+Just create some .php files, place them in your web directory, and the server will automatically parse them for you.</p>
+<p>You do not need to compile anything or install any extra tools.
+Because PHP is free, most web hosts offer PHP support.</p>
+      <strong>Set Up PHP on Your Own PC</strong>
+    <p>However, if your server does not support PHP, you must:</p>
+      <li>install a web server</li>
+      <li>install PHP</li>
+      <li>The official PHP website has: </li><a id="link_reference" href="http://php.net/manual/en/install.php" target="_blank"> Installation instructions for PHP</a>
+
+    </article>
+    </section>
+  
+  <section class="main-section" id="Php_Syntax">
+    <header>Php Syntax</header>
+    <article>
+     <p>A PHP script is executed on the server, and the plain HTML result is sent back to the browser.</p>
+      <h1>Basic PHP Syntax</h1>
+      <p>A PHP script can be placed anywhere in the document.</p>
+      <p>A PHP script starts with</p>
+       <code>
+        &lt;&quest;php 
+          echo "My first PHP code line!; 
+        &quest;&gt;
+      </code>
+<p>The default file extension for PHP files is ".php".</p>
+<p>A PHP file normally contains HTML tags, and some PHP scripting code.</p>
+      
+<p>Below, we have an example of a simple PHP file, with a PHP script that uses a built-in PHP function "echo" to output the text "Hello World!" on a web page:</p>
+            <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;body&gt;
+          &lt;h1&gt;My firts php page&lt;h1&gt;
+          &lt;&quest;php 
+          echo= "Hello world!";
+          &quest;&gt;
+          &lt;body&gt;
+          &lt;html&gt;
+           </code>
+    </article>
+    </section>  
+  
+ <section class="main-section" id="Php_Variables">
+    <header>Php variables</header>
+    <article>
+      <p>Variables are "containers" for storing information.</p>
+      <h4>Creating (Declaring) PHP Variables</h4>
+      <p>In PHP, a variable starts with the $ sign, followed by the name of the variable:</p>
+      <code>          
+      &lt;&quest;php 
+      $txt = "Hello world!";
+      $x = 5;
+      $y = 10.5;
+      &quest;&gt;
+      </code>
+      <li><strong>Note</strong> When you assign a text value to a variable, put quotes around the value.</li>
+      <li><strong>Note</strong> Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</li>
+   <em> Think of variables as containers for storing data.</em>
+      <h3>PHP Variables</h3>
+      <strong> Rules for PHP variables:</strong>
+      <li>A variable starts with the $ sign, followed by the name of the variable</li>
+      <li> A variable name must start with a letter or the underscore character</li>
+      <li> A variable name cannot start with a number</li>
+      <li> A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+      <li>Variable names are case-sensitive ($age and $AGE are two different variables)</li>
+      <strong> Output Variables</strong> 
+      <p>The PHP echo statement is often used to output data to the screen.</p>
+      <p>The following example will show how to output text and a variable:</p>
+      <code>
+        &lt;&quest;php  
+        $txt = "W3Schools.com";
+        echo "I love $txt!";
+        &quest;&gt;
+      </code>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Echo_Print">
+    <header>Php Echo Print</header>
+    <article>
+<p>In PHP there are two basic ways to get output: echo and print.</p>
+
+      <p>In this tutorial we use <em>echo</em> (and <em>print</em>) in almost every example. So, this chapter contains a little more info about those two output statements.</p>
+      
+      <h3>PHP echo and print Statements</h3>
+      <p>echo and print are more or less the same. They are both used to output data to the screen.</p>
+      <p>The differences are small: echo has no return value while print has a return value of 1 so it can be used in expressions. echo can take multiple parameters (although such usage is rare) while print can take one argument. echo is marginally faster than print.</p>
+      <h3>The PHP echo Statement</h3>
+      <p>The echo statement can be used with or without parentheses: echo or echo().</p>
+      <strong>Display Text</strong>
+      <p>The following example shows how to output text with the echo command (notice that the text can contain HTML markup):</p><p>Example</p>
+      <code>
+        &lt;&quest;php 
+        echo "<h2>PHP is Fun!</h2>";
+        echo "Hello world!&lt;br&gt;";
+        echo "I'm about to learn PHP!&lt;br&gt;";
+        echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+        &quest;&gt;
+      </code>
+      <strong>Display Variables</strong> 
+      <p>The following example shows how to output text and variables with the echo statement:</p>
+            <code>
+        &lt;&quest;php 
+          $txt1 = "Learn PHP";
+          $txt2 = "W3Schools.com";
+          $x = 5;
+          $y = 4;
+
+          echo "&lt;h2&gt;" . $txt1 . "&lt;/h2&gt;";
+          echo "Study PHP at " . $txt2 . "&lt;br&gt;";
+          echo $x + $y;
+        &quest;&gt;
+      </code>
+      <h3>The PHP print Statement</h3>
+      <p>The print statement can be used with or without parentheses: print or print().</p>
+      <strong>Display Text</strong> 
+      <p>The following example shows how to output text with the print command (notice that the text can contain HTML markup):</p>
+      <code>
+         &lt;&quest;php 
+          print "&lt;h2&lg;PHP is Fun!&lt;/h2&gt;";
+          print "Hello world!&lt;br&gt;";
+          print "I'm about to learn PHP!";
+         &quest;&gt;
+      </code>
+    </article>
+  </section>  
+  
+  <section class="main-section" id="Php_Data_Types">
+    <header>Php Data Types</header>
+    <article>
+    <p>Variables can store data of different types, and different data types can do different things.
+    PHP supports the following data types:</p>
+      <li>String</li>
+      <p>A string is a sequence of characters, like "Hello world!".</p>
+      <li>Integer</li>
+      <p>An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.</p>
+      <li>Float (floating point numbers - also called double)</li>
+      <p>A float (floating point number) is a number with a decimal point or a number in exponential form.</p>
+      <li>Boolean</li>
+      <p>A Boolean represents two possible states: TRUE or FALSE.</p>
+      <li>Array</li>
+      <p>An array stores multiple values in one single variable.</p>
+      <li>Object</li>
+      <p>An object is a data type which stores data and information on how to process that data.</p>
+      <li>NULL</li>
+      <p>Null is a special data type which can have only one value: NULL.</p>
+      <li>Resource</li>
+      <p>The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP.</p>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Strings">
+    <header>Php Strings</header>
+    <article>
+     <p>In this chapter we will look at some commonly used functions to manipulate strings.</p>
+      <h3>Get The Length of a String</h3>
+      <p>The PHP strlen() function returns the length of a string.</p>
+      <p>The example below returns the length of the string "Hello world!":</p>
+      <code>
+         &lt;&quest;php
+          echo strlen("Hello world!"); // outputs 12
+         &quest;&gt;
+      </code>
+      <li>Count The Number of Words in a String</li>
+      <li>Reverse a String</li>
+      <li>Search For a Specific Text Within a String</li>
+      <li>Replace Text Within a String</li>
+      <li>Complete PHP String Reference</li>
+      <p>For a complete reference of all string functions, go to our complete <a id="link_reference" href="https://www.w3schools.com/php/php_ref_string.asp">PHP String Reference</a>  </p>        
+    </article>
+    </section> 
+  
+  <section class="main-section" id="Php_Constants">
+    <header>Php Constants</header>
+    <article>
+    <p>Constants are like variables except that once they are defined they cannot be changed or undefined.</p>
+      <h3>PHP Constants</h3>
+<p>A constant is an identifier (name) for a simple value. The value cannot be changed during the script.</p>
+<p>A valid constant name starts with a letter or underscore (no $ sign before the constant name).</p>
+      <strong>Note:</strong><p> Unlike variables, constants are automatically global across the entire script.</p>
+      <h3>Create a PHP Constant</h3>
+     <p>To create a constant, use the define() function.</p>
+      <strong>Syntax</strong>
+      <em>define(name, value, case-insensitive)</em>
+      <p>Parameters:</p>
+      <li>name: Specifies the name of the constant</li>
+      <li>value: Specifies the value of the constant</li>
+      <li>case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false</li>
+      <p>The example below creates a constant with a case-sensitive name:</p>
+      <code>
+        &lt;&quest;php
+        define("GREETING", "Welcome to W3Schools.com!");
+        echo GREETING;
+        &quest;&gt;
+      </code>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Operators">
+    <header>Php Operators</header>
+    <article>
+    <p>Operators are used to perform operations on variables and values.</p>
+    <p>PHP divides the operators in the following groups:</p>
+      <li>Arithmetic operators</li>
+      <li>Assignment operators</li>
+      <li>Comparison operators</li>
+      <li>Increment/Decrement operators</li>
+      <li>Logical operators</li>
+      <li>String operators</li>
+      <li>Array operators</li>
+      <h3>PHP Arithmetic Operators</h3>
+      <p>The PHP arithmetic operators are used with numeric values to perform common arithmetical operations, such as addition, subtraction, multiplication etc.</p>
+      <h3>PHP Assignment Operators</h3>
+      <p>The PHP assignment operators are used with numeric values to write a value to a variable.
+The basic assignment operator in PHP is "=". It means that the left operand gets set to the value of the assignment expression on the right.</p>
+      <h3>PHP Comparison Operators</h3>
+      <p>The PHP comparison operators are used to compare two values (number or string)</p>
+      <h3>PHP Increment / Decrement Operators</h3>
+      <p>The PHP increment operators are used to increment a variable's value.</p>
+      <p>The PHP decrement operators are used to decrement a variable's value.</p>
+      <h3>PHP Logical Operators</h3>
+      <p>The PHP logical operators are used to combine conditional statements.</p>
+      <h3>PHP String Operators</h3>
+      <p>PHP has two operators that are specially designed for strings.</p>
+      <h3>PHP Array Operators</h3>
+      <p>The PHP array operators are used to compare arrays.</p>
+    </article>
+    </section> 
+  
+  <section class="main-section" id="Php_Conditions">
+    <header>Php Conditions</header>
+    <article>
+    <p>Conditional statements are used to perform different actions based on different conditions.</p>
+      
+      <strong>PHP Conditional Statements</strong>    
+     <p>Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.</p>
+     <p>In PHP we have the following conditional statements:</p>
+      <li>if statement - executes some code if one condition is true </li>
+      <li>if...else statement - executes some code if a condition is true and another code if that condition is false</li>
+      <li>if...elseif....else statement - executes different codes for more than two conditions</li>
+      <li>switch statement - selects one of many blocks of code to be executed</li>
+      <h3>PHP - The if Statement</h3>
+      <p>The if statement executes some code if one condition is true.</p>
+      <strong>Syntax</strong>
+      <code>
+        if (condition) {
+    code to be executed if condition is true;
+        } 
+      </code>
+      <h3>PHP - The if...else Statement</h3>
+      <p>The if....else statement executes some code if a condition is true and another code if that condition is false.</p>
+            <strong> Syntax</strong>
+      <code>
+        if (condition) {
+        code to be executed if condition is true;
+        } else {
+        code to be executed if condition is false;
+        } 
+      </code>
+      <h3>PHP - The if...elseif....else Statement</h3>
+      <p>The if....elseif...else statement executes different codes for more than two conditions.</p>
+      <strong> Syntax</strong>
+      <code>
+        if (condition) {
+        code to be executed if this condition is true;
+        } elseif (condition) {
+        code to be executed if this condition is true;
+        } else {
+        code to be executed if all conditions are false;
+        }
+      </code>
+
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Switch">
+    <header>Php Switch</header>
+    <article>
+     <p>The switch statement is used to perform different actions based on different conditions.</p>
+    <h3>The PHP switch Statement</h3>
+    <p>Use the switch statement to select one of many blocks of code to be executed.</p>
+      <strong>Syntax</strong>
+      <code>
+        switch (n) {
+        case label1:
+        code to be executed if n=label1;
+        break;
+        case label2:
+        code to be executed if n=label2;
+        break;
+        case label3:
+        code to be executed if n=label3;
+        break;
+        ...
+        default:
+        code to be executed if n is different from all labels;
+        } 
+      </code>
+      <p>This is how it works: First we have a single expression n (most often a variable), that is evaluated once.</p> <p>The value of the expression is then compared with the values for each case in the structure. If there is a match, the block of code associated with that case is executed. Use break to prevent the code from running into the next case automatically. The default statement is used if no match is found.</p>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_While_Loops">
+    <header>Php While Loops</header>
+    <article>
+    <p>PHP while loops execute a block of code while the specified condition is true.</p>
+      <h3>PHP Loops</h3>
+    <p>Often when you write code, you want the same block of code to run over and over again in a row. Instead of adding several almost equal code-lines in a script, we can use loops to perform a task like this.</p>
+     <p> In PHP, we have the following looping statements:</p>
+    <li>while - loops through a block of code as long as the specified condition is true</li>
+    <li>do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true</li>
+    <li>for - loops through a block of code a specified number of times</li>
+    <li>foreach - loops through a block of code for each element in an array</li>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Functions">
+    <header>PHP Functions</header>
+    <article>
+    <p>The real power of PHP comes from its functions; it has more than 1000 built-in functions.</p>
+      <h3>PHP User Defined Functions</h3>
+      <p>Besides the built-in PHP functions, we can create our own functions.</p>
+      <p>A function is a block of statements that can be used repeatedly in a program.</p>
+      <p>A function will not execute immediately when a page loads.</p>
+      <p>A function will be executed by a call to the function.</p>
+      <h3>Create a User Defined Function in PHP</h3>
+      <p>A user-defined function declaration starts with the word function:</p>
+      <strong>Syntax</strong>
+      <code>
+        function functionName() {
+        code to be executed;
+        } 
+      </code>
+      <p><strong>Note:</strong> A function name can start with a letter or underscore (not a number).</p>
+      <p><strong>Tip:</strong> Give the function a name that reflects what the function does!</p>
+      <p><em>Function names are NOT case-sensitive.</em></p>
+      <p>In the example below, we create a function named "writeMsg()". The opening curly brace ( { ) indicates the beginning of the         function code and the closing curly brace ( } ) indicates the end of the function. The function outputs "Hello world!". To call the function, just write its name:</p>
+      <code>
+      &lt;&quest;php 
+      function writeMsg() {
+      echo "Hello world!";
+      }
+      writeMsg(); // call the function
+      &quest;&gt;
+      </code>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Arrays">
+    <header>Php Arrays</header>
+    <article>
+    <p>An array stores multiple values in one single variable:</p>
+    <strong>Example</strong>
+    <code>
+     &lt;&quest;php 
+      $cars = array("Volvo", "BMW", "Toyota");
+      echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+     &quest;&gt;
+    </code>
+    <h3>What is an Array?</h3>
+    <p>An array is a special variable, which can hold more than one value at a time.</p>
+<p>If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+    <code>
+      $cars1 = "Volvo";
+      $cars2 = "BMW";
+      $cars3 = "Toyota"; 
+    </code>
+    <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?</p>
+    <p>The solution is to create an array!</p>
+    <p>An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+    <h3>Create an Array in PHP</h3>
+    <p>In PHP, the array() function is used to create an array:</p>
+    <code>array();</code>
+    <p>In PHP, there are three types of arrays:</p>
+    <li>Indexed arrays - Arrays with a numeric index</li>
+    <li>Associative arrays - Arrays with named keys</li>
+    <li>Multidimensional arrays - Arrays containing one or more arrays</li>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Sortings_Arrays">
+    <header>Php Sortings Arrays</header>
+    <article>
+    <p>The elements in an array can be sorted in alphabetical or numerical order, descending or ascending.</p>
+      <h3>PHP - Sort Functions For Arrays</h3>
+      <p>In this chapter, we will go through the following PHP array sort functions:</p>
+      <li>sort() - sort arrays in ascending order</li>
+      <li>rsort() - sort arrays in descending order</li>
+      <li>asort() - sort associative arrays in ascending order, according to the value</li>
+      <li>ksort() - sort associative arrays in ascending order, according to the key</li>
+      <li>arsort() - sort associative arrays in descending order, according to the value</li>
+      <li>krsort() - sort associative arrays in descending order, according to the key</li>
+    </article>
+    </section>  
+  
+  <section class="main-section" id="Php_Superglobals">
+    <header>Php Superglobals</header>
+    <article>
+<p>Superglobals were introduced in PHP 4.1.0, and are built-in variables that are always available in all scopes.</p>
+      <h3>PHP Global Variables - Superglobals</h3>
+ <p>Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardless of scope - and you can access them from any function, class or file without having to do anything special.</p> 
+      The PHP superglobal variables are:
+      <li>$GLOBALS</li>
+      <li>$_SERVER</li>
+      <li>$_REQUEST</li>
+      <li>$_POST</li>
+      <li>$_GET</li>
+      <li>$_FILES</li>
+      <li>$_ENV</li>
+      <li>$_COOKIE</li>
+      <li>$_SESSION</li>
+    <p>This chapter will explain some of the superglobals, and the rest will be explained in later chapters. </p>
+    </article>
+    </section> 
+  
+     <section class="main-section reference" id="Reference">
+    <header>Reference</header>
+    <article>
+      <li>All the documentation in this page was taken from <a id="link_reference" href="https://www.w3schools.com/php/default.asp" target="_blank">Php - w3schools.com</a>
+    </article>
+    </section>  
+</main>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

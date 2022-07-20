@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Java Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+    <title>Java Documentation</title>
+    <link rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+    <header class="navbar-header">
+        <h1>Java documentation</h1>
+    </header>
+    <div class="nav-links">
+        <a href="#introduction" class="link">Introduction</a>
+        <a href="#variables" class="link">Variables</a>
+        <a href="#Strings" class="link">Strings</a>
+        <a href="#classes" class="link">Classes</a>
+        <a href="#Objects" class="link">Objects</a>
+        <a href="#constructors" class="link">Constructors</a>
+    </div>
+    </nav>
+    <div class="main-doc">
+        <section class="main-section" id="introduction">
+            <h1>Introduction</h1>
+            <p>Java programming language was originally developed by Sun Microsystems which was 
+            initiated by James Gosling and released in 1995 as core component of Sun Microsystems' 
+            Java platform (Java 1.0 [J2SE]).</p>
+            <p> The latest release of the Java Standard Edition is Java SE 8. With the advancement of 
+            Java and its widespread popularity, multiple configurations were built to suit 
+            various types of platforms. For example: J2EE for Enterprise Applications, J2ME for 
+            Mobile Applications.</p>
+            <p>Java features:</p>
+            <ul>
+                <li>Object oriented</li>
+                <li>Platforn indepndent</li>
+                <li>Architecture nutral</li>
+                <li>Multithreaded</li>
+                <li>Interpreted</li>
+                <li>High performance</li>
+            </ul>
+            
+            <pre><code>
+   public class MyFirstJavaProgram {
+   public static void main(String []args) {
+      System.out.println("Hello World"); // prints Hello World
+   }
+}
+            </code></pre>
+        </section>
+        <section class="main-section" id="variables">
+            <h1>Variables</h1>
+            <p>A variable provides us with named storage that our programs can manipulate. Each 
+                variable in Java has a specific type, which determines the size and layout of the 
+                variable's memory; the range of values that can be stored within that memory; and the 
+                set of operations that can be applied to the variable.</p>
+            <p>There are three types of variables</p>
+            <ol>
+                <li>Local variables</li>
+                <li>Instance variables</li>
+                <li>Class/static variables</li>
+            </ol>
+            <p>Example of variable declaration and initialization</p>
+                <pre><code>
+                    int a, b, c;         // Declares three ints, a, b, and c.
+                    int a = 10, b = 10;  // Example of initialization
+                    byte B = 22;         // initializes a byte type variable B.
+                    double pi = 3.14159; // declares and assigns a value of PI.
+                    char a = 'a';        // the char variable a iis initialized with value 'a'
+                </code></pre>
+        </section>
+        <section class="main-section" id="Strings">
+            <h1>Strings</h1>
+            <p>The Java platform provides the String class to create and manipulate strings.</p>
+            <p>The most direct way to create a string is to write:</p>
+                <pre><code>
+                    String greeting = "Hello world!";
+                </code></pre>
+            <p>As with any other object, you can create String objects by using the new keyword and a constructor. The String class has 11 constructors 
+                that allow you to provide the initial value of the string using different sources, such as an array of characters.</p>
+            <pre><code>
+                public class StringDemo {
+
+                    public static void main(String args[]) {
+                       char[] helloArray = { 'h', 'e', 'l', 'l', 'o', '.' };
+                       String helloString = new String(helloArray);  
+                       System.out.println( helloString );
+                    }
+                 }
+            </code></pre>
+        </section>
+        <section class="main-section" id="classes">
+            <h1>Classes</h1>
+            <p>A class is a blueprint from which individual objects are created.</p>
+
+            <p>The following is a sample of a class.</p>
+                <pre><code>
+                    public class Dog {
+                        String breed;
+                        int age;
+                        String color;
+                     
+                        void barking() {
+                        }
+                     
+                        void hungry() {
+                        }
+                     
+                        void sleeping() {
+                        }
+                     }
+                </code></pre>
+            </section>
+        <section class="main-section" id="Objects">
+               <h1>Objects</h1> 
+               <p>As mentioned previously, a class provides the blueprints for objects. So basically, an object is created from a class. 
+                   In Java, the new keyword is used to create new objects.</p>
+                   <p>Following is an example of creating an object:</p>
+                   <pre><code>
+                    public class Puppy {
+                        public Puppy(String name) {
+                           // This constructor has one parameter, name.
+                           System.out.println("Passed Name is :" + name );
+                        }
+                     
+                        public static void main(String []args) {
+                           // Following statement would create an object myPuppy
+                           Puppy myPuppy = new Puppy( "tommy" );
+                        }
+                     }
+                   </code></pre>
+                </section>
+        <section class="main-section" id="constructors">
+            <h1>Constructors</h1>
+            <p>A constructor initializes an object when it is created. It has the same name as its class and is syntactically 
+                similar to a method. However, constructors have no explicit return type.</p>
+            <p>Typically, you will use a constructor to give initial values to the instance variables defined by the class, or 
+                to perform any other start-up procedures required to create a fully formed object.</p>
+                <pre><code>
+                    class ClassName {
+                        ClassName() {
+                        }
+                     }
+                </code></pre>
+        </section>
+        <section class="main-section" id="reference">
+            <h1>Reference</h1>
+            <ul>
+                <li>
+                    <p>all documentation has been taken from <a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">Java Tutorialspoint</a></p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

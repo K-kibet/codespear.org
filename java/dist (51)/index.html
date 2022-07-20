@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Java Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <nav id="navbar">
+        <header>Java Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Hello_world">Hello World</a></li>
+            <li><a class="nav-link" href="#Java_variables">Java Variables</a></li>
+            <li><a class="nav-link" href="#Java_datatypes">Java Datatypes</a></li>
+            <li><a class="nav-link" href="#Control_statements">Control Statements</a></li>
+            <li><a class="nav-link" href="#If-else">If-else</a></li>
+            <li><a class="nav-link" href="#Switch">Switch</a></li>
+            <li><a class="nav-link" href="#For_loop">For Loop</a></li>
+            <li><a class="nav-link" href="#While_loop">while Loop</a></li>
+            <li><a class="nav-link" href="#Do_while_loop">Do While Loop</a></li>
+            <li><a class="nav-link" href="#Break">Break</a></li>
+            <li><a class="nav-link" href="#Continue">Continue</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Java is a programming language and a platform. Java is a high level, robust, object-oriented and
+                    secure programming
+                    language.</p>
+                <p>Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995.
+                    James Gosling is known
+                    as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so
+                    James Gosling and
+                    his team changed the name from Oak to Java.</p>
+                <p>Platform: Any hardware or software environment in which a program runs, is known as a platform. Since
+                    Java has a runtime
+                    environment (JRE) and API, it is called a platform.</p>
+                <h4>According to Sun, 3 billion devices run Java. There are many devices where Java is currently used.
+                    Some of them are as
+                    follows:</h4>
+                <ol>
+                    <li>Desktop Applications such as acrobat reader, media player, antivirus, etc.
+                    </li>
+                    <li>Web Applications such as irctc.co.in, javatpoint.com, etc.</li>
+                    <li>Enterprise Applications such as banking applications.</li>
+                    <li>Mobile</li>
+                    <li>Embedded System</li>
+                    <li>Smart Card</li>
+                    <li>Robotics</li>
+                    <li>Games, etc.</li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="Hello_world">
+            <header>Hello World</header>
+            <article>
+                <p>In this section, we will learn how to write the simple program of Java. We can write a simple hello
+                    Java program easily
+                    after installing the JDK.</p>
+                <p>
+                    To create a simple Java program, you need to create a class that contains the main method. Let's
+                    understand the
+                    requirement first.</p>
+                <h4>The requirement for Java Hello World Example:</h4>
+                <p>For executing any Java program, the following software or application must be properly installed.</p>
+                <ul>
+                    <li>Install the JDK if you don't have installed it</li>
+                    <li>Install the JDK if you don't have installed it</li>
+                    <li>Create the Java program</li>
+                    <li>Compile and run the Java program</li>
+                </ul>
+                <h4>Creating Hello World Example</h4>
+                <code>class Simple{
+                public static void main(String args[]){
+                System.out.println("Hello Java");
+                }
+                }
+            </code>
+            </article>
+        </section>
+        <section class="main-section" id="Java_variables">
+            <header>Java Variables</header>
+            <article>
+                <p>A variable is a container which holds the value while the Java program is executed. A variable is
+                    assigned with a data type.</p>
+                <p>Variable is a name of memory location. There are three types of variables in java: local, instance
+                    and static.</p>
+                <p>There are two types of data types in Java: primitive and non-primitive.</p>
+                <h3>Variable</h3>
+                <p>A variable is the name of a reserved area allocated in memory. In other words, it is a name of the
+                    memory location. It
+                    is a combination of "vary + able" which means its value can be changed.</p>
+                <h4>Types of Variables</h4>
+                <ol>
+                    <li>
+                        <h4>Local Variable</h4>
+                        <p>A variable declared inside the body of the method is called local variable. You can use this
+                            variable only within that
+                            method and the other methods in the class aren't even aware that the variable exists.</p>
+                    </li>
+                    <li>
+                        <h4>Instance Variable</h4>
+                        <p>A variable declared inside the class but outside the body of the method, is called an
+                            instance variable. It is not
+                            declared as static.
+                            It is called an instance variable because its value is instance-specific and is not shared
+                            among instances.</p>
+                    </li>
+                    <li>
+                        <h4>Static variable</h4>
+                        <p>A variable that is declared as static is called a static variable. It cannot be local. You
+                            can create a single copy of
+                            the static variable and share it among all the instances of the class. Memory allocation for
+                            static variables happens
+                            only once when the class is loaded in the memory.</p>
+                    </li>
+                </ol>
+                <h4>Example to understand the types of variables in java</h4>
+                <code>public class A
+                    {
+                    static int m=100;//static variable
+                    void method()
+                    {
+                    int n=90;//local variable
+                    }
+                    public static void main(String args[])
+                    {
+                    int data=50;//instance variable
+                    }
+                    }//end of class
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Java_datatypes">
+            <header>Java Datatypes</header>
+            <article>
+                <p>Data types specify the different sizes and values that can be stored in the variable. There are two
+                    types of data types
+                    in Java:</p>
+                <ol>
+                    <li>
+                        <h4>Primitive data types:</h4>
+                        <p>The primitive data types include boolean, char, byte, short, int, long, float and double.</p>
+                    </li>
+                    <li>
+                        <h4>Non-primitive data types:</h4>
+                        <p>The non-primitive data types include Classes, Interfaces, and Arrays.</p>
+                    </li>
+                </ol>
+                <h3>Java Primitive Data Types</h3>
+                <p>In Java language, primitive data types are the building blocks of data manipulation. These are the
+                    most basic data types
+                    available in Java language.</p>
+                <p>There are 8 types of primitive data types:</p>
+                <ul>
+                    <li>boolean data type</li>
+                    <li>byte data type</li>
+                    <li>char data type</li>
+                    <li>short data type</li>
+                    <li>int data type</li>
+                    <li>long data type</li>
+                    <li>float data type</li>
+                    <li>double data type</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Control_statements">
+            <header>Control Statements</header>
+            <article>
+                <p>Java compiler executes the code from top to bottom. The statements in the code are executed according
+                    to the order in
+                    which they appear. However, Java provides statements that can be used to control the flow of Java
+                    code. Such statements
+                    are called control flow statements. It is one of the fundamental features of Java, which provides a
+                    smooth flow of
+                    program.</p>
+                <p>Java provides three types of control flow statements.</p>
+                <ol>
+                    <li>
+                        <p>Decision Making statements
+                        </p>
+                        <ul>
+                            <li>if statements</li>
+                            <li>switch statements</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Loop statements</p>
+                        <ul>
+                            <li>do while loop</li>
+                            <li>while loop</li>
+                            <li>for loop</li>
+                            <li>for-each loop</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Jump statements</p>
+                        <ul>
+                            <li>break statements</li>
+                            <li>continue statements</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+        </section>
+        <section class="main-section" id="If-else">
+            <header>If-Else</header>
+            <p>The Java if statement is used to test the condition. It checks boolean condition: true or false. There
+                are various types
+                of if statement in Java.</p>
+            <ul>
+                <li>if statement</li>
+                <li>if-else statement</li>
+                <li>if-else-if ladder</li>
+                <li>nested if statement</li>
+            </ul>
+            <h3>Java if statement</h3>
+            <p>The Java if statement tests the condition. It executes the if block if condition is true.</p>
+            <h4>syntax:</h4>
+            <code>if(condition){
+                //code to be executed
+                }
+            </code>
+            <h4>Example:</h4>
+            <code>public class IfExample {
+            public static void main(String[] args) {
+            //defining an 'age' variable
+            int age=20;
+            //checking the age
+            if(age>18){
+            System.out.print("Age is greater than 18");
+            }
+            }
+            }</code>
+            <h3>Java if-else Statement</h3>
+            <p>The Java if-else statement also tests the condition. It executes the if block if condition is true
+                otherwise else block
+                is executed.</p>
+            <h4>Syntax:</h4>
+            <code>if(condition){
+            //code if condition is true
+            }else{
+            //code if condition is false
+            }</code>
+            <h4>Example:</h4>
+            <code>public class IfElseExample {
+            public static void main(String[] args) {
+            //defining a variable
+            int number=13;
+            //Check if the number is divisible by 2 or not
+            if(number%2==0){
+            System.out.println("even number");
+            }else{
+            System.out.println("odd number");
+            }
+            }
+            }</code>
+            <h3>Java if-else-if ladder Statement</h3>
+            <p>The if-else-if ladder statement executes one condition from multiple statements.</p>
+            <h4>Syntax:</h4>
+            <code>if(condition1){
+            //code to be executed if condition1 is true
+            }else if(condition2){
+            //code to be executed if condition2 is true
+            }
+            else if(condition3){
+            //code to be executed if condition3 is true
+            }
+            ...
+            else{
+            //code to be executed if all the conditions are false
+            }</code>
+            <h4>Example:</h4>
+            <code>public class IfElseIfExample {
+                public static void main(String[] args) {
+                    int marks=65;
+                
+                    if(marks<50)
+                    { System.out.println("fail");
+                    } 
+                    else if(marks>=50 && marks<60)
+                    { System.out.println("D grade");
+                    } 
+                    else if(marks>=60 && marks<70)
+                    { System.out.println("C grade");
+                    } 
+                    else if(marks>=70 && marks<80)
+                    { System.out.println("B grade"); 
+                    }
+                    else if(marks>=80 && marks<90)
+                    { System.out.println("A grade");
+                    }
+                    else if(marks>=90 && marks<10)
+                    { System.out.println("A+ grade");
+                }
+                    else{ System.out.println    ("Invalid!");
+                }
+                } 
+                }
+            </code>
+            <h3>Java Nested if statement</h3>
+            <p>The nested if statement represents the if block within another if block. Here, the inner if block
+                condition executes
+                only when outer if block condition is true.</p>
+            <h4>Syntax:</h4>
+            <code>if(condition){
+            //code to be executed
+            if(condition){
+            //code to be executed
+            }
+            }</code>
+            <h4>Example:</h4>
+            <code>public class JavaNestedIfExample {
+            public static void main(String[] args) {
+            //Creating two variables for age and weight
+            int age=20;
+            int weight=80;
+            //applying condition on age and weight
+            if(age>=18){
+            if(weight>50){
+            System.out.println("You are eligible to donate blood");
+            }
+            }
+            }}</code>
+        </section>
+        <section class="main-section" id="Switch">
+            <header>Switch</header>
+            <p>The Java switch statement executes one statement from multiple conditions. It is like if-else-if ladder
+                statement. The
+                switch statement works with byte, short, int, long, enum types, String and some wrapper types like Byte,
+                Short, Int, and
+                Long. Since Java 7, you can use strings in the switch statement.</p>
+            <p>In other words, the switch statement tests the equality of a variable against multiple values.</p>
+            <h3>Points to Remember</h3>
+            <ul>
+                <li>There can be one or N number of case values for a switch expression.</li>
+                <li>The case value must be of switch expression type only. The case value must be literal or constant.
+                    It doesn't allow
+                    variables.</li>
+                <li>The case values must be unique. In case of duplicate value, it renders compile-time error.</li>
+                <li>The Java switch expression must be of byte, short, int, long (with its Wrapper type), enums and
+                    string.</li>
+                <li>Each case statement can have a break statement which is optional. When control reaches to the break
+                    statement, it jumps
+                    the control after the switch expression. If a break statement is not found, it executes the next
+                    case.</li>
+                <li>The case value can have a default label which is optional</li>
+            </ul>
+            <h4>Syntax:</h4>
+            <code>switch(expression){
+            case value1:
+            //code to be executed;
+            break; //optional
+            case value2:
+            //code to be executed;
+            break; //optional
+            ......
+            
+            default:
+            code to be executed if all cases are not matched;
+            }</code>
+            <h4>Example:</h4>
+            <code>public class SwitchExample {
+            public static void main(String[] args) {
+            //Declaring a variable for switch expression
+            int number=20;
+            //Switch expression
+            switch(number){
+            //Case statements
+            case 10: System.out.println("10");
+            break;
+            case 20: System.out.println("20");
+            break;
+            case 30: System.out.println("30");
+            break;
+            //Default case statement
+            default:System.out.println("Not in 10, 20 or 30");
+            }
+            }
+            }</code>
+        </section>
+        <section class="main-section" id="For_loop">
+            <header>For Loop</header>
+            <p>The Java for loop is used to iterate a part of the program several times. If the number of iteration is
+                fixed, it is
+                recommended to use for loop.</p>
+            <h3>Simple for Loop</h3>
+            <p>A simple for loop is the same as C/C++. We can initialize the variable, check condition and
+                increment/decrement value.
+                It consists of four parts:</p>
+            <ol>
+                <li>Initialization: It is the initial condition which is executed once when the loop starts. Here, we
+                    can initialize the
+                    variable, or we can use an already initialized variable. It is an optional condition.</li>
+                <li>Condition: It is the second condition which is executed each time to test the condition of the loop.
+                    It continues
+                    execution until the condition is false. It must return boolean value either true or false. It is an
+                    optional condition.</li>
+                <li>Increment/Decrement: It increments or decrements the variable value. It is an optional condition.
+                </li>
+                <li>Statement: The statement of the loop is executed each time until the second condition is false.</li>
+            </ol>
+            <h4>Syntax:</h4>
+            <code>  for(initialization;condition; increment/decrement){
+                    //statement or code to be executed
+                    }
+                </code>
+            <h4>Example:</h4>
+            <code>  public class ForExample {
+                    public static void main(String[] args) {
+                    //Code of Java for loop
+                    for(int i=1;i<=10;i++){ System.out.println(i); } 
+                }
+                }
+                </code>
+        </section>
+        <section class="main-section" id="While_loop">
+            <header>While Loop</header>
+            <p>The Java while loop is used to iterate a part of the program repeatedly until the specified Boolean
+                condition is true. As
+                soon as the Boolean condition becomes false, the loop automatically stops.</p>
+            <p>The while loop is considered as a repeating if statement. If the number of iteration is not fixed, it is
+                recommended to
+                use the while loop.</p>
+            <h4>Syntax:</h4>
+            <code>while (condition){
+//code to be executed
+I ncrement / decrement statement
+}</code>
+            <h4>The different parts of while loop:</h4>
+            <ol>
+                <li>Condition: It is an expression which is tested. If the condition is true, the loop body is executed
+                    and control goes to
+                    update expression. When the condition becomes false, we exit the while loop.</li>
+                <li>Update expression: Every time the loop body is executed, this expression increments or decrements
+                    loop variable.</li>
+            </ol>
+            <h4>Example:</h4>
+            <code>public class WhileExample {
+            public static void main(String[] args) {
+            int i=1;
+            while(i<=10){ System.out.println(i); i++; }
+            }
+            }</code>
+        </section>
+        <section class="main-section" id="Do_while_loop">
+            <header>Do While Loop</header>
+            <p>The Java do-while loop is used to iterate a part of the program repeatedly, until the specified condition
+                is true. If
+                the number of iteration is not fixed and you must have to execute the loop at least once, it is
+                recommended to use a
+                do-while loop.</p>
+            <p>Java do-while loop is called an exit control loop. Therefore, unlike while loop and for loop, the
+                do-while check the
+                condition at the end of loop body. The Java do-while loop is executed at least once because condition is
+                checked after
+                loop body.</p>
+            <h4>Syntax:</h4>
+            <code>do{
+            //code to be executed / loop body
+            //update statement
+            }while (condition);</code>
+            <h4>The different parts of do-while loop:</h4>
+            <ol>
+                <li>Condition: It is an expression which is tested. If the condition is true, the loop body is executed
+                    and control goes to
+                    update expression. As soon as the condition becomes false, loop breaks automatically.</li>
+                <li>Update expression: Every time the loop body is executed, this expression increments or decrements
+                    loop variable.</li>
+            </ol>
+            <h4>Example:</h4>
+            <code>public class DoWhileExample {
+            public static void main(String[] args) {
+            int i=1;
+            do{
+            System.out.println(i);
+            i++;
+            }while(i<=10);
+            }
+            }</code>
+        </section>
+        <section class="main-section" id="Break">
+            <header>Break</header>
+            <p>When a break statement is encountered inside a loop, the loop is immediately terminated and the program
+                control resumes
+                at the next statement following the loop.</p>
+            <p>The Java break statement is used to break loop or switch statement. It breaks the current flow of the
+                program at
+                specified condition. In case of inner loop, it breaks only inner loop.</p>
+            <p>We can use Java break statement in all types of loops such as for loop, while loop and do-while loop.</p>
+            <h4>Syntax:</h4>
+            <code>jump-statement;
+            break;</code>
+            <h4>Example:</h4>
+            <code>public class BreakExample {
+            public static void main(String[] args) {
+            //using for loop
+            for(int i=1;i<=10;i++){ if(i==5){ //breaking the loop break; } System.out.println(i); 
+        } 
+        }
+        }</code>
+        </section>
+        <section class="main-section" id="Continue">
+            <header>Continue</header>
+            <p>The continue statement is used in loop control structure when you need to jump to the next iteration of
+                the loop
+                immediately. It can be used with for loop or while loop.</p>
+            <p>The Java continue statement is used to continue the loop. It continues the current flow of the program
+                and skips the
+                remaining code at the specified condition. In case of an inner loop, it continues the inner loop only.
+            </p>
+            <p>We can use Java continue statement in all types of loops such as for loop, while loop and do-while loop.
+            </p>
+            <h4>Syntax:</h4>
+            <code>jump-statement;
+            continue;</code>
+            <h4>Example:</h4>
+            <code>public class ContinueExample {
+            public static void main(String[] args) {
+            //for loop
+            for(int i=1;i<=10;i++){ if(i==5){ //using continue statement continue;//it will skip the rest statement }
+                System.out.println(i);
+            }
+            }
+            }</code>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <li>All the documentation is taken from <a href="https://www.javatpoint.com/" target="_blank">javaTpoint</a>
+            </li>
+        </section>
+    </main>
+</body>
+
+</html>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

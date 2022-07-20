@@ -1,0 +1,122 @@
+body{
+    min-width: 290px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+}
+#navbar{
+    position: fixed;
+    min-width: 200px;
+    width: 250px;
+    height: 100%;
+    border-right: 3px solid rgba(0, 22, 22, 0.4);
+}
+#navbar header{
+    font-size: 24px;
+    font-weight: 700;
+    color: green;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+#navbar ul{
+    text-align: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 90%;
+    margin-left:-40px;
+}
+#navbar li{
+    list-style-type: none;
+    border: 1px solid rgba(0,0,0,0.5);
+    padding: 15px 0px 15px 15px;
+    display: block;
+    width: 100%;
+}
+#navbar a{
+    text-decoration: none;
+    color: black;
+}
+#main-doc{
+    position: absolute;
+    left: 260px;
+    width: 70%;
+    top: 20px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.main-section{
+    margin-bottom: 60px;
+}
+section article{
+    margin: 15px;
+}
+#main-doc header{
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: orangered;
+}
+#main-doc li{
+    margin-right: 20px;
+    padding: auto;
+}
+#main-doc h3{
+    color: rgba(80, 11, 75,0.8);
+    letter-spacing: 1.5px;
+}
+#main-doc h4{
+    color: rgb(59, 45, 45);
+    margin : 15px 0px;
+}
+
+code{
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color:rgba(236, 245, 120,1);
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid rgba(0, 22, 22, 0.4);
+    border-radius: 15px;
+}
+@media (max-width: 800px){
+   
+    #navbar {
+    background-color: white;
+    position: absolute;
+    width: 100vw;
+    max-height: 250px;
+    margin: 0px;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+  #navbar ul{
+      height: 75%;
+  }
+  #navbar header{
+      padding-left: 5px;
+  }
+  #main-doc{
+      position: absolute;
+      left: 0;
+      width: 100vw;
+      margin: 10px 0px 10px 10px;
+      top :280px;
+  }
+  .main-section{
+      width: 90%;
+  }
+code {
+    margin-left: -10px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;;
+    min-width: 180px;
+  }
+}

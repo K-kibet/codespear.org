@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - technical_documentation</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Java Documentation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            * {
+                font-family: monospace;
+            }
+            
+            p {
+                padding: 1px;
+                font-size: 1.2em;
+            }
+            
+            code {
+                font-family: Consolas,"courier new";
+                display: block;
+                text-align: left;
+                white-space: pre-wrap;
+                position: relative;
+                word-break: normal;
+                word-wrap: normal;
+                background-color: #e8ebf0;
+                padding: 5px;
+                margin: 5px;
+                border-radius: 5px;
+            }
+            
+            a {
+                display: block;
+                margin: 5px;
+                padding: 3px;
+                text-decoration: none;
+                font-size: 1.5em;
+                color: black;
+            }
+            
+            header {
+                text-align: center;
+                font-size: 2em;
+                padding: 5px;
+                background-color: #9FABC1;
+            }
+            
+            table, th, td {
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;
+                margin: 10px;
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            thead {
+                font-size: 1.2em;
+                font-weight: bolder;
+                background-color: #e8ebf0;
+            }
+            
+            #navbar {
+                width: 25%;
+                height: 100%;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background-color: #e8ebf0;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            a:hover {
+                background-color: #9FABC1;
+                font-size: 1.7em;
+                border-radius: 5px;
+            }
+            
+            #main-doc {
+                position: absolute;
+                margin-left: 27%;
+            }
+            
+            @media(max-width: 600px) {
+                
+                #navbar {
+                    width: 100%;
+                    height: 260px;
+                    position: absolute;
+                    top: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    z-index: 1;
+                    text-align: center;
+                }
+                
+                a {
+                    font-size: 1.2em;
+                    margin: 1px;
+                    padding: 1px;
+                }
+                
+                code {
+                    white-space: pre-line;
+                }
+                
+                #main-doc {
+                    position: relative;
+                    margin-left: 0px;
+                    margin-top: 270px;
+                }
+            }   
+            
+        </style>
+        
+        
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>Java Documentation</header>
+                <a class="nav-link" href="#Java">Java</a>
+                <a class="nav-link" href="#Features_and_Benefits_of_Java">Features and Benefits of Java</a>
+                <a class="nav-link" href="#Java_keywords">Java Keywords</a>
+                <a class="nav-link" href="#Primitive_Data_Types">Primitive Data Types</a>
+                <a class="nav-link" href="#Summary_of_Operators">Summary of Operators</a>
+                <a class="nav-link" href="#The_if..else_Statement">The if..else Statement</a>
+                <a class="nav-link" href="#The_switch_Statement">The switch Statement</a>
+                <a class="nav-link" href="#The_while_and_do-while_Statements">The while and do-while Statements</a>
+                <a class="nav-link" href="#The_for_Statement">The for Statement</a>
+                <a class="nav-link" href="#Reference">Reference</a>
+            </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Java">
+                <!-- describes de topic of the section -->
+                <header>Java</header>
+                
+                <p>In the Java programming language, all source code is first written in plain text files ending with the .java extension. Those source files are then compiled into .class files by the javac compiler. A .class file does not contain code that is native to your processor; it instead contains bytecodes — the machine language of the Java Virtual Machine1 (Java VM). The java launcher tool then runs your application with an instance of the Java Virtual Machine.</p>
+                <p>Because the Java VM is available on many different operating systems, the same .class files are capable of running on Microsoft Windows, the Solaris™ Operating System (Solaris OS), Linux, or Mac OS. Some virtual machines, such as the Java SE HotSpot at a Glance, perform additional steps at runtime to give your application a performance boost. This includes various tasks such as finding performance bottlenecks and recompiling (to native code) frequently used sections of code.</p>
+            </section>
+            
+            <section class="main-section" id="Features_and_Benefits_of_Java">
+                <header>Features and Benefits of Java</header>
+                <p>The Java programming language is a high-level language that can be characterized by all of the following buzzwords:</p>
+                <ul>
+                    <li>Simple</li>
+                    <li>Object Oriented</li>
+                    <li>Distributed</li>
+                    <li>Multithreaded</li>
+                    <li>Dynamic</li>
+                    <li>Architecture neutral</li>
+                    <li>Portable</li>
+                    <li>High Performance</li>
+                    <li>Robust</li>
+                    <li>Secure</li>
+                </ul>
+            </section>
+            
+            <section class="main-section" id="Java_keywords">
+                <header>Java Keywords</header>
+                <p>Here is a list of keywords in the Java programming language. You cannot use any of the following as identifiers in your programs. The keywords const and goto are reserved, even though they are not currently used. true, false, and null might seem like keywords, but they are actually literals; you cannot use them as identifiers in your programs.</p>
+                <table>
+                    <tr><td>abstract</td> <td>continue</td> <td>for</td> <td>new</td> <td>switch</td></tr>
+                    <tr><td>assert***</td> <td>default</td> <td>goto*</td> <td>package</td> <td>synchronized</td> </tr>
+                    <tr><td>boolean</td> <td>do</td> <td>if</td> <td>private</td> <td>this</td></tr>
+                    <tr><td>break</td> <td>double</td> <td>implements</td> <td>protected</td> <td>throw</td></tr>
+                    <tr><td>byte</td> <td>else</td> <td>import</td> <td>public</td> <td>throws</td></tr>
+                    <tr><td>case</td> <td>enum****</td>	<td>instanceof</td> <td>return</td> <td>transient</td></tr>
+                    <tr><td>catch</td> <td>extends</td> <td>int</td> <td>short</td> <td>try</td></tr>
+                    <tr><td>char</td> <td>final</td> <td>interface</td> <td>static</td>	<td>void</td></tr>
+                    <tr><td>class</td> <td>finally</td>	<td>long</td> <td>strictfp**</td> <td>volatile</td></tr>
+                    <tr><td>const*</td> <td>float</td> <td>native</td> <td>super</td> <td>while</td></tr>
+                </table>
+                
+                <table>
+                    <tr> <td>*</td> <td>not used</td> </tr>
+                    <tr> <td>**</td> <td>added in 1.2</td> </tr>
+                    <tr> <td>***</td> <td>added in 1.4</td> </tr>
+                    <tr> <td>****</td> <td>added in 5.0</td> </tr>
+                </table>
+                
+            </section>
+            
+            <section class="main-section" id="Primitive_Data_Types">
+                <header>Primitive Data Types</header>
+                <p>The Java programming language is statically-typed, which means that all variables must first be declared before they can be used. This involves stating the variable's type and name. Example:</p>
+                <code>int gear = 1;</code>
+                <code>boolean result = true;</code>
+                <code>byte b = 100;</code>
+                <table>
+                    <thead>
+                    <tr><td>Data Type</td> <td>Default Value (for fields)</td> <td>Size</td></tr>
+                    </thead>
+                    <tr><td>byte</td> <td>0</td> <td>8 bits</td></tr>
+                    <tr><td>short</td> <td>0</td> <td>16 bits</td></tr>
+                    <tr><td>int</td> <td>0</td> <td>32 bits</td></tr>
+                    <tr><td>long</td> <td>0L</td> <td>64 bits</td></tr>
+                    <tr><td>float</td> <td>0.0f</td> <td>32 bits</td></tr>
+                    <tr><td>double</td> <td>0.0d</td> <td>64 bits</td></tr>
+                    <tr><td>char</td> <td>'\u0000'</td> <td>16 bits</td></tr>
+                    <tr><td>String (or any object)</td> <td>null</td>-<td></td></tr>
+                    <tr><td>boolean</td> <td>false</td> <td>-</td></tr>
+                </table>
+            </section>
+            
+            <section class="main-section" id="Summary_of_Operators">
+                <header>Summary of Operators</header>
+                <p>The following quick reference summarizes the operators supported by the Java programming language.</p>
+
+                <table>
+                    <thead><tr><td colspan="2">Simple Assignment Operator</td></tr></thead>
+                    <tr><td>=</td> <td>Simple assignment operator</td></tr>
+                </table>
+                
+                <table>
+                    <thead><tr><td colspan="2">Arithmetic Operators</td></tr></thead>
+                    <tr><td>+</td> <td>Additive operator (also used for String concatenation)</td></tr>
+                    <tr><td>-</td> <td>Subtraction operator</td></tr>
+                    <tr><td>*</td> <td>Multiplication operator</td></tr>
+                    <tr><td>/</td> <td>Division operator</td></tr>
+                    <tr><td>%</td> <td>Remainder operator</td></tr>
+                </table>
+                
+                <table>
+                    <thead><tr><td colspan="2">Unary Operators</td></tr></thead>
+                    <tr><td>+</td> <td>Unary plus operator; indicates positive value (numbers are positive without this, however)</td></tr>
+                    <tr><td>-</td> <td>Unary minus operator; negates an expression</td></tr>
+                    <tr><td>++</td> <td>Increment operator; increments a value by 1</td></tr>
+                    <tr><td>--</td> <td>Decrement operator; decrements a value by 1</td></tr>
+                    <tr><td>!</td> <td>Logical complement operator; inverts the value of a boolean</td></tr>
+                </table>
+                
+                <table>
+                    <thead><tr><td colspan="2">Equality and Relational Operators</td></tr></thead>
+                    <tr><td>==</td> <td>Equal to</td></tr>
+                    <tr><td>!=</td> <td>Not equal to</td></tr>
+                    <tr><td>></td> <td>Greater than</td></tr>
+                    <tr><td>>=</td> <td>Greater than or equal to</td></tr>
+                    <tr><td><</td> <td>Less than</td></tr>
+                    <tr><td><=</td> <td>Less than or equal to</td></tr>
+                </table>
+                
+                <table>
+                    <thead><tr><td colspan="2">Conditional Operators</td></tr></thead>
+                    <tr><td>&&</td> <td>Conditional-AND</td></tr>
+                    <tr><td>||</td> <td>Conditional-OR</td></tr>
+                    <tr><td>?:</td> <td>Ternary (shorthand for if-then-else statement)</td></tr>
+                </table>
+                
+                <table>
+                    <thead><tr><td colspan="2">Type Comparison Operator</td></tr></thead>
+                    <tr><td>instanceof</td> <td>Compares an object to a specified type</td></tr>
+                </table>
+                
+                <table>
+                    <thead><tr><td colspan="2">Bitwise and Bit Shift Operators</td></tr></thead>
+                    <tr><td>~</td> <td>Unary bitwise complement</td></tr>
+                    <tr><td><<</td> <td>Signed left shift</td></tr>
+                    <tr><td>>></td> <td>Signed right shift</td></tr>
+                    <tr><td>>>></td> <td>Unsigned right shift</td></tr>
+                    <tr><td>&</td> <td>Bitwise AND</td></tr>
+                    <tr><td>^</td> <td>Bitwise exclusive OR</td></tr>
+                    <tr><td>|</td> <td>Bitwise inclusive OR</td></tr>
+                </table>
+            </section>
+            
+            <section class="main-section" id="The_if..else_Statement">
+                <header>The if..else Statement</header>
+                <p>The if-then statement is the most basic of all the control flow statements. It tells your program to execute a certain section of code only if a particular test evaluates to true.</p>
+                <code>
+                    public static void method() {
+                        int testscore = 76;
+                        char grade;
+
+                        if (testscore >= 90) {
+                            grade = 'A';
+                        } else if (testscore >= 80) {
+                            grade = 'B';
+                        } else if (testscore >= 70) {
+                            grade = 'C';
+                        } else if (testscore >= 60) {
+                            grade = 'D';
+                        } else {
+                            grade = 'F';
+                        }
+                        System.out.println("Grade = " + grade);
+                    }
+                </code>
+            </section>
+            
+            <section class="main-section" id="The_switch_Statement">
+                <header>The switch Statement</header>
+                <p>Unlike if-then and if-then-else statements, the switch statement can have a number of possible execution paths. A switch works with the byte, short, char, and int primitive data types. It also works with enumerated types.</p>
+                <code>
+                    public static void main(String[] args) {
+                        int month = 8;
+                        String monthString;
+                        switch (month) {
+                            case 1:  monthString = "January";
+                                     break;
+                            case 2:  monthString = "February";
+                                     break;
+                            case 3:  monthString = "March";
+                                     break;
+                            case 4:  monthString = "April";
+                                     break;
+                            case 5:  monthString = "May";
+                                     break;
+                            case 6:  monthString = "June";
+                                     break;
+                            case 7:  monthString = "July";
+                                     break;
+                            case 8:  monthString = "August";
+                                     break;
+                            case 9:  monthString = "September";
+                                     break;
+                            case 10: monthString = "October";
+                                     break;
+                            case 11: monthString = "November";
+                                     break;
+                            case 12: monthString = "December";
+                                     break;
+                            default: monthString = "Invalid month";
+                                     break;
+                        }
+                        System.out.println(monthString);
+                    }
+                </code>
+            </section>
+            
+            <section class="main-section" id="The_while_and_do-while_Statements">
+                <header>The while and do-while Statements</header>
+                <p>The while statement continually executes a block of statements while a particular condition is true. Its syntax can be expressed as:</p>
+
+                <code>
+                    while (expression) {
+                        statement(s)
+                    }
+                </code>
+                <p>The Java programming language also provides a do-while statement, which can be expressed as follows:</p>
+                <code>
+                    do {
+                         statement(s)
+                    } while (expression);
+                </code>
+            </section>
+            
+            <section class="main-section" id="The_for_Statement">
+                <header>The for Statement</header>
+                <p>The for statement provides a compact way to iterate over a range of values. Programmers often refer to it as the "for loop" because of the way in which it repeatedly loops until a particular condition is satisfied. The general form of the for statement can be expressed as follows:</p>
+                <code>
+                    for (initialization; termination;
+                         increment) {
+                        statement(s)
+                    }
+                </code>
+            </section>
+            
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <p style="text-align: center">All this documentation is taken from <a style="display: inline; font-size: 1em" href="https://docs.oracle.com/javase/tutorial/index.html">Java™ Tutorials</a></p>
+            </section>
+            
+        </main>
+    </body>
+    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

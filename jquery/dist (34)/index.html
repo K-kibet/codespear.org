@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page - jQuery</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <header>
+    <h1>jQuery Documentation</h1>
+    <a class="nav-link" href="#introduction">Introduction</a>
+    <a class="nav-link" href="#jquery_get_started">jQuery Get Started</a>
+    <a class="nav-link" href="#jquery_syntax">jQuery Syntax</a>
+    <a class="nav-link" href="#jquery_selectors">jQuery Selectors</a>
+    <a class="nav-link" href="#jquery_events">jQuery Events</a>
+  </header>
+</nav>
+
+
+<main id="main-doc">
+  <section class="main-section" id="introduction">
+    <header>Introduction</header>
+      <p>jQuery is a JavaScript Library.</p>
+      <p>jQuery greatly simplifies JavaScript programming.</p>
+      <p>jQuery is easy to learn.</p>
+      <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+      <p>The jQuery library contains the following features:</p>
+      <ul>
+          <li>HTML/DOM manipulation</li>
+          <li>CSS manipulation</li>
+          <li>HTML event methods</li>
+          <li>Effects and animations</li>
+          <li>AJAX</li>
+          <li>Utilities</li>
+    </ul>
+    <p><strong>Tip:</strong> In addition, jQuery has plugins for almost any task out there.</p>
+  </section>
+  
+  <section class="main-section" id="jquery_get_started">
+    <header>jQuery Get Started</header>
+    <h2>Adding jQuery to Your Web Pages</h2>
+    <p>There are several ways to start using jQuery on your web site. You can:</p>
+    <ul>
+        <li>Download the jQuery library from jQuery.com</li>
+        <li>Include jQuery from a CDN, like Google</li>
+    </ul>
+    <h2>Downloading jQuery</h2>
+    <p>The jQuery library is a single JavaScript file, and you reference it with the HTML <span class="red">&lt;script&gt;</span> tag (notice that the <span class="red">&lt;script&gt;</span> tag should be inside the <span class="red">&lt;head&gt;</span> section):
+    <code>&lt;head&gt;
+  &lt;script src=&quot;jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code>
+    <p><strong>Tip:</strong> Place the downloaded file in the same directory as the pages where you wish to use it.</p>
+  </section>
+  
+  <section class="main-section" id="jquery_syntax">
+    <header>jQuery Syntax</header>
+    <p>With jQuery you select (query) HTML elements and perform "actions" on them.</p>
+    <p>The jQuery syntax is tailor-made for <strong>selecting</strong> HTML elements and performing some <strong>action</strong> on the element(s).</p>
+    <p>Basic syntax is: <strong>$(selector).action()</strong></p>
+    <ul>
+      <li>A $ sign to define/access jQuery</li>
+      <li>A (selector) to "query (or find)" HTML elements</li>
+      <li>A jQuery action() to be performed on the element(s)</li>
+    </ul>
+    <h2>The Document Ready Event</h2>
+    <p>jQuery methods are placed inside a document ready t:</p>
+  even  <code>$(document).ready(function(){
+    
+  // jQuery methods go here...
+    
+});</code>
+   <p>This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+    <p><strong>Tip:</strong> The jQuery team has also created an even shorter method for the document ready event:</p>
+    <code>$(function(){
+      
+  // jQuery methods go here...
+      
+});</code>
+    <p>Use the syntax you prefer. We think that the document ready event is easier to understand when reading the code.</p>
+  </section>
+    
+  <section class="main-section" id="jquery_selectors">
+    <header>jQuery Selectors</header>
+    <p>jQuery selectors are one of the most important parts of the jQuery library.</p>
+    <p>All selectors in jQuery start with the dollar sign and parentheses: $().</p>
+    <h2>The element Selector</h2>
+    <p>The jQuery element selector selects elements based on the element name.</p>
+    <p>You can select all <span class="red">&lt;p&gt;</span> elements on a page like this:</p>
+    <code>$("p")</code>
+    <h2>The #id Selector</h2>
+    <p>The jQuery <span class="red">#id</span> selector uses the id attribute of an HTML tag to find the specific element.</p>
+    <p>An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.</p>
+    <p>To find an element with a specific id, write a hash character, followed by the id of the HTML element:</p>
+    <code>$("#test")</code>
+    <h2>The .class Selector</h2>
+    <p>The jQuery <span class="red">.class</span> selector finds elements with a specific class.</p>
+    <p>To find elements with a specific class, write a period character, followed by the name of the class:</p>
+    <code>$(".test")</code>
+  </section>
+  <section class="main-section" id="jquery_events">
+    <header>jQuery Events</header>
+    <p>jQuery is tailor-made to respond to events in an HTML page.</p>
+    <h2>jQuery Syntax For Event Methods</h2>
+    <p>In jQuery, most DOM events have an equivalent jQuery method.</p>
+    <p>To assign a click event to all paragraphs on a page, you can do this:</p>
+    <code>$("p").click();</code>
+    <p>The next step is to define what should happen when the event fires. You must pass a function to the event:</p>
+    <code>$("p").click(function(){
+  // action goes here!!
+});</code>
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+</body>
+</html>

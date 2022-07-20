@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FreeCodeCamp Technical Documentation Challenge</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <link rel="stylesheet" type="text/css" href="responsive.css" />
+</head>
+<body>
+
+
+  <header>
+
+    <h1> jQuery Documentation </h1>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#introduction" class="nav-link"> Introduction </a></li>
+        <li><a href="#adding_jquery" class="nav-link"> Setting up jQuery </a></li>
+        <li><a href="#syntax" class="nav-link"> jQuery Syntax </a></li>
+        <li><a href="#hide_show" class="nav-link"> jQuery Effect - Hide/Show </a></li>
+        <li><a href="#fade" class="nav-link"> jQuery Effect - Fade </a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+
+
+  <!-- Main Page Content -->
+  <main id="main-doc">
+    <div id="main-doc-content">
+
+      <section class="main-section" id="introduction">
+
+        <h1> Introduction - What is jQuery </h1>
+
+        <p>
+          jQuery is a simple and lightweight JavaScript library that contains a lot of methods
+          that wrap JavaScript code meant to accomplish certain tasks into simpler and much
+          shorter pieces of code. It also simplifies a lot of complex JavaScript parts like
+          AJAX calls and DOM manipulation.
+        </p>
+        <p>
+
+          Through jQuery you can do all kind of things, from hiding and showing elements, to
+          changing the CSS of your HTML tags, to creating all kind of small animations that will
+          add visual effects to your website.
+          <br /><br />
+
+          jQuery offers a simplified way to navigate through a document and, by using well thought
+          methods, the entire code is easy to read and manipulate.
+          <br /><br />
+
+          Bellow you can see an example that shows how you can hide an HTML element using jQuery:
+          <br /><br/>
+
+
+          <code>
+            $(document).ready(function(){
+              <br /><br />
+              &nbsp;&nbsp; $("idOfTheElement").hide();
+              <br /><br/>
+            });
+          </code>
+          <br /><br />
+
+          The main features of jQuery are:
+
+        </p>
+
+        <ul>
+          <li> HTML/DOM manipulation </li>
+          <li> CSS manipulation </li>
+          <li> HTML event methods </li>
+          <li> Effects and animation </li>
+          <li> AJAX </li>
+          <li> Utilities </li>
+        </ul>
+
+      </section>
+
+
+
+      <section class="main-section" id="adding_jquery">
+
+        <h1> Adding jQuery to your website </h1>
+
+        <p>
+
+          Adding jQuery to your HTML file is essential to make it work. If you ever added JavaScript to your
+          HTML file, then the process is pretty much the same, the only difference being that you have to "download"
+          jQuery for it to work.
+          <br /><br />
+
+          The way you do that is by either literally downloading it the necessariy files from the official
+          jQuery website, or you can use a CDN (Content Delivery Network).
+          <br /><br />
+
+          Let's see how you can add jQuery to your HTML file using both methods:
+
+        </p>
+
+        <h2> Downloading jQuery into your computer </h2>
+
+        <p>
+
+          This method is really simple, and it requires you to go to the jQuery website by clicking on
+          <a href="http://jquery.com/download/">this</a> link and downloading the <strong> compressed production
+          jQuery 3.3.1 </strong>
+          <br /><br />
+
+          After you do that, all you have to do is add downloaded file to where your main HTML file is, and
+          then using the HTML code that will add jQuery to your page, like bellow:
+
+          <code>
+            &lt;head&gt;
+            <br />
+            &nbsp;&nbsp; &lt;script src="jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+            <br />
+            &lt;/head&gt;
+          </code>
+
+        </p>
+
+        <h2> Using a CDN (Content Delivery Network) </h2>
+
+        <p>
+
+          The other way is a lot simple, and doesn't require you to host jQuery on your computer.
+          <br /><br />
+
+          Both Google and Microsoft host jQuery, so you can use both links from the sections bellow.
+          <br /><br />
+
+          Just add the following code to your HTML page and jQuery should work.
+          <br /><br />
+
+          Be aware that in some cases, you may have to add jQuery at the end of your HTML file instead of
+          at the beginning. Simply take the "script" code featured bellow, and add it at the end of your
+          HTML document (before your "body" tag ends).
+          <br /><br />
+
+          <h3> Google CDN </h3>
+          <code>
+            &lt;head&gt;
+            <br />
+            &nbsp;&nbsp; &lt;script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+            <br />
+            &lt;/head&gt;
+          </code>
+          <br /><br />
+
+          <h3> Microsoft CDN </h3>
+          <code>
+            &lt;head&gt;
+            <br />
+            &nbsp;&nbsp; &lt;script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+            <br />
+            &lt;/head&gt;
+          </code>
+
+        </p>
+
+      </section>
+
+      <section class="main-section" id="syntax">
+
+        <h1> jQuery Syntax </h1>
+
+        <p>
+
+          The jQuery syntax is made mainly to select HTML elements and perform some action on them.
+          <br /><br />
+
+          For example, a basic example of the jQuery syntax would be: <strong>$(selector).action()</strong>
+          <br /><br />
+
+
+        </p>
+
+
+        <ul>
+          <li> A $ sign to define/access jQuery </li>
+          <li> A (selector) to "query (or find)" HTML elements </li>
+          <li> A jQuery action() to be performed on the element(s) </li>
+        </ul>
+
+        <p> Examples: </p>
+
+        <ul>
+          <li> $(this).hide() - hides the current element </li>
+          <li> $("p").hide() - hides all &lt;p&gt; elements </li>
+          <li> $(".test").hide() - hides all the elements with class="test" </li>
+          <li> $("#test").hide() - hides the element with id="test" </li>
+        </ul>
+
+
+        <p>
+
+          This makes the syntax really easy to remember and really easy to use. Selecting elements is really easy
+          and you can choose whether to select a specific element from your page by using ID and CLASS, or if
+          you want to selectg all of them by simply select a "p" or a "div" element.
+          <br /><br />
+
+          However, to use jQuery, everything has to be wrapped into a document.ready event. This event
+          makes sure that jQuery will start running once the page is loaded. It looks like this:
+
+        </p>
+
+        <code>
+          $(document).ready(function(){
+            <br />
+            // jQuery methods go here...
+            <br />
+          })
+        </code>
+
+
+      </section>
+
+      <section class="main-section" id="hide_show">
+
+        <h1> jQuery Effects - Hide/Show </h1>
+
+        <p>
+
+          One of the most basics jQuery effects that you can add to your HTML elements is the hide/show effect.
+          <br /><br />
+
+          To use it all you have to do is to use jQuery to create a function that will hide or show an element
+          if you click on another element, like a button or a paragraph.
+          <br /><br />
+
+          Here's how the code would look like, and an exaplanation for what it does:
+          <br /><br/>
+
+        </p>
+
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$(".hide-button").click(function(){
+            &nbsp;&nbsp;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;$("p").hide();
+            &nbsp;&nbsp;<br />
+            &nbsp;&nbsp;});
+            <br />
+          });
+        </code>
+        <br /><br />
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$(".show-button").click(function(){
+            &nbsp;&nbsp;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;$("p").show();
+            &nbsp;&nbsp;<br />
+            &nbsp;&nbsp;});
+            <br />
+          });
+        </code>
+        <br /><br />
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$(".toggle-button").click(function(){
+            &nbsp;&nbsp;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;$("p").toggle();
+            &nbsp;&nbsp;<br />
+            &nbsp;&nbsp;});
+            <br />
+          });
+        </code>
+
+        <ul>
+          <li> The first code selects an element with the class of "hide-button", and creates a function: if the
+          user clicks the button, then all the "p" elements within the document will be hidden. </li>
+          <li>  The second code selects an element with the class of "show-button", and creates a function: if the
+          user clicks the button, then all the "p" elements within the document will be shown. </li>
+          <li>  The third code selects an element with the class of "toggle-button", and creates a function: if the
+          user clicks the button, then all the "p" elements within the document will be hidden or shown, with each
+          click. If the element is hidden and the user clicks, the element will appear, and vice versa. </li>
+        </ul>
+
+      </section>
+
+
+      <section class="main-section" id="fade">
+
+        <h1> jQuery Effect - Fade </h1>
+
+      <p>
+
+        The "Fade" effect is similar to the Hide/Show effect we talked about above, the main difference being
+        that when you use "Fade" instead of "Show" the transition in which the element goes from hidden to
+        visible is slow and animated. Same thing when an element goes from visible to hidden.
+        <br /><br />
+
+        One thing that should be noted is the fact that using "Fade" has the same effect as using "Show" in jQuery.
+        The only difference is that the transition is slower, but the end result is that the element will be visible.
+        <br /><br />
+
+        Another thing that should be noted is the parenthesis after the name of the method. By inserting a value
+        inside the parenthesis, you can control how much time it will take the fade animation to be completed.
+        <br /><br />
+
+        The only exception is that when it comes to the "fadeTo()" method, the numbers within the parenthesis
+        can also represent the opacity of the element. You can add both a speed and an opacity by adding two
+        values, like this: fadeTo("slow", 0.7);
+        <br /><br />
+
+        There are four main fade methods that you can use to show an element:
+
+      </p>
+
+      <ul>
+        <li> fadeIn() - this method makes an element visible using a short "fade in" animation </li>
+        <li> fadeOut() - this method makes an element invisible using a short "fade out" animation </li>
+        <li> fadeToggle() - this method makes an element either visible or invisible when clicking the same element </li>
+        <li> fadeTo() - this method allows you to hide or show an element by changing its opacity </li>
+      </ul>
+
+      <p>
+
+        All methods are used the same way when accessing an element, as shown in the sections bellow:
+        <br /><br />
+
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$("button").click(function(){
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;$("element").fadeIn():
+              <br />
+            &nbsp;&nbsp;});
+            <br />
+          })
+        </code>
+        <br /><br />
+
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$("button").click(function(){
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;$("element").fadeOut():
+              <br />
+            &nbsp;&nbsp;});
+            <br />
+          })
+        </code>
+        <br /><br />
+
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$("button").click(function(){
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;$("element").fadeToggle():
+              <br />
+            &nbsp;&nbsp;});
+            <br />
+          })
+        </code>
+        <br /><br />
+
+        <code>
+          $(document).ready(function(){
+            <br />
+            &nbsp;&nbsp;$("button").click(function(){
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;$("element").fadeTo():
+              <br />
+            &nbsp;&nbsp;});
+            <br />
+          })
+        </code>
+        <br /><br />
+
+
+      </p>
+
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

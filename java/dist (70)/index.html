@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Java Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Binary Tree with Java</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#why_learn_java">Represent Tree in Java Code</a></li>
+        <li><a class="nav-link" href="#getting_started_with_java_programming">Manipulation Data</a></li>
+        <li><a class="nav-link" href="#object_and_class">Insert Data</a></li>
+        <li><a class="nav-link" href="#java_basic">Search Data</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <article>
+          <p>In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child. A recursive definition using just set theory notions is that a (non-empty) binary tree is a tuple (L, S, R), where L and R are binary trees or the empty set and S is a singleton set.[1] Some authors allow the binary tree to be the empty set as well.[2]</p>
+          <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Binary_tree.svg/192px-Binary_tree.svg.png">
+          <p id="img-caption">A labeled binary tree of size 9 and height 3, with a root node whose value is 2. The above tree is unbalanced and not sorted.</p>
+          <p>From a graph theory perspective, binary (and K-ary) trees as defined here are actually arborescences.[3] A binary tree may thus be also called a bifurcating arborescence[3]—a term which appears in some very old programming books,[4] before the modern computer science terminology prevailed. It is also possible to interpret a binary tree as an undirected, rather than a directed graph, in which case a binary tree is an ordered, rooted tree.[5] Some authors use rooted binary tree instead of binary tree to emphasize the fact that the tree is rooted, but as defined above, a binary tree is always rooted.[6] A binary tree is a special case of an ordered K-ary tree, where k is 2. </p>
+        </article>
+      </section>
+      <section class="main-section" id="why_learn_java">
+        <header>Represent Tree in Java Code</header>
+        <article>
+          <p>First, we need a class of node objects. These objects contain the data representing the objects being stored (employees in an employee database, for example) and also references to each of the node's two children. Here's how that looks</p>
+          <code> 
+          class Node {      
+            int iData;              // data used as key value 
+            double dData;            // other data 
+            node leftChild;         // this node's left child   
+            node rightChild;        // this node's right child  
+            
+            public void displayNode() {   
+                System.out.print("Data Node "+iData" dan "+fData);          
+            }        
+          } 
+          </code>
+          <p>Some programmers also include a reference to the node's parent. This simplifies some operations but complicates others, so we don't include it. We do include a method called displayNode() to display the node's data</p>
+        </article>  
+      </section>
+      <section class="main-section" id="getting_started_with_java_programming">
+        <header>Manipulation Data</header>
+        <article>
+          <p> We'll also need a class from which to instantiate the tree itself; the object that holds all the nodes. We'll call this class Tree. It has only one field: a Node variable that holds the root. It doesn't need fields for the other nodes because they are all accessed from the root. We also need some method to make the data dynamics </p>
+          <ul>
+            <li>Insert</li>
+            <li>Search</li>
+            <li>Delete</li>
+            <li>Transverse PreOrder, InOrder, PostOrder</li>
+            <li>Display Tree</li>
+          </ul> 
+          <p> To start the program running, we need main program which is will be the Tree class like the one below :</p>
+          <code>
+            class Tree {
+            private Node root;            // the only data field in Tree
+            public void find(int key){
+            
+            }       
+            public void insert(int id, double dd){
+            
+            } 
+            public void delete(int id){
+            
+            }       
+            // various other methods
+            }  // end class Tree
+          </code>  
+          <p>Finally, we need a way to perform operations on the tree. Here's how you might write a class with a main() routine to create a tree, insert three nodes into it, and then search for one of them. We'll call this class TreeApp: </p>
+          <code>
+            class TreeApp {
+            public static void main(String[] args) { 
+            Tree theTree = new Tree;        // make a tree
+            theTree.insert(50, 1.5);        // insert 3 nodes
+            theTree.insert(25, 1.7);
+            theTree.insert(75, 1.9);
+            node found = theTree.find(25);  // find node with key 25
+            if(found != null)
+            System.out.println("Found the node with key 25");
+            else
+            System.out.println("Could not find node with key 25");          
+            }  // end main()
+          }  // end class TreeApp
+          </code>    
+        </article>  
+      </section>
+      <section class="main-section" id="object_and_class">
+        <header>Insert Data</header>
+        <article>
+          <p>  
+To insert a node we must first find the place to insert it. This is much the same process as trying to find a node that turns out not to exist, as described in the section on Find. We follow the path from the root to the appropriate node, which will be the parent of the new node. Once this parent is found, the new node is connected as its left or right child, depending on whether the new node's key is less than or greater than that of the parent</p>
+          <p>Here is the code for insert function</p>
+          <code>
+            public void insert(int id, double dd){
+            Node newNode = new Node();    // make new node
+            newNode.iData = id;           // insert data
+            newNode.dData = dd;          
+            if(root==null)                // no node in root
+               root = newNode;
+            else                          // root occupied
+            {
+               Node current = root;       // start at root
+               Node parent;
+               while(true)                // (exits internally)
+               { 
+                 parent = current;
+                 if(id < current.iData)  // go left?
+                 {
+                    current = current.leftChild;
+                    if(current == null)  // if end of the line,
+                    {                 // insert on left
+                        parent.leftChild = newNode;
+                        return;
+                    }                   
+                 }  // end if go left
+                 else                    // or go right?
+                 {
+                    current = current.rightChild;
+                    if(current == null)  // if end of the line
+                    {                 // insert on right
+                       parent.rightChild = newNode;
+                       return;
+                    }                   
+                 }  // end else go right
+              }  // end while             
+            }  // end else not root
+          }  // end insert()     
+         </code>
+        </article>  
+      </section>
+      <section class="main-section" id="java_basic">
+        <header>Finding Data</header>
+        <article>
+          <p>Finding a node with a specific key is the simplest of the major tree operations, so let's start with that</p>
+          <p>Remember that the nodes in a binary search tree correspond to objects containing information. They could be person objects, with an employee number as the key and also perhaps name, address, telephone number, salary, and other fields. Or they could represent car parts, with a part number as the key value and fields for quantity on hand, price, and so on. However, the only characteristics of each node that we can see in the Workshop applet are a number and a color. A node is created with these two characteristics and keeps them throughout its life. Here is the code to finding routine</p>
+          <code>
+            public Node find(int key)     // find node with given key
+            {                            // (assumes non-empty tree)
+            Node current = root;                // start at root
+            while(current.iData != key)         // while no match,          
+            {
+               if(key < current.iData)          // go left?
+                  current = current.leftChild;
+               else
+                  current = current.rightChild; // or go right?
+               if(current == null)              // if no child,
+                  return null;                  // didn't find it
+            }
+            return current;                     // found it
+           } 
+         </code>       
+        </article>  
+      </section>
+    </main>
+<!-- partial -->
+  
+</body>
+</html>

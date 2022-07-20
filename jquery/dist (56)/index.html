@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - jQuery Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+                    <header>jQuery Documentation</header>
+                    <ul>
+                      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                      <li>
+                        <a class="nav-link" href="#What_you_should_already_know"
+                          >What you should already know</a
+                        >
+                      </li>
+                      <li>
+                        <a class="nav-link" href="#jQuery_Effects">jQuery Effects</a>
+                      </li>
+                      <li><a class="nav-link" href="#jQuery_HTML">jQuery HTML</a></li>
+                      <li><a class="nav-link" href="#jQuery_Traversing">jQuery Traversing</a></li>
+                      <li>
+                        <a class="nav-link" href="#jQuery_AJAX">jQuery AJAX</a>
+                      </li>
+                      <li><a class="nav-link" href="#jQuery_Misc">jQuery Misc</a></li>
+                      <li><a class="nav-link" href="#Reference">Reference</a></li>
+                    </ul>
+                  </nav>
+                  <main id="main-doc">
+<section class="main-section" id="Introduction">
+    <article>
+    <h2>Introduction</h2>
+    <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+    <h3>What is jQuery?</h3>
+    <p>jQuery is a lightweight, "write less, do more", JavaScript library.
+        jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+            jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+        </p>
+        <p>The jQuery library contains the following features:</p>
+        <ul>
+                <li>HTML/DOM manipulation</li>
+                <li>CSS manipulation</li>
+                <li>HTML event methods</li>
+                <li>Effects and animations</li>
+                <li>AJAX</li>
+                <li>Utilities</li>
+            </ul>
+            <h3>Why jQuery?</h3>
+            <p>There are lots of other JavaScript libraries out there, but jQuery is probably the most popular, and also the most extendable.
+
+            </p>
+            <p>Many of the biggest companies on the Web use jQuery, such as:</p>
+            <ul>
+                <li>Google</li>
+                <li>Microsoft</li>
+                <li>IBM</li>
+                <li>Netflix</li>
+            </ul>
+        </article>
+</section>
+<section class="main-section" id="What_you_should_already_know">
+    <article> 
+    <h2>What you should already know</h2>
+    <p>Before you start studying jQuery, you should have a basic knowledge of:
+    </p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</article>
+</section>
+<section class="main-section" id="jQuery_Effects">
+    <article>  
+    <h2>jQuery Effects</h2>
+<h3>jQuery hide() and show()</h3>
+<p>With jQuery, you can hide and show HTML elements with the hide() and show() methods:
+
+</p>
+<code>
+    <h3>Example</h3>
+    $("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
+</code>
+<h3>jQuery Fading Methods</h3>
+<p>With jQuery you can fade an element in and out of visibility.</p>
+<p>jQuery has the following fade methods:</p>
+<ul>
+    <li>fadeIn(): <b>syntax: </b>$(selector).fadeIn(speed,callback);</li>
+    <li>fadeOut() <b>syntax: </b>$(selector).fadeOut(speed,callback);</li>
+    <li>fadeToggle() <b>syntax: </b>$(selector).fadeToggle(speed,callback);</li>
+    <li>fadeTo() <b>syntax: </b>$(selector).fadeTo(speed,opacity,callback);</li>
+</ul>
+<p>Read more about jQuery Effects on <a href="https://www.w3schools.com/jquery/"> https://www.w3schools.com/jquery/</a> </p>
+</article>
+</section>
+<section class="main-section" id="jQuery_HTML">
+    <article>  
+    <h2>jquery HTML</h2>
+    <h3>jQuery - Get Content and Attributes</h3>
+    <p>jQuery contains powerful methods for changing and manipulating HTML elements and attributes.
+                </p>
+                <h3>jQuery DOM Manipulation</h3>
+                <p>One very important part of jQuery is the possibility to manipulate the DOM.
+                </p>
+                <p>
+                        jQuery comes with a bunch of DOM related methods that make it easy to access and manipulate elements and attributes. 
+                        <b>DOM = Document Object Model </b>
+                    </p>
+                    <h3>Get Content - text(), html(), and val()</h3>
+                    <p>Three simple, but useful, jQuery methods for DOM manipulation are:</p>
+                    <ul>
+                        <li>text() - <b>Sets or returns the text content of selected elements</b></li>
+                        <li>html() - <b>Sets or returns the text content of selected elements</b></li>
+                        <li>val() - <b>Sets or returns the text content of selected elements</b></li>
+                    </ul>
+                    <p>The following example demonstrates how to get content with the jQuery text() and html() methods:
+                    </p>
+                    <code>
+                            $("#btn1").click(function(){
+                                alert("Text: " + $("#test").text());
+                              });
+                              $("#btn2").click(function(){
+                                alert("HTML: " + $("#test").html());
+                              });
+                    </code>
+<p>Read more about jQuery HTML on <a href="https://www.w3schools.com/jquery/"> https://www.w3schools.com/jquery/</a> </p>
+
+</article>
+</section>
+<section class="main-section" id="jQuery_Traversing">
+        <article>   
+        <h2>jquery Traversing</h2>
+        <h3>What is Traversing?</h3>
+        <p>jQuery traversing, which means "move through", are used to "find" (or select) HTML elements based on their relation to other elements. Start with one selection and move through that selection until you reach the elements you desire.
+
+        </p>
+       <h3>Traversing the DOM</h3>
+       <p>jQuery provides a variety of methods that allow us to traverse the DOM.
+
+            The largest category of traversal methods are tree-traversal.
+            
+            The next chapters will show us how to travel up, down and sideways in the DOM tree.
+            
+            </p>
+            <h3>jQuery Traversing - Ancestors</h3>
+            <p>With jQuery you can traverse up the DOM tree to find ancestors of an element.<br>
+                    An ancestor is a parent, grandparent, great-grandparent, and so on.</p>
+<h3>Traversing Up the DOM Tree</h3>
+<p>Three useful jQuery methods for traversing up the DOM tree are:</p>
+<ul>
+    <li>parent()</li>
+    <li>parents()</li>
+    <li>parent()</li>
+    <li>parentsUntil()</li>
+</ul>
+<h4>jQuery parent() Method</h4>
+<p>The parent() method returns the direct parent element of the selected element.
+
+        This method only traverse a single level up the DOM tree.<br>
+        
+        The following example returns the direct parent element of each "<span>" elements:</p>
+            <code>
+                    $(document).ready(function(){
+                        $("span").parent();
+                      });
+            </code>
+            <h4>jQuery parents() Method</h4>
+            <p>The parents() method returns all ancestor elements of the selected element, all the way up to the document's root element (<html>). <br>
+                The following example returns all ancestors of all <span> elements:</p>
+                    <code>
+                            $(document).ready(function(){
+                                $("span").parents();
+                              });
+                    </code>
+<p>Read more about jQuery Traversing on <a href="https://www.w3schools.com/jquery/"> https://www.w3schools.com/jquery/</a> </p>
+
+    </article>
+    </section>
+<section class="main-section" id="jQuery_AJAX">
+    <article>   
+    <h2>jquery AJAX</h2>
+    <h3>jQuery - AJAX Introduction</h3>
+    <p>AJAX is the art of exchanging data with a server, and updating parts of a web page - without reloading the whole page.
+        </p>
+        <h4>What is AJAX?</h4>
+        <p>AJAX = Asynchronous JavaScript and XML.</p>
+        <p>
+                In short; AJAX is about loading data in the background and display it on the webpage, without reloading the whole page.
+
+                Examples of applications using AJAX: Gmail, Google Maps, Youtube, and Facebook tabs.
+        </p>
+   <h4>What About jQuery and AJAX?</h4>
+   <p>
+        jQuery provides several methods for AJAX functionality.<br>
+
+        With the jQuery AJAX methods, you can request text, HTML, XML, or JSON from a remote server using both HTTP Get and HTTP Post - And you can load the external data directly into the selected HTML elements of your web page!
+   </p>
+   <p>Read more about jQuery AJAX on <a href="https://www.w3schools.com/jquery/"> https://www.w3schools.com/jquery/</a> </p>
+
+
+</article>
+</section>
+<section class="main-section" id="jQuery_Misc">
+    <article>   
+   <h2>jQuery Misc</h2> 
+   <h3>jQuery - The noConflict() Method </h3>
+   <p>What if you wish to use other frameworks on your pages, while still using jQuery?</p>
+   <h4>jQuery and Other JavaScript Frameworks</h4>
+   <p>As you already know; jQuery uses the $ sign as a shortcut for jQuery.
+        There are many other popular JavaScript frameworks like: Angular, Backbone, Ember, Knockout, and more.
+    </p>
+    <p><b>What if other JavaScript frameworks also use the $ sign as a shortcut?</b></p>
+    <p>If two different frameworks are using the same shortcut, one of them might stop working.
+The jQuery team have already thought about this, and implemented the noConflict() method.
+</p>
+<h3>
+        The jQuery noConflict() Method
+</h3>
+<p>The noConflict() method releases the hold on the $ shortcut identifier, so that other scripts can use it.
+  You can of course still use jQuery, simply by writing the full name instead of the shortcut:</p>
+  <p>Read more about jQuery Misc on <a href="https://www.w3schools.com/jquery/"> https://www.w3schools.com/jquery/</a> </p>
+
+</article>
+</section>
+<section class="main-section" id="Reference">
+    <article>   
+    <h2>Reference</h2>
+<p>All the documentation in this page is taken from <a href="https://www.w3schools.com/jquery/"> https://www.w3schools.com/jquery/</a> </p>
+</article>
+</section>
+                  </main>
+<!-- partial -->
+  
+</body>
+</html>

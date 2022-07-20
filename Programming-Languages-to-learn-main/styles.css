@@ -1,0 +1,349 @@
+button>.material-icons{
+  
+  right:5px;
+  position:absolute;
+}
+
+
+body{
+ 
+  --topNav-height:54px;
+   padding-top: var(--topNav-height);
+}
+.ad{
+  position:relative;
+}
+.d-none{
+  top:5px;
+  right:5px;
+  width:20px;
+  text-align:center;
+  position:absolute;
+  justify-content:center;
+  align-items:center;
+  
+}
+.ad-none{
+  display:none
+}
+.d-none:hover{
+  cursor:pointer;
+  background:#bdbbbb;
+}
+header{
+  top:0;
+  width:100%;
+  height:60px;
+  position:fixed;
+  box-shadow: 0 0 3px , rgb(0, 0,0,0.2);
+  background-color: #03fcf4;
+  display: flex;
+  overflow-x: hidden;
+  min-width:200px;
+}
+.icon-container{
+    width:50px;
+    height:100%;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+    max-width: 50px;
+    overflow: hidden;
+    cursor:pointer;
+}
+.name{
+  display:flex;
+  text-align:center;
+  overflow:hidden;
+  color:#03a5fc;
+  
+}
+.icon{
+  width:40px;
+  height:40px;
+  position:relative;
+  border-radius:50%;
+  align-items:center;
+  text-align:center;
+  margin-bottom:0;
+  display:flex;
+  
+}
+#img__icon{
+  width:inherit;
+  height:inherit;
+  border-radius:inherit;
+}
+.header-hidden{
+    transform: translateY(-60px);
+    box-shadow: none;
+}
+
+.topNav{
+   right:5px;
+   position:absolute;
+   cursor:pointer;
+}
+
+.topnav__link:hover{
+  color:white;
+  background-color:#03b6fc;
+}
+
+.container{
+  width:100%;
+  height:180px;
+  position:relative;
+  text-align:center;
+  aling-items:center;
+}
+a{
+  text-decoration:none;
+  margin:2px;
+  padding:2px;
+  text-align:center;
+  aling-items:center;
+  display:flex;
+  color:#0328fc;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+
+.navbar{
+
+    position: fixed;
+    right: -200px;
+    top : 60px;
+    width: 200px;
+    height: 300px;
+    background: #03a5fc;
+    border-right: 2px solid #008c71;
+    box-shadow: 0 0 10px 5px rgba(0,0,0, 0.25);
+    opacity: 0;
+    transition: right 0.5s ease-in-out,opacity 0.5s ease-in-out;
+
+}
+.navbar__link{
+    display: flex;
+    align-items: center;
+    background:#04a5fc ;
+    color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #0098fc;
+}
+
+.navbar__link .material-icons{
+    margin-right: 12px;
+}
+
+.navbar__link:active{
+    background-color: #03ecfc;
+
+}
+
+.navbar--open{
+    right: 0;
+    opacity: 1;
+}
+
+
+/*Toggle btwn dark and light mode*/
+
+
+
+.togglebtn{
+  
+     
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-bottom: 1px solid #0098fc;
+}
+
+.button-wrapper{
+    width: 146px;
+    height:99%;
+    margin: 5px ;
+    position: relative;
+    box-shadow: 0 0 20px 7px #0de6a1cc;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.btn{
+    color: white;
+    padding: 2px 10px;
+    width:70px;
+    height:99%;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 73px;
+    height: 100%;
+    background: linear-gradient(to right,#1cc3a4,#24dc87);
+    border-radius: 30px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.togglebtn__hidden{
+  display:none;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.fade{
+  width:100%;
+  height:300px;
+}
+img{
+  border-radius:10px;
+  height:inherit;
+  object-fit:cover;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  cursor:pointer;
+}
+.panel:hover{
+  background:#f0fefe;
+}

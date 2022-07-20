@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Kkibet</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header class="header">
+        <div>
+          <h1 id="navTitle"><strong>C++ Documentation</strong></h1>
+        </div>
+        <nav id="bar">
+       <hr>
+        <a href="#introduction" id="nav-bar1" class="nav-link">Introduction</a>
+     <hr>  
+      <a href="#Advantages" id="nav-bar" class="nav-link">Advantages</a>
+     <hr> 
+          <a href="#Syntax" id="nav-bar1" class="nav-link">C++ Syntax</a>
+      <hr>
+      <a href="#Hello,World!Program" id="nav-bar" class="nav-link">Hello World</a>
+      <hr>
+      <a href="#Variables" id="nav-bar1" class="nav-link">Variables</a>
+      <hr>
+      <a href="#Constants" id="nav-bar" class="nav-link">Constants</a>
+      <hr>
+      <a href="#DataTypes" id="nav-bar1" class="nav-link">Data Types</a>
+      <hr>
+      <a href="#Reference" id="nav-bar" class="nav-link">Reference</a>
+          <hr>
+      </nav>
+      </header>
+      
+      <div class="main-section">
+        
+        <h1 id="introduction">Introduction :</h1>
+        <p>C++ is a cross-platform language that can be used to create high-performance applications. C++ was developed by Bjarne Stroustrup, as an extension to the C language. </p> 
+        <p>
+      In 1978, Brian Kernighan and Dennis Ritchie published a book called “The C Programming Language”. This book, which was commonly known as K&R (after the authors’ last names), provided an informal specification for the language and became a de facto standard. When maximum portability was needed, programmers would stick to the recommendations in K&R, because most compilers at the time were implemented to K&R standards.</p>
+        
+        <br>
+        <h1 id="Advantages">Advantages of C++ :</h1>
+        <ul>
+          <li>C++ gives programmers a high level of control over system resources and memory.</li>
+          <li>C++ is one of the world's most popular programming languages.</li>
+          <li>C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems.</li>
+          <li>C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</li>
+          <li>C++ is portable and can be used to develop applications that can be adapted to multiple platforms.</li>
+          <li>C++ is fun and easy to learn!</li>
+          <li>As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa</li>
+        </ul>
+        <br>
+        <h1 id="Syntax">C++ Syntax :</h1> 
+        
+        <p>The term “Syntax” is a set of pre-defined protocols or rules that we need to follow in a programming language.</p>
+        <p>Every programming language has its own unique syntax. Similarly, C++  Syntax also has its significance.</p>
+        <p>At this stage, we would not take any difficult programs into consideration. We would start off with the most popular program for beginners called the “Hello world!” program. </p>
+        <p>At the end of this tutorial, you would be pretty familiar with the basic structure of a C++ program.</p>
+        <br>
+        <h1 id="Hello,World!Program">C++ "Hello, World!" Program :</h1>
+        <p>In this example, we will learn to create a simple program named "Hello World" in C++ programming.</p>
+        
+        <p>A "Hello, World!" is a simple program that outputs Hello, World! on the screen. Since it's a very simple program, it's often used to introduce a new programming language to a newbie.</p>
+        
+        <p>Let's see how C++ "Hello, World!" program works.</p>
+        
+        <code class="code-container">
+          <p>// Your First C++ Program</p>
+      
+      <p>#include <iostream> </p>
+      
+      <p>int main() {</p>
+          <p>std::cout << "Hello World!";</p>
+          <p>return 0;</p>
+      <p>}</p>
+        </code>
+        
+        <p><strong> Output</strong></p>
+        
+        <code class="code-container">
+          <p>Hello World!</p>
+          </code>
+        
+        <br>
+        
+        <h1 id="Variables">C++ Variables :</h1>
+        
+        <p>Variables are containers for storing data values.</p>
+        
+        <p>In C++, there are different <strong>types</strong> of variables (defined with different keywords), for example:</p>
+        <ul>
+          <li><mark>int</mark> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+          <li><mark>double</mark> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+          <li><mark>char</mark> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+          <li><mark>string</mark> - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+          <li><mark>bool</mark> - stores values with two states: true or false</li>
+          
+        </ul>
+        
+        <p>To create a variable, you must specify the type and assign it a value:</p>
+        
+        <code class="code-container">
+          <p>type variable = value;</p>
+          
+        </code>
+        
+        <p>Where type is one of C++ types (such as int), and variable is the name of the variable (such as x or myName). The equal sign is used to assign values to the variable.</p>
+        
+        <p>To create a variable that should store a number, look at the following example:</p>
+        
+        <code class="code-container">
+          <p>int myNum = 15;
+      </p>
+          <p>cout << myNum;</p>
+          
+        </code>
+        <br>
+        <h1 id="Constants">C++ Constants :
+        </h1>
+        <p>Constants refer to fixed values that the program may not alter and they are called literals.</p>
+        <p>Constants can be of any of the basic data types and can be divided into Integer Numerals, Floating-Point Numerals, Characters, Strings and Boolean Values.</p>
+        
+        <p>When you do not want others (or yourself) to override existing variable values, use the const keyword (this will declare the variable as "constant", which means unchangeable and read-only):</p>
+       
+        <code class="code-container">
+          <p><strong>Example:</strong></p>
+          <p>const int myNum = 15;  // myNum will always be 15
+      </p>
+          <p>myNum = 10;  // error: assignment of read-only variable 'myNum'</p>
+          
+        </code>
+        <br>
+        <h1 id="DataTypes">C++ Data Types :</h1>
+        
+        <p>All variables use data-type during declaration to restrict the type of data to be stored. Therefore, we can say that data types are used to tell the variables the type of data it can store. </p>
+        
+        <p>Whenever a variable is defined in C++, the compiler allocates some memory for that variable based on the data-type with which it is declared. Every data type requires a different amount of memory.</p>
+        
+        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191113115600/DatatypesInC.png">
+        
+        <p>Primitive data types available in C++ are: </p>
+        <ul>
+          <li>Integer</li>
+          <li>Character</li>
+          <li>Boolean</li>
+          <li>Floating Point</li>
+          <li>Double Floating Point</li>
+          <li>Valueless or Void</li>
+          <li>Wide Character</li>
+        </ul>
+        
+        <p>Derived Data Types available in C++ are: </p>
+        <ul>
+          <li>Functionr</li>
+          <li>Array</li>
+          <li>Pointer</li>
+          <li>Reference</li>
+          
+        </ul>
+        <p>Abstract or User-Defined Data Types available in C++ are: </p>
+        <ul>
+          <li>Class</li>
+          <li>Structure</li>
+          <li>Union</li>
+          <li>Enumeration</li>
+          <li>Typedef defined DataType</li>
+         
+        </ul>
+        <br>
+       <h1 id="Reference">Reference :</h1>
+        <p>All the documentation in this page is taken from w3schools.com. To learn C++ language visit <a href="https://www.w3schools.com" target=”_blank”>w3schools.com</a></p>
+        </div>
+<!-- partial -->
+  
+</body>
+</html>

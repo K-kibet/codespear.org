@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - PHP Technical Page.</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHP Documentation</title>
+</head>
+<body>
+  <div id="wrapper">
+    <aside>
+    <nav id="navbar">
+      <header>PHP Documentation</header>
+      <div id="link-container">
+          <a href="#introduction" class="nav-link active">Introduction</a>
+          <a href="#syntax" class="nav-link">syntax</a>
+          <a href="#variables" class="nav-link">variables</a>
+          <a href="#echo_/_print" class="nav-link">Echo / Print</a>
+          <a href="#data_types" class="nav-link">data types</a>
+          <a href="#constants" class="nav-link">constants</a>
+          <a href="#if...else...elseif" class="nav-link">if...Else...Elseif</a>
+          <a href="#while_loops" class="nav-link">while loops</a>
+          <a href="#for_loops" class="nav-link">for loops</a>
+          <a href="#functions" class="nav-link">functions</a>
+          <a href="#superglobals" class="nav-link">superglobals</a>
+          <a href="#references" class="nav-link">References</a>
+      </div>
+    </nav>
+  </aside>
+  
+  <main id="main-doc">
+    <section class="main-section" id="introduction">
+      <header><h1>Introduction</h1></header>
+      
+      <p>PHP standfor PHP: Hypertext Preprocessor and is a server scripting language use fo making dynamic and interactive Web pages and/or application. It's open source, free, effecient and widely-used as an alternative to competitor such as Microsoft's ASP.</p>
+      <p>
+        PHP is crossplatform and is compatible with almost all server used today (Apache, IIS, Nginx, etc.). It supports a wide range aof databases and it's completly free.
+      </p>
+      <p>PHP scripts a executed on the server. They can contain text, HTML, CSS JavaScript and PHP code. The executed script result is return to the browser as plain HTML.</p>
+      <h2>How Can I Use PHP</h2>
+      <ul>
+        <li>PHP can generate dynamic content</li>
+        <li>You can create a CRUD application in PHP</li>
+        <li>PHP can encrypt data</li>
+        <li>PHP can be used to control user-access</li>
+        <li>PHP can send and receive cookies</li>
+      </ul>
+      <h2>What You Should Already Know</h2>
+      <p>Before you move on, you should have a basic understanding of the following:</p>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <p>If you don't have any knowledge on these subjects, we recommend looking at the basic. <a href="#">here</a></p>
+    </section>
+    
+    <section class="main-section" id="syntax">
+      <header>Syntax</header>
+      <p>PHP files have the extension ".php", it can be embed anywhere in HTML document.</p>
+      <p>A PHP script start with &lt;?php and ends with ?&gt;</p>
+      <div class="example_container">
+        <h3>Example</h3>
+        <div class="example_container_body">
+          <pre>
+            <code>
+              &lt;!doctype html>
+              &lt;html>
+              &lt;body>
+                // PHP code here
+                &lt;h1>My First PHP page&lt;/h1>
+
+                &lt;?php echo "Hellow, World"?&gt;
+
+              &lt;/body>
+              &lt;/html>
+            </code>
+          </pre>
+        </div>
+      </div>
+      <p class="note"><strong>Note:</strong> PHP statements always end with semicolon (;).</p>
+      <h2>Comments in PHP</h2>
+      <p>A comment, as in most programming laguages is line that is not read/executed as part of the code. Its purpose is to be usefull to someone looking at the code.</p>
+      <p>Comment can be used for:</p>
+      <ul>
+        <li>Let others understand what your code is doing</li>
+        <li>Remind you of what you did when you come back to look a your code after a while.</li>
+      </ul>
+      
+      <p>PHP support single line and multiple lines comment:</p>
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html>
+            &lt;html lang="en">
+            &lt;body>
+              &lt;?php
+                // This is a single line comment
+                # This is also a single line comment
+
+                /*
+                This is a multiple lines comment
+                that spans of multiple lines
+                */
+
+                // Comment can be used to temporally disable parts of code for debug purpose
+                $sum = 5 + 10;
+                # echo $sum;
+                echo $sum - 10;
+            &lt;/body>
+            &lt;/html>
+          </code>
+        </pre>
+      </div>  
+      <p>In PHP, all keywords &#40;e.g. if, else,while,echo,etc&#41;, classes, functions, and user-defined functions are not case-sensitive.</p>
+      <p>This is legal/equal</p>
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html>
+            &lt;html>
+            &lt;body>
+
+              &lt;?php
+               
+                ECHO "Hello World!";
+                echo "Hello World!";
+                EcHo "Hello World!";
+                
+              ?>
+
+            &lt;/body>
+            &lt;/html>
+          </code>
+        </pre>
+      </div>
+      <p>However; all variable names are case-sensitive.</p>
+      <p>The example below is only valid in the first statement.</p>
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;!DOCTYPE html>
+            &lt;html>
+            &lt;body>
+
+              &lt;?php
+               
+                $name = "John";
+                echo "My name is: " . $name;
+                echo "I am " . $NAME;
+                echo "You can call me " . $Name;
+                
+              ?>
+
+            &lt;/body>
+            &lt;/html>
+          </code>
+        </pre>
+      </div>
+    </section>
+    
+    <section class="main-section" id="variables">
+      <header><h1>Variables</h1></header>
+      <p>PHP as well as in most programming language are storages in memory (Containers) for storing information.</p>
+      <p>PHP has no keyword for declaring a variable. the variable is created when a value is first assign to it. PHP variable can be as short as (x or y) but, for best practice it recommanded to use more descriptive name like (totalsale, day, nextyear).</p>
+      
+      <p>All PHP variable must obey the following rules:</p>
+      <ul>
+        <li>All Variables must start with a dollar sign (<strong>$</strong>), followed by the name of the variable</li>
+        <li>A variable name must start with a <strong>letter</strong> or the <strong>underscore</strong> character</li>
+        <li>Variables name cannot start with a <strong>number</strong></li>
+        <li>A variable name can only contain <strong>alpha-numeric</strong> characters and <strong>underscores (a-zA-Z, 0-9 and _)</strong></li>
+        <li>Variable names are <strong>case-sensitive</strong></li>
+      </ul>
+      
+      <h2>Declaring Variable</h2>
+      
+      <p class="note"><strong>Note:</strong> PHP variable starts with $ followed by the name of the variable
+      <div class="example_container">
+        <h3>Examples</h3>
+      <pre>
+        <code>
+          &lt;?php
+           
+            $txt = "Hello, World!";
+            
+            $PI = 3.14159;
+            
+            $age = "24";
+            
+          ?>
+        </code>
+      </pre>
+      </div>
+      <p>In the example above, the variable <strong>$txt</strong> hold the text "Hello, World" and so on.</p>
+      
+      <p class="note"><strong>Note:</strong> PHP is a loosely typed language meaning you do not need to specify which data type a variable is.</p>
+      <p>PHP automatically converts a variable to the correct type, depending on its value.</p>
+      
+      <hr />
+      
+      <h2>Variable Scope</h2>
+      
+      <p>Variable scope refer to part/block of the code in which a variable can be access or used. In PHP script a variable can be declare anywhere.</p>
+      <p>In PHP there are three different variable scopes:</p>
+      
+      <ul>
+        <li>local</li>
+        <li>global</li>
+        <li>static</li>
+      </ul>
+      
+      <p>In PHP a variable is said to be in the <strong>GLOBAL SCOPE</strong> when it is declared <strong>outside</strong> a function and, can only be accessed outside that function</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;?php
+             
+              $age = 28; // global scope
+              
+              function aTest()
+              {
+                // Because $age was declare outside of this function, the statement bellow will produce an error
+                echo "&lt;p>I am $age years old, inside the function&lt;/p>";
+              }
+              
+              aTest();
+              
+              echo "&lt;p> I am $age years old, outside the function&lt;/p>";
+            
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p>In PHP a variable is said to be in the <strong>LOCAL SCOPE</strong> when it is declared <strong>within</strong> a function and, can only be access within that function</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;?php  
+                       
+              function aTest()
+              {
+                $age = 28; // global scope
+                
+                echo "&lt;p>I am $age years old, inside the function&lt;/p>";
+              }
+              
+              aTest();
+              // Because $age was declare outside of this statement bellow will produce an error.
+              echo "&lt;p> I am $age years old, outside the function&lt;/p>";
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note:</strong>You can have local variables with the same name in different functions, because local variables are only recognized by the function in which they are declared.</p>
+      
+      <hr />
+      
+      <h2>The global Keyword</h2>
+      
+      <p>To access a variable in the global scope within (inside) a function, the global keyword must be used before the variable.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;?php
+             
+              $num = 15;
+              $num2 = 3;
+              $result;
+              
+              function aTest()
+              {
+                global $num, $num2, $result;
+                $result = $num - $num2;
+              }
+              
+              aTest(); // run function
+              echo $result; // output the new value for variable $result
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p>All global in PHP are stored in an array called $GLOBALS[<i>index</i>]. The index holds the variable name. This array is also accessible from within functions and can be used to update global variables directly.</p>
+      
+      <p>Then the example above well be:</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+            &lt;?php
+             
+              $num = 15;
+              $num2 = 3;
+              $result;
+              
+              function aTest()
+              {
+                $GLOBALS['result'] = $GLOBALS['num'] - $GLOBALS['num2']; 
+              }
+              
+              aTest();
+              echo $resutl; // outputs 12
+              
+            ?&gt;  
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>The static Keyword</h2>
+      
+      <p>Since after a function is executed, in most cases, all of its variables are deleted. However, in some scenarios you want a local variable <strong>NOT</strong> to be deleted as, you "may" need it for a  further job.</p>
+      
+      <p>You do this b using the static keyword when you first declare the varible (within a function).</p>
+      <p>This mean that, each time the function is called, that variable will still have the information it contained from the last call (last time function was called).</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            function aTest()
+            {
+              static $x = 0;
+              echo $x;
+              $x++;
+            }
+            
+            aTest(); // outputs 0
+            aTest(); // outputs 1
+            aTest(); // outputs 2
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong>the variable is still local to the function.</p>
+    </section>
+    
+    <section class="main-section" id="echo_/_print">
+     
+      <header><h1>Echo / Print</h1></header>
+      
+      <p>To get output on the screen, PHP uses <strong>echo</strong> and <strong>print</strong> statement.</p>
+      <p><strong>echo</strong> and <strong>print</strong> are more or less the same, the differences a small: echo has no <strong>return value</strong> while print has a <strong>return value of 1</strong> which means it can be used in expressions. Though it rare, echo can take multiple parameters while print only one. echo is marginally faster than print.</p>
+            
+      <h2>echo Statement</h2>
+      
+      <p>You can use the echo statement with/without parentheses: <i>echo</i> or <i>echo()</i>.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            echo "&lt;h2>PHP echo can contain HTML&lt;/h2>";
+            
+            echo ("This", "is", "a", "multiple parameters", "example.");
+            
+            // This output the variable as well as the text
+            $str = "PHP";
+            
+            echo "I am learnig " . $str . " and I love it";
+            
+            // This will also output the variable
+            echo "I am learnig $str and I love it";
+            
+            // This will not output the variable
+            echo 'I am learnig $str and I love it';
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong>to avoid error is always a good practice to concatenate the variable to a string to avoid error. Never use single quotes when outputting a variable inside a string unless it is concatenated.</p>
+      
+      <hr />
+      
+      <h2>print Statement</h2>
+      
+      <p>As echo, the print can be used with/without parentheses: <i>print</i> or <i>print()</i>.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            print "&lt;h2>PHP echo can contain HTML&lt;/h2>";
+            
+            print ("This", "is", "a", "multiple parameters", "example.");
+            
+            // This output the variable as well as the text
+            $str = "PHP";
+            
+            print "I am learnig " . $str . " and I love it";
+            
+            // This will also output the variable
+            print "I am learnig $str and I love it";
+            
+            // This will not output the variable
+            print 'I am learnig $str and I love it';
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+    
+    <section class="main-section" id="data_types">
+      <header><h1>Data Types</h1></header>
+      
+      <p>Like others programming languages, variables can store data of different types, and each data types has a specific things they can achieve.</p>
+      
+      <p>Bellow are the data types supported by PHP:</p>
+      
+      <h2>String</h2>
+      
+      <p>A string is a text or a sequence of characters wrapped in quotes.</p>
+      <p>It can be single quote like 'Hello, World' or double quotes as "Hello, World".</p>
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            $str = "Hello, World!";
+            
+            $str2 = 'Hello, World!";
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>Integer</h2>
+      
+      <p>Every non-decimal number between -2,147,483,648 and 2,147,483,647 is considered to be an integer data type.</p>
+      
+      <p>Here a some rule for integers:</p>
+      
+      <ul>
+        <li>An integer must be one digit long, at least</li>
+        <li>Integers can be specified in three formats: <strong>decimal (10-base), hexadecimal (16-based - prefixed with 0x) or octal (8-based - prefixed with 0)</strong></li>
+      </ul>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            $int = 10;
+            
+            $int2 = 59028;
+            
+            $int3 = "59028";
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong> integers can also be wrapped in quotes. for best practice in recommanded no to use quotes for integers.</p>
+      
+      <hr />
+      
+      <h2>Float</h2>
+      
+      <p>A floating point number (float) is a number with a decimal point or in exponential form.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            $float = 10.5;
+            
+            $PI = 3.14159;
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>Boolean</h2>
+      
+      <p>A boolean represents only two possible states: <strong>TRUE</strong> or <strong>FALSE</strong>.</p>
+      <p>Booleans can booleans can be used to check if a varaible hold a certain value.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            $valid = true;
+            $invalid = false;
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>Array</h2>
+      
+      <p>An array can be considered as a special variable that, instead of storing only one value, can stores multiple values.</p>
+      
+      <p>An array can store values of different data type at the same time.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            $colors = array("Black","Blue","Grey");
+            
+            $colors2 = ["Green","Red","Yellow"];
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong> as of PHP 5.4, you can replace <i>array()</i> with <i>[]</i>.</p>
+      
+      <hr />
+      
+      <h2>Object</h2>
+      
+      <p>An object stores data and inforamtion on how to process that data.</p>
+      <p>PHP object must be explicitly declared by first declaring a class of that object using the keyword <strong>class</strong>. A class is a structure than can contain properties and methods. Think of a class as a blueprint for an house and the object the actual house.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            class Person
+            {
+              function Greet()
+              {
+                $this->name = "Jonh";
+              }
+              
+              // creating an object
+              $user = new Person();
+              
+              // show object properties
+              echo $user->name; // outputs John
+            }
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>NULL Value</h2>
+      
+      <p>Another special data type is null which can have only one value: <strong>NULL</strong>.</p>
+      <p>A variable of data type null has no value assigned to it. All variable created without a value are automatically assigned a value of <strong>NULL</strong>.</p>
+      <p>You can also empty a varaible by assigning/setting the value to NULL it.</p>
+      
+      <div class="example_container">
+        <h3>Example</h3>
+        <pre>
+          <code>
+          &lt;?php
+           
+            $str = "Hello, World"
+            $str = null;
+            
+          ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>Resource</h2>
+      
+      <p>This is another special type, technically resource is not an actual data type but the storing of a refenrence to functions and resources external to PHP.</p>
+      
+      <p>Database calls are example of using resource locator</p>
+    </section>
+    
+    <section class="main-section" id="constants">
+     
+      <header><h1>Constants</h1></header>
+      
+      <p>Constants are the sames as variable except that once created, they cannot be changed or undefined.</p>
+      
+      <p>Constants name must starts with a <strong>letter</strong> or <strong>underscore</strong> (no <strong>$</strong> before a constant name). Unlike variables, constants dont have scope or are automatically global accross the script.</p>
+      
+      <h2>Create a Constant</h2>
+      
+      <p>You use the <strong>define()</strong> function to create a constant in PHP. By defautl PHP constant are case-sensitives.</p>
+      
+      <p><strong>Syntax:</strong> define(name, value, case-insensitive)</p>
+      
+      <p>parameters:</p>
+      <ul>
+        <li>name: Specifies the name of the constant</li>
+        <li>value: Specifies the value of the constant</li>
+        <li>case-insentive: Specifies whether the constant name should be case-insensitive. Default is false</li>
+      </ul>
+      
+      <p><strong>case-sensitive</strong> constants</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+             
+              define("GOTO", "freecodecamp.org");
+              echo GOTO;
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+            <p><strong>case-insensitive</strong> constants</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+             
+              define("GOTO", "freecodecamp.org", true);
+              echo GoTo;
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>Constants are Global</h2>
+      
+      <p>All constants are automatically global in PHP and can be used across the entire script.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?p
+              define("GOTO", "freecodecamp.org");
+              
+              function aTest()
+              {
+                echo GOTO;
+              }
+              
+              aTest();
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+    
+    <section class="main-section" id="if...else...elseif">
+     
+      <header><h1>If...Else...Elseif</h1></header>
+      
+      <p>When you want to execute/perform certains actions based on certains conditions, you use <strong>conditional statement</strong>.</p>
+      
+      <p>PHP has the following conditional statements:</p>
+      
+      <ul>
+        <li><strong>if statement:</strong> executes some code if one condition is true</li>
+        <li><strong>if...else statement: </strong> executes some code if a condition is true and another if that condition is false</li>
+        <li><strong>if...elseif...else statement: </strong>executes different codes for more than two conditions</li>
+        <li><strong>switch statement: </strong> selects one of many blocks of code to be executed</li>
+      </ul>
+      
+      <h2>The if Statement</h2>
+      
+      <p>This statement executes a block of code if one condition is true</p>
+      
+      <p><strong>Syntax:</strong></p>
+      <pre>
+        if (condition)
+        {
+          // code to be executed if condition is true;
+        }
+      </pre>
+      
+      <p>The example below will output "Good evening!" if the current hour is greater than 18:</p>
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+              
+              $time = date('H');
+              
+              if ($time > "18")
+              {
+                echo "Good Evening!";
+              }
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>The if...else Statement</h2>
+      
+      <p>The codes inside this statement is executes if a condition is true or if it is false instead.</p>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        if (condition)
+        {
+          code to be executed if condition is true;
+        }
+        else
+        {
+          code to be executed if condition is false;
+        }
+      </pre>
+      
+      <p>The example below will output "Good morning!"if the time is less than 18, and "Good evening!" otherwise:</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+             
+              $time = date('H');
+              
+              if ($time &lt; "18")
+              {
+                echo "Good morning!";
+              }
+              else
+              {
+                echo "Good evening!";
+              }
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>The if...elseif...else Statement</h2>
+      
+      <p>In this statement, differents codes are executed based on more than two conditions.</p>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        if (condition) 
+        {
+          code to be executed if this condition is true;
+        }       
+        elseif (condition) 
+        {
+          code to be executed if this condition is true;
+        }       
+        else 
+        {
+          code to be executed if all conditions are false;
+        }
+      </pre>
+      
+      <p>The example below will output "Good morning!" if the time is less than 12, "Good afternoon!" if the time is less than 18, otherwise "Good evening!":</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+             
+              $time = date('H');
+              
+              if ($time &lt; "12")
+              {
+                echo "Good morning!";
+              }
+              elseif ($time &lt; "18")
+              {
+                echo "Good afternoon!";
+              }
+              else
+              {
+                echo "Good evening!";
+              }
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <hr />
+      
+      <h2>The switch Statement</h2>
+      
+      <p>Like the if...else statement, the switch statement is used to execute different actions based on different conditions.</p>
+      <p>switch Statement are another variation of if...else Statement. You can use switch a the place of if...else and vice-versa.</p>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        switch (n) 
+        {
+          case condition1:
+              code to be executed if n=condition1;
+              break;
+          case condition2:
+              code to be executed if n=condition2;
+              break;
+          case condition3:
+              code to be executed if n=condition3;
+              break;
+          ...
+          default:
+              code to be executed if n is different from all labels;
+        }
+      </pre>
+      
+      <p>A switch statement work by evaluating an expression <strong>n</strong> (usually a variable), then compares it with the value of each case in the structure. If there is match, the block code inside the case is executed. the <strong>break</strong> keyword stop the code if a case is match. The <strong>default</strong> statement contains the code to be executed if no case is matched.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+             
+              $time = date('H');
+              
+              switch ($time)
+              {
+                case 8:
+                  echo "Breakfast!";
+                  break;
+              case 12:
+                echo "Lunch!";
+                break;
+              case 19:
+                echo "Dinner!";
+                break;
+              default
+                echo "Work time!";
+              }
+              
+            ?&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+    
+    <section class="main-section" id="while_loops">
+     
+      <header><h1>While Loops</h1></header>
+      
+      <p>Sometime when you need a block of code to run several time in a row, you have to add several (almost) equal code-lines in a script, wich will result in lot of repeations, to avoid repeating yourself, you use what is called loops to perform that kind of task.</p>
+      
+      <p>PHP offers the following while looping statements:</p>
+      
+      <ul>
+        <li><strong>while: </strong>loops through a block of code as long as the condition specified is true</li>
+        <li><strong>do...while: </strong>loops through a block of code once, and then repeats the loop as long as the condition specified is true</li>
+      </ul>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        while (condition is true)
+        {
+          // code to be executed here;
+        }
+      </pre>
+      
+      <p>The example below display a list of number from 0 to 9, first you set a variable (counter) $i to 0 &#40;<strong>$i = 0</strong>&#41;. Then, the while loop will run until $i is equal, or less than 9 &#40;<strong>$i &lt;&#61; 9</strong>&#41;. $i will be incremented by 1 each time the loop runs &#40;<strong>$i++</strong>&#41;:</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;
+             
+              $i &#61; 0;
+              
+              while &#40;$i &lt;&#61; 9&#41;
+              &#123;
+                echo $i . "&lt;br /&gt;";
+                $i++;
+              &#125;
+              
+            &#63;&gt;  
+          </code>
+        </pre>
+      </div>
+      
+      <h2>The do...while loop</h2>
+      
+      <p>This loop (do...while) is most suitable when you run a block of code first before checking a condition, if the condition is false the loop will exit, otherwise it will repeat.</p>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        do
+        {
+          // code to be executed here;
+        }
+        while (condition is true);
+      </pre>
+      
+      <p>Let rewrite the example used with the <strong>while loop</strong> to get the same output, 0 to 9.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;
+             
+              $i &#61; 0;
+              
+              do
+              &#123;
+                echo $i . "&lt;br /&gt;";
+                $i++;
+              &#125;
+              while &#40;$i &lt;&#61; 9&#41;
+              
+            &#63;&gt;  
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong> In the do...while loop the condition is tested <strong>after</strong> executing the code within the loop. So basically it means that the do...while loop would runs the code a least once, even if the condition is false the first.</p>
+      
+      <p>For instance, if you had set $i above to 10 the do while loop would have run once and print 0, then exit the loop.</p>
+    </section>
+    
+    <section class="main-section" id="for_loops">
+     
+      <header><h1>For Loops</h1></header>
+      
+      <p>Like while loops, you can use for loops to avoid repeating oursefl or a block of code.</p>
+      
+      <p>PHP offers the following <strong>for</strong> looping statements:</p>
+      
+      <ul>
+        <li><strong>for: </strong> loops through a block of code a specified number of times</li>
+        <li><strong>foreach: </strong>loops through a block of code for each element in an array</li>
+      </ul>
+      
+      <h2>The for loop</h2>
+      
+      <p>You use the for loop when you know in advance how many times the script should run.</p>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        for (init counter; test counter; increment counter)
+        {
+          // code to be executed here;
+        }
+      </pre>
+      <p>Parameters:</p>
+      <ul>
+        <li><strong>init counter: </strong>Initialize the loop counter value</li>
+        <li><strong>test counter: </strong>Evaluated for each interation. If the true, the loop continues, if it evaluates to false the loop ends</li>
+        <li><strong>increment counter: </strong>Increases the loop counter value</li>
+      </ul>
+      
+      <p>Let display the text "Hello, World!" 5 times</p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;php
+              
+              for &#40;$i = 0; $i &lt;&#61; 5; $i++&#41;
+              &#123;
+                echo "Hello, World";
+              &#125;
+              
+            &#63;&gt;
+          </code>
+        </pre>
+      </div>
+      
+      <h2>The foreach Loop</h2>
+      
+      <p>Whenever you want ot loop through an array, the foreach loop is the best choice you got, as a matter of facts it only works on arrays, it loops throuugh each key/value pair in an array.</p>
+      
+      <p><strong>Syntax:</strong></p>
+      
+      <pre>
+        foreach ($array as $value)
+        {
+          // code to be executed here;
+        }
+      </pre>
+      
+      <p>Here is how it works, each time the loop runs, the value of the current array element is assigned to <strong>$value</strong> and the array pointer is moved by one until it reaches the last item in the array.</p>
+      
+      <p>Let display all the values of the given given array in the example bellow:</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;php
+              
+              $cars = ["Volvo", "Lanborgini", "Tesla", "Porsch"];
+              // note you could use $cars = array("volvo", ...), but syntaxt is hold and should be avoided.
+              
+              foreach ($cars as $value)
+              {
+                echo "$value &lt;br /&gt;";
+              }
+            
+            &#63;&gt;
+          </code>
+        </pre>
+      </div>
+    </section>
+    
+    <section class="main-section" id="functions">
+      <header><h1>Functions</h1></header>
+      <p>The Tue power of PHP lies in its built-in functions; It offers more than 1000 reday to use function to speed up your development.</p>
+      <h2>Some built-in functions</h2>
+      <ul>
+        <li><strong>count&#40;&#41;:</strong> This function count the length (the number of elements) in an array:</li>
+        <li><strong>sort&#40;&#41;:</strong> This function is used to sort an array in ascending order</li>
+        <li><strong>str_word_count&#40;&#41;:</strong> This function count the number of words in a given string</li>
+      </ul>
+      
+      <h4>The count&#40;&#41; Function </h4>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;php
+             
+              $country = ["Congo", "Ghana", "Zimbabwe", "Guinea", ];
+              echo count&#40;$country&#41;
+              
+            ?>
+            
+            // Output 4
+          </code>
+        </pre>
+      </div>
+      
+      <h4>The sort&#40;&#41; Function </h4>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;php
+            
+              $person = 
+              [
+                "Kwame N'krumah", 
+                "Patrice Lumumba", 
+                "Thomas Sankara", 
+                "Moahmed Khadafi", 
+                "Sheik Anta Diop", 
+              ];
+              
+              # sort the array
+              sort($person);
+              
+              # Display sorted array values
+              for($i = 0; $i &lt; count($person); $i++)
+              {
+                  echo $person[$i] . "&lt;br />";
+              }
+            
+            ?>
+            
+            // output:  Kwame N'krumah
+                              Moahmed Khadafi
+                              Patrice Lumumba
+                              Sheik Anta Diop
+                              Thomas Sankara
+          </code>
+        </pre>
+      </div>
+      
+      <h4>The str_word_count&#40;&#41; Function </h4>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;&#63;php
+            
+              $str = "PHP offers a lot of built-in functions to work with string such as, strlen(), strrev(),strpos(),str_replace() and many more.";
+
+              // Display number of words in $str String.
+              echo str_word_count($str);
+              
+            ?&gt;
+            
+            // output 21
+          </code>
+        </pre>
+      </div>
+      
+      <h2>User Defined Functions</h2>
+      
+      <p>Besides PHP built-in functions, you can create your own functions.</p>
+      <p>A function can be define as a block of statements than can be used as much as you like in a program. A function will not execute immediately when a page loads but when it is called.</p>
+      
+      <h2>User Defined Function</h2>
+      
+      <ul>
+        <li>In PHP a user definded function declaration start with the keyword <strong>"function"</strong>.</li>
+        <li>Function name start with lowercase letter or underscore and should be meaningful.</li> 
+        <li>If you function name is composed of many words, use the camelCase notation to name your function.</li>
+      </ul>
+      
+      <p><strong>Syntax</strong></p>
+      
+      <pre>
+        function functionName()
+        {
+          // code to be executed here;
+        }
+      </pre>
+      
+      <p>The function bellow display a greeting message to the web browser. The global keyword make the variable $name accessible within the function as it's local.</p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              $name = "MEGNIE";
+              
+              function greet()
+              {
+                global $name;
+                
+                echo "Good morning". $name . ",how are you doing today";
+              }
+              
+              greet(); // Call the function
+            ?>
+            
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong>Function names are <strong>not case-sensitive</strong>. The function start a the opening curly brace (<strong> { </strong>) and end at the closing curly brace (<strong> } </strong>).</p>
+      
+      <h2>Function Arguments</h2>
+      
+      <p>Function Arguments are sort of variable used to pass information to functions.</p>
+      
+      <p>To pass information to a function, the arguments must be specified after the function name inside the the function parentheses. Function can have as many arguments as you, they must be separated with a comma.</p>
+      
+      <p><strong>Syntax</strong></p>
+      
+      <pre>
+        function functionName ($argument1, $argument1, ...)
+        {
+          // Code to be executed;
+        }
+      </pre>
+      
+      <p>The following example takes three arguments ($firstName, $lastName, $address). When the function is called, you pass the firstname, lastname and address and those values are used in the function.</p>
+      <p class="note"><strong>Note: </strong>The function argument are usually variable or input from user</p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              function employeeName ($firstName, $lastName, $address)
+              {
+                  echo $firstName . " ". $lastName . " " . $address . "<br />";
+              }
+    
+            employeeName("John", "Dooe", "27A1 Kingdome Hall Street, Dome Taifa");
+            employeeName("Kwame", "Franklin", "134B5 Papaye Street, Osu Accra");
+          </code>
+        </pre>
+      </div>
+      
+      <h2>Function with Default Argument value</h2>
+      
+      <p>Sometime you may need to set a default value to a function, so the value will be used if the function is called without arguments.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+              
+              function setTime($defaultTime = "10:30")
+              {
+                echo "It's : $defaultTime &lt;br />";
+              }
+              
+              setTime("22:30");
+              setTime("06:00");
+              setTime();
+              
+            ?>
+            
+            /* output It's : 22:30
+                            It's : 06:00;
+                            It's : 10:30;
+            */
+          </code>
+        </pre>
+      </div>
+      
+      <h2>Function with Return values</h2>
+      
+      <p>There are cases where your function only do calculation and nothing else, to access the value obtained by the function will need the function to return a value that can then be used in another function be be display.</p>
+      
+      <p>For a function to return a value, you use the return statement:</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+              
+              function rectangleArea($l, $L) {
+        
+                return ($l * $L);
+              } 
+              
+              echo "Area of rectangle: 10cm x 5cm = " . rectangleArea(10, 5) . "cm.";
+              
+            ?>
+            // Output 50cm;
+          </code>
+        </pre>
+      </div>
+    </section>
+    
+    <section class="main-section" id="superglobals">
+     
+      <header><h1>Superglobals</h1></header>
+            
+      <p>PHP has several predefined (built-in) varibales called <strong>Superglobal</strong>,those variable are scope independant, this means that they are always available in all scopes.</p>
+      <p>They can be access from any function, class or file withouth including anything, just type the superglobal and you're good to go.</p>
+
+      <P>The PHP superglobal variables are:</P>
+      <ul>
+        <li>$GLOBALS</li>
+        <li>$_SERVER</li>
+        <li>$_REQUEST</li>
+        <li>$_POST</li>
+        <li>$_GET</li>
+        <li>$_FILES</li>
+        <li>$_ENV</li>
+        <li>$_COOKIE</li>
+        <li>$_SESSION</li>
+      </ul>
+      
+      <h2>$GLOBALS</h2>
+      
+      <p>You use the $GLOBALS super global variable (array) to access global variables from anywhere in your script, functions or methods.</p>
+      <p>The globals variables are stored in the $GLOBALS[index] array. The index holds the name of the variable to be access.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+              
+              $num1 = 100;
+              $num2 = 72;
+              
+              function substract()
+              {
+                $GLOBALS['result'] = $GLOBALS['num1'] - $GLOBALS['num2'];
+              }
+              
+              substract();
+              
+              echo $result;
+            
+            ?>
+            // Output 28
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_SERVER</h2>
+      
+      <p>The PHP $_SERVER super global holds informations about headers, paths and script locations.</p>
+      
+      <p>Here is an example of some elements in $_SERVER:</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              echo $_SERVER['PHP_SELF'];
+              echo "&lt;br />";
+              echo $_SERVER['SERVER_NAME'];
+              echo "&lt;br />";
+              echo $_SERVER['HTTP_HOST'];
+              echo "&lt;br />";
+              echo $_SERVER['HTTP_REFERER'];
+              echo "&lt;br />";
+              echo $_SERVER['HTTP_USER_AGENT'];
+              echo "&lt;br />";
+              echo $_SERVER['SCRIPT_NAME'];
+              echo "&lt;br />";
+              echo $_SERVER['SERVER_ADDR'];
+              
+            ?>
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_REQUEST</h2>
+      
+      <p>When an HTML form is submitted, you use $_REQUEST super global to collect it data.</p>
+      
+      <p>The example bellow submit a form when the user click on <strong>submit</strong>. The form data is sent to a specific file specified in the form tage using <strong>action</strong> attribute.</p>
+      <p>This example submit the data to the file itself to process data. You can also use a different file, just replace the file name with the one you wish to use.</p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;html>
+            &lt;body>
+            
+            &lt;form method="POST"action="&lt;?= $_SERVER['PHP_SELF'];?>">
+              &lt;label for="email">E-mail:&lt;/label>
+              &lt;input type="email" name="email" id="email" />
+              &lt;input type="submit" name="submit" />
+            &lt;/form>
+            
+            &lt;?php
+              
+              if (isset($_POST['submit']))
+              {
+                // Collect value of input field
+                $email = $_REQUEST['email'];
+                
+                if (empty($email))
+                {
+                  echo "Fill your email please!";
+                }
+                if (!empty($email))
+                {
+                  echo $email;
+                }
+              }
+            
+            ?>
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_POST</h2>
+      
+      <p>PHP $_POST is the most used super global to collect data after submitting an HTML form with <strong>method="POST"</strong>. It can also be use to pass variables.</p>
+      
+      <p>The example bellow submit a form when the user click on <strong>submit</strong>. The form data is sent to an other file to process data using the <strong>action</strong> attribute.</p></p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;html>
+            &lt;body>
+            
+            &lt;!-- HTML FILE -->
+            
+              &lt;form method="POST"action="include/handlers/newsletter_handler.php">
+                &lt;label for="email">E-mail:&lt;/label>
+                &lt;input type="email" name="email" id="email" />
+                &lt;input type="submit" name="submit" />
+              &lt;/form>
+            
+            &lt;/body>
+            &lt;/html>
+            
+            
+            &lt;?php
+            
+            // EXTERNAL PHP FILE: newsletter_handler.php
+             
+              if (isset($_POST['submit']))
+              {
+                // Collect value of input field
+                $email = $_POST['email'];
+                
+                if (empty($email))
+                {
+                  echo "Fill your email please!";
+                }
+                if (!empty($email))
+                {
+                  echo $email;
+                }
+              }
+            
+            ?>
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_GET</h2>
+      
+      <p>Like $_POST, $_GET super global can also be used to collect HTML form data if the form data was submited with <strong>method="GET"</strong>.</p>
+      <p>The Get method is more suitable to extract data sent in an URL.</p>
+      
+      <p>Imagin a user request an artist album from your website.</p>
+      
+      <p>The link will looks similar to this one:</p>
+      <p><i>https://www.yoursite.com/albums?artist=AyongBeatz&amp;title=Real</i></p>
+      
+      <p>To access the value (<strong> paramaters </strong>) in the URL when the user click on request button and the link is submited to your handler (file containing PHP script to process data):</p>
+      
+      
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              if(isset($_GET['request']))
+              {
+                $artist_name = $_GET['artist'];
+                $album_id = $_GET['album'];
+                
+                $sql = "SELECT from album WHERE artist_name = $artist_name, album_id = $album_id";
+                
+                // some code...
+              }
+            
+            ?>
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_FILES</h2>
+      
+      <p>$_FILES is another super global (associative array) variable. It contains all uploaded file informtaion. The $_FILES super global used the HTTP POST method to send data of the current script it contains.</p>
+      
+      <p>To Upload files you need the $_FILES super global. The $_FILES super global can be used to validate the data to be upload.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;form enctype="multipart/form-data action="uploadHandler.php" method="POST">
+              &lt;input type="hidden" name="MAX_FILE_SIZE" value="50000" />
+              &lt;p>Shoes file toUpload&lt;/p>&lt;br />
+              &lt;input type="file" name="fileName" />
+              &lt;input type="submit" value="Upload"/>
+            &lt;/form>
+          </code>
+        </pre>
+      </div>
+      
+      <p>Using the form above the $_FILES variable will contains the following:</p>
+      
+      <ul>
+        <li><strong>$_FILES['fileName']['name']</strong> - Original name of the file on the client machine.</li>
+        <li><strong>$_FILES['fileName']['type']</strong> - This contains the mime type of the file for instance "image/gif" if the browser provide tha information. The value is not to be taken for granted as it's not check on the PHP side.</li>
+        <li><strong>$_FILES['fileName']['size']</strong> - This conains the size, in bytes of the uploaded file</li>
+        <li><strong>$_FILES['fileName']['tmp_name']</strong> - Temporary filename of the server where the uploaded file was stored</li>
+        <li><strong>$_FILES['userfile']['error']</strong> - The error code associated with this file upload.</li>
+      </ul>
+      
+      <p class="note"><strong>Note: </strong> File are stored by default in the server's default temporary folder. To change that behavior another directory must be specified with the <strong>upload_tmp_dir</strong> directive in php.ini.</p>
+      
+      <p>Here is example on how to validate file upload</p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              $uploaddir = 'Your_tmp_dir_upload';
+              $uploadfile = $uploaddir . basename($_FILES['fileName']['name']);
+              
+              //echo '&lt;pre>';
+              if (move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadfile)) 
+              {
+                echo "File is valid, and was successfully uploaded.\n";
+              }
+              if (!move_uploaded_file($_FILES['fileName']['tmp_name'], $uploadfile))
+              {
+                echo "Error file not uploaded";
+              }
+
+              echo 'Here is some more debugging info:';
+              print_r($_FILES);
+
+              //print "&lt;/pre>";
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_ENV</h2>
+      
+      <p>$_ENV is used to pass variables to the current script via the environment method.</p>
+      
+      <p>Importing these variable into PHP's global namespace depent on the environment under which the PHP parser is running because many are provided by the shell under which PHP is running. Most system are running different types of shells.</p>
+      
+      <p>Other environment variables include the <strong>Common Gateway Interface</strong> (CGI), always available regardless of whether PHP is running as a server module or CGI processor.</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        
+        <pre>
+          <code>
+            &lt;?php
+              
+              echo 'My username is ' .$_ENV["USER"] . '!';
+              
+            ?>
+            
+            // The output will like bellow if the "John"is the user executing the script
+            
+            # My name is John!
+          </code>
+        </pre>
+      </div>
+      
+      <h2>$_COOKIE</h2>
+      
+      <p>$_COOKIE super global variable cookie informations. A cookie is  a small file embeded on the user's computer by the server.</p>
+      
+      <p>Each time the same computer send a request with a browser, cookie will be send too. This will enable the server to identify a user.</p>
+      
+      <p>PHP can both create and retrieve cookie values.</p>
+      
+      <p>To create cookie, use the function <strong>setcookie()</strong>.</p>
+      
+      <p><strong>Syntax</strong></p>
+      
+      <pre>
+        setcookie(name, value, expire, path, domain, secure, httponly);
+      </pre>
+      
+      <p>All the parameters above are optional except for <i>name</i>.</p>
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              $cookie_name = "user";
+              $cookie_value = "Henry Ducard";
+              
+              setcookie($cookie_name, $cookie_value, time() + (86400 * 7), "/"); // 86400 second = 1 day  
+            ?>
+            
+            &lt;html>
+              &lt;body>
+                &lt;?php
+                  if (isset($_COOKIE[$cookie_name]))
+                  {
+                    echo "Cookie" . $cookie_name . " is set! <br />";
+                    echo "Value is: " . $_COOKIE[$cookie_value];
+                  }
+                  if (!isset($_COOKIE[$cookie_name]))
+                  {
+                    echo "Cookie named " . $cookie_name . " is not set!";
+                  }
+                ?>
+              &lt;/body>
+            &lt;/html>
+          </code>
+        </pre>
+      </div>
+      <p><strong>Note:</strong> If you don't see the cookie value, reload the page. The cookie block code must come <strong>before &lt;htmle> tag</htmle></strong></p>
+      
+      <h2>$_SESSION</h2>
+      
+      <p>$_SESSION (associative array) stores information about user that can be used across multiple page.</p>
+      <p>Because on the internet unlike computer/mobile application the server does not know who is connected or what they are doing because HTTP address are stateless.(It doesn't maintain state.</p>
+      
+      <p>To solve that problem you store user information in the $_SESSION super global variable. These information can then be access and use across multiple pages that inclues but not limited to <strong>username</strong>,<strong>userid</strong>,<strong>IP address.</strong></p>
+      <p class="note"><strong>Note:</strong> By default session variable last until as long as the browser is not close by the user. To permanently store these data a database is needed.</p>
+      
+      <p>To start a PHP Session use the <strong>session_start</strong> function. Bellow is an example of how to start a Session:</p>
+      
+      <div class="example_container">
+        <h3>example</h3>
+        <pre>
+          <code>
+            &lt;?php
+              
+              session_start(); // Start the session
+              $user_id = 2;
+              $_SESSION[['user_id'] = $user_id;
+                             
+            ?>
+            
+            &lt;html>
+              &lt;body>
+                &lt;?php
+                  if (isset($_SESSION['user_id']))
+                  {
+                    echo "Session user_id is: " . $_SESSION['user_id'];
+                  }
+                  if (!isset($_SESSION['user_id']))
+                  {
+                    echo "Session is not set!";
+                  }
+                ?>
+              &lt;/body>
+            &lt;/html>
+          </code>
+        </pre>
+      </div>
+      
+      <p class="note"><strong>Note: </strong>like setcookie(), session_start() function must comes before any <strong>HTML tags</strong>. session_unset() and session_destroy() are used to destroy/end the session and remove all global session variable.</p>
+    </section>
+    
+    <section class="main-section" id="references">
+      <header><h1>References</h1></header>
+      <p>If you wish to learn more about PHP follow the links bellow</p>
+      
+      <ul>
+        <li><a href="https://www.w3schools.com/php/default.asp" target="_blank" class="ref-links">W3school</a> - Learn how to code in PHP.</li>
+        <li><a href="http://php.net/docs.php" class="ref-links">PHP</a> - Official PHP Documentation website.</li>
+      </ul>
+    </section>
+
+  </main>
+  </div>
+  <footer>
+    <div class="footer_innercontainer">
+      &copy; 2018 | <a href="https://www.freecodecamp.org/stonec0der">StoneCoder</a>
+    </div>
+  </footer>
+  <scritp src="assets/js/script.js"></scritp> 
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.0'><\/script>".replace("HOST", location.hostname));
+  //]]></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="navbar">
+  <h1>Public Advice Traveling Help Technical Documentation</h1>
+  <hr>
+  <h3>Table of Content</h3>
+  <ol>
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#general overview" rel="internal"><li>General overview</li></a>
+    <a class="nav-link" href="#technical requirement" rel="internal"><li>Technical requirement</li></a>
+    <a class="nav-link" href="#PATH Source structure" rel="internal"><li>PATH Source structure</li></a>
+    <a class="nav-link" href="#architecture" rel="internal"><li>Architecture</li></a>
+    <a class="nav-link" href="#references" rel="internal"><li>References</li></a>
+  </ol>
+</nav>
+
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>1. Introduction</header>
+    <article>
+    <h4>1.1	Purpose of this document</h4>
+<p>The purpose of this document is to give technical information about PATH design and implementation.</p>
+    <h4>1.2	Intended Audience</h4>
+<p>The intended audiences are:</p>
+
+<li>Supervisors, to analyze the design and implementation of PATH.</li>
+<li>PATH team members.</li>
+<li>Future developers to extend or use some ideas of PATH project.</li>
+    <h4>1.3	Scope</h4>
+<p>This document will describe the design and some technical issues of PATH project. Further documents could be found on DSD web site.</p>
+      <h4>1.4	Definitions and acronyms</h4>
+      <h5>1.4.1	Definitions</h5>
+<table id="table1">
+    <tr>
+      <th>Keyword</th>
+      <th>Definitions</th>
+    </tr>
+    <tr>
+      <td>Google MAP API</td>
+      <td>API provided by Google to use Google maps</td>
+  </tr>
+</table>
+    <h5>1.4.2	Acronyms and abbreviations</h5>  
+<table id="table2">
+    <tr>
+    <th>Acronym or abbreviation</th>
+    <th>Definitions</th>
+  </tr>
+    <tr>
+      <td>PATH</td>
+      <td>Public Advice Traveling Help</td>
+    </tr>
+    <tr>
+      <td>GIS</td>
+      <td>Geographical Information System</td>
+  </tr>
+    <tr>
+      <td>UIL</td>
+      <td>User Interface Layer</td>
+    </tr>
+    <tr>
+      <td>DAL</td>
+      <td>Data  Access Layer</td>
+    </tr>
+    <tr>
+      <td>BOL</td>
+      <td>Business Object Layer</td>
+    </tr>
+</table>
+      </artice>
+    </section>
+  <section class="main-section" id="general overview">
+   <header>2.	General overview</header>
+       <article>
+    <h4>2.1	Technologies Used</h4>
+<p>PATH is a web based application that depends on Google map API. We used MySQL, Eclipse, Apache server, PHP and Google map API. Except from Google technology that we just have access to the API list, all other technologies and component are open source.</p>
+    <h4>2.2	General Functioning</h4>
+<p>The following are the major system functionalities:</p>
+
+<li>Register user in PATH web site.</li>
+<li>Suggest the suitable advices for different routes or places according to user preferences.</li>
+<li>Store advices given by users.</li>
+<li>Store advice types entered by users.</li>
+<li>Manage advice entry conflicts.</li>
+<li>Allow Administrator to manage conflict parameters.</li>
+<p>The two last functionalities are not yet integrated to the system and partially implemented.</p>
+    <h4>2.3	Error handling</h4>
+<p>As the architecture is three tires, exception handling was done on each layer separately. The layer that was faced with an exception, raise a new exception to the upper layer if needed. The final layer which is UIL decides the proper message to show to PATH users and with the current implementation, UIL usually redirect the user to a special page that contains the proper message.</p>
+      </artice>
+    </section>
+<section class="main-section" id="technical requirement">
+   <header>3.	Technical requirement</header>
+       <article>
+    <h4>3.1	Client requirement</h4>
+<p>As PATH is a web application it could be run on most of custom operating systems via a web browser. We tested PATH with Chrome 1.0 and IE 7.0 and found no problem.</p>
+    <h4>3.2	Server Requirement</h4>
+<p>The following technologies are required for PATH server:</p>
+
+<li>Mysql 5.1</li>
+<li>Apache 2.2.1</li>
+<li>PHP 5.2.8</li>
+    <h4>3.3	Google map API</h4>
+<p>Google Maps allows was used to manipulate maps by adding waypoints, information markers, plan routes etc. JavaScript was used to use Google map API. The Google Maps API provides utilities for manipulating the map like loading waypoints and creating routes from waypoints. Google Maps currently supports driving and walking directions.  To use the Google Maps API one must sign up for an API key and we registered one key for PATH web site. Google Maps API is free to use as long users are less than 50,000.  The web site which is for Google map key registration is http://code.google.com/apis/maps/signup.html.  There are some documents and samples of using Google map API that could be found in http://code.google.com/apis/maps/.  Some special very close related documents that are available for PHP, MYSQL and Google map API could be reached at 
+http://code.google.com/apis/maps/articles/phpsqlajax.html.
+</p>
+      </artice>
+    </section>
+<section class="main-section" id="PATH Source structure">
+   <header>4.	PATH Source structure</header>
+       <article>
+<p>There are three main folders that represent three tiers architecture of the project. Figure 1 shows the files we had for implementation. PATH presentation layer contains 13 files. BOL contains 10 files and finally DAL includes two files. The average number of lines of code for each file is about 100. We used a big header file that include left side menu bar also upper menu bar. Also a common footer was used for all PATH web pages.</p>
+         <a href="https://ibb.co/d44Z9p"><img src="https://preview.ibb.co/fcf7Up/File_Structure_of_PATH.png" alt="File_Structure_of_PATH" border="0"></a>
+      </artice>
+    </section>
+<section class="main-section" id="architecture">
+ <header>5.	Architecture</header>
+       <article>
+<p>Architectural design consisted of high level architecture and detail design including sequence diagrams and class diagrams.</p>
+<h4>5.1	 High Level Architecture</h4>
+<p>Project design consisted of three tier architecture. It included User Interface Layer (UIL), Business Object Layer (BOL) and Data Access Layer (DAL). The user can view the system through UIL. This layer was built using HTML, PHP and JavaScript.  There are just a few client side processes such as “Input Control” which are implemented entirely in UIL. 
+All other processes are passed on to the BOL for processing. BOL was built using PHP. It contains business modules and classes that take the appropriate decision and fetch the required data from Google Maps through the Google Maps API and from PATH database through DAL. The interaction with Google API is through JavaScript. The database is built with MySQL.
+ Figure 4 shows a high level architecture of PATH. As the users decide types of Advices, a Generic Type was used to store different advice kinds.
+</p>
+         <a href="https://ibb.co/f4di29"><img src="https://preview.ibb.co/hbDGN9/High_Level_Architecture.png" alt="High_Level_Architecture" border="0"></a>
+    <h4>5.2	PATH Class Diagram</h4>
+<p>The class diagram is briefly explained in this section. The three users of the system are Administrator, Manager and User. All users are inherited from base user. Advices are stored in Advice and Advice Fields. This made the project very flexible because there is no limitation for any changes that user want for any advice. Advice entries are stored in advice profile. Here we save all changes needed happens for each advice in a special location. The related class diagram is shown in .
+The last entries for each location are the valid data. Administrator defines Conflict Threshold (CT) for advices. If PATH notices so many changes (More than CT) for an advice entry, Conflict would occur and nothing more could be saved from users. Managers then are able to review conflicts and decide the final values.
+</p>
+         <a href="https://ibb.co/ciLfh9"><img src="https://preview.ibb.co/jBrWpp/PATH_Class_Diagram.png" alt="PATH_Class_Diagram" border="0"></a>
+    <h4>5.3	User search Sequence Diagram</h4>
+<p>This sequence diagram is depicting all the interactions between the layers that serve the user request. The user can search for a route with search criteria entered. The system will interact with the Google API to get the map as requested. The map then needs to be embedded with the advice that corresponds to the requested route. PATH search engine will then fetch advices from the database and add them as flags on the map fetched with the Google API. The final map is returned to the user. 
+</p>
+         <a href="https://ibb.co/bXSMpp"><img src="https://preview.ibb.co/cotGN9/Search_Route_Sequence.png" alt="Search_Route_Sequence" border="0"></a>`
+      </artice>
+    </section>   
+<section class="main-section" id="references">
+   <header>6.	References</header>
+       <article>
+<li>DSD official web site, BTW PATH team</li>
+<li>Colin Potts, Kenji Takahashi, Annie I.Anton, “Inquiry-Based Requirements Analysis”, Georgia Institute of Technology, Nippon Telegraph and Technology Corp.</li>
+<li>Kousik Sankar R, Raman Venkat, “Total Requirements Control at Every Stage of Product Development”, Philips Electronics India Limited.</li>
+<li>Anthony Finkelstein, Steve Easterbrook, Jeff Kramer & Bashar Nuseibeh, “Requirements Engineering Through Viewpoints”, Department of Computing, Imperial College, 180 Queen’s Gate, London SW7 2BZ.</li>
+<li>Harry M. Sneed, Ancon GmbH, “Testing a Web Application”, Vienna, Austria & Budapest, Hungary Page 17.</li>
+<li>Google Maps API, “What is the Google Maps API”, Jan 2009; 
+http://code.Google.com/intl/sv/apis/maps/
+</li>
+<li>PHP, “Documentation”, Jan 2009; http://www.php.net/docs.php</li>
+<li>Sun, “MySQL 5.1 Reference Manual”, Jan 2009; http://dev.mysql.com/doc/refman/5.1/en/</li>
+<li>Apache, “HTTP Server Project”, Jan 2009; http://httpd.apache.org</li>
+      </artice>
+    </section>
+</main>
+<!-- partial -->
+  
+</body>
+</html>

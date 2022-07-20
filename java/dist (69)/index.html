@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Java Documentation</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Java Documentation Page</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+  <div class="page-wrap">
+    <div class="row">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+        <nav id="navbar" class="navbar-movil navbar-expand-sm">
+          <header class="title"><i class="fab fa-java"></i>Doc</header>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMini" aria-controls="navMini" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                        </button>
+          <div class="collapse navbar-collapse" id="navMini">
+            <ul class="nav flex-column mt-4">
+              <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+              <li class="nav-item"><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Javascript_and_Java">JavaScript and Java</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Hello_world">Hello world</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Variables">Variables</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Declaring_variables">Declaring variables</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="footer-wrap">
+
+        </section>
+      </div>
+      <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7">
+        <main id="main-doc">
+          <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <hr>
+            <article>
+              <p>Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+              <p>Java applications are typically compiled to "bytecode" that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The language derives much of its original features from SmallTalk, with a syntax similar to C and C++, but it has fewer low-level facilities than either of them. There were five primary goals in the creation of the Java language:</p>
+           <li>
+             It must be "simple, object-oriented, and familiar".
+              </li>
+              <li>
+                It must be "robust and secure".
+              </li>
+              <li>
+                It must be "architecture-neutral and portable".
+              </li>
+              <li>
+                It must execute with "high performance".
+              </li>
+              <li>
+               It must be "interpreted, threaded, and dynamic".
+              </li>
+              
+              
+            </article>
+          </section>
+          <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <hr>
+            <p>This guide assumes you have the following basic background:</p>
+            <li>The syntax of Java is largely influenced by C++. Unlike C++, which combines the syntax for structured, generic, and object-oriented programming, Java was built almost exclusively as an object-oriented language. All code is written inside classes, and every data item is an object, with the exception of the primitive data types, (i.e. integers, floating-point numbers, boolean values, and characters), which are not objects for performance reasons. Java reuses some popular aspects of C++ (such as the printf method).</li>
+            <li>Unlike C++, Java does not support operator overloading, or multiple inheritance for classes, though multiple inheritance is supported for interfaces.</li>
+            <li>Java uses comments similar to those of C++. There are three different styles of comments: a single line style marked with two slashes (//), a multiple line style opened with /* and closed with */, and the Javadoc commenting style opened with /** and closed with */. The Javadoc style of commenting allows the user to run the Javadoc executable to create documentation for the program and can be read by some integrated development environments (IDEs) such as Eclipse to allow developers to access documentation within the IDE.</li>
+          </section>
+          <section class="main-section" id="Javascript_and_Java">
+            <header>Javascript and Java</header>
+            <hr>
+            <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax,
+              naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+            <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object
+              model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative
+              requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+            <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement
+              interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+          </section>
+          <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <hr>
+            <p>The traditional "Hello, world!" program can be written in Java as:</p>
+            <code>public class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}</code>
+          </section>
+          <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <hr>
+            <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
+            <p>A Java identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because Java is case sensitive, letters include the characters "A" through "Z" (uppercase) and the
+              characters "a" through "z" (lowercase).</p>
+            <code>var num = 10; var name = "Diana" ; let _width = 200.4 </code>
+            <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+          </section>
+          <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <hr>
+          
+            <p>To declare and assign a number use the following syntax:</p>
+            <code>int myNumber = 5;</code>
+      
+            <p>Or you can combine them:</p>
+            <code>int myNumber;
+myNumber = 5;</code>
+            <p>To define a double floating point number, use the following syntax:</p>
+            <code>double d = 4.5;
+d = 3.0;</code>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>

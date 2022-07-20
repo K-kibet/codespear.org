@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page (FCC)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="style/style.css">
+  <title>Home | Jayesh</title>
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <header>PHP Documentation</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li>
+        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+      </li>
+      <li>
+        <a class="nav-link" href="#PHP">Php and Backend</a>
+      </li>
+      <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+      <li><a class="nav-link" href="#Variables">Variables</a></li>
+      <li>
+        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+      </li>
+      <li><a class="nav-link" href="#Variable_types">Variable Types</a></li>
+      <li><a class="nav-link" href="#Global_variables">Global variables</a></li>
+      <li><a class="nav-link" href="#Constants">Constants</a></li>
+      <li><a class="nav-link" href="#Data_types">Data types</a></li>
+      <li>
+        <a class="nav-link" href="#if...else_statement">elseif statement</a>
+      </li>
+      <li><a class="nav-link" href="#while_statement">while statement</a></li>
+      <li>
+        <a class="nav-link" href="#Function_declarations">Function declarations</a>
+      </li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>
+          PHP started out as a small open source project that evolved as more and more people found out how useful it was. Rasmus Lerdorf unleashed the first version of PHP way back in 1994.
+        </p>
+
+        <p>
+          PHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites.
+        </p>
+        <ul>
+          <li>
+            PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time.
+          </li>
+          <li>
+            PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added support for Java and distributed object architectures (COM and CORBA), making n-tier development a possibility for the first time.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="What_you_should_already_know">
+      <header>What you should already know</header>
+      <article>
+        <p>This guide assumes you have the following basic background:</p>
+
+        <ul>
+          <li>
+            A general understanding of the Internet and the World Wide Web (WWW).
+          </li>
+          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+          <li>
+            Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about Php.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="main-section" id="PHP">
+      <header>Php and Backend</header>
+      <article>
+        <p>
+          PHP performs system functions, i.e. from files on a system it can create, open, read, write, and close them. It can encrypt data.
+        </p>
+
+        <p>
+          PHP can handle forms, i.e. gather data from files, save data to a file, through email you can send data, return data to the user. Using PHP, you can restrict users to access some pages of your website.
+        </p>
+        <p>
+          You add, delete, modify elements within your database through PHP. Access cookies variables and set cookies.
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Hello_world">
+      <header>Hello world</header>
+      <article>
+        To get a feel for PHP, first start with simple PHP scripts. Since "Hello, World!" is an essential example, first we will create a friendly little "Hello, World!" script. As mentioned earlier, PHP is embedded in HTML. That means that in amongst your normal
+        HTML (or XHTML if you're cutting-edge) you'll have PHP statements like this −
+        <code>
+                    &lt;body&gt;
+                    &lt;?php echo "Hello, World!";?&gt;
+                    &lt;/body&gt;
+                </code>
+
+      </article>
+    </section>
+    <section class="main-section" id="Variables">
+      <header>Variables</header>
+      <p>
+        The main way to store information in the middle of a PHP program is by using a variable.
+      </p>
+      <p>
+        All variables in PHP are denoted with a leading dollar sign ($). The value of a variable is the value of its most recent assignment. Variables are assigned with the = operator, with the variable on the left-hand side and the expression to be evaluated
+        on the right. Variables can, but do not need, to be declared before assignment. Variables in PHP do not have intrinsic types - a variable does not know in advance whether it will be used to store a number or a string of characters.
+      </p>
+      <p>
+        Variables used before they are assigned have default values. PHP does a good job of automatically converting types from one to another when necessary. PHP variables are Perl-like.
+      </p>
+    </section>
+    <section class="main-section" id="Declaring_variables">
+      <header>Declaring variables</header>
+      <article>
+        You can declare a variable in three ways:
+        <p>
+          With the keyword $. For example, <code>$x = 42.</code> This syntax can be used to declare both local and global variables.
+        </p>
+        <p>
+          By simply assigning it a value. For example, <code>x = 42.</code> This always declares a global variable. You shouldn't use this variant.
+        </p>
+
+      </article>
+    </section>
+    <section class="main-section" id="Variable_types">
+      <header>Variable Types</header>
+      <article>
+        <p>
+          PHP provides a large number of predefined variables to any script which it runs. Many of these variables, however, cannot be fully documented as they are dependent upon which server is running, the version and setup of the server, and other factors. Some
+          of these variables will not be available when PHP is run on the command line. For a listing of these variables, please see the section on Reserved Predefined Variables.
+        </p>
+
+        <p>
+          PHP also provides an additional set of predefined arrays containing variables from the web server (if applicable), the environment, and user input. These arrays are rather special in that they are automatically global - i.e., automatically available in
+          every scope. For this reason, they are often known as "superglobals". (There is no mechanism in PHP for user-defined superglobals.) The superglobals can be found here; however, for a listing of their contents and further discussion on PHP predefined
+          variables and their natures, please see the section Reserved Predefined Variables.
+        </p>
+        <p>Incorrect</p>
+        <code>echo $_GET['chuck.norris'];</code>
+        <p>
+          I haven't found it anywhere else in the manual, so I'll make a note of it here - PHP will automatically replace any dots ('.') in an incoming variable name with underscores ('_'). So if you have dots in your incoming variables, e.g.:
+
+        </p>
+
+        <p>Correct</p>
+
+        <code>echo $_GET['chuck_norris'];</code>
+      </article>
+    </section>
+    <section class="main-section" id="Global_variables">
+      <header>Global variables</header>
+      <article>
+        <p>
+          The scope of a variable is the context within which it is defined. For the most part all PHP variables only have a single scope. This single scope spans included and required files as well. For example:
+        </p>
+
+        <code> &lt; ?php
+                    $a = 1;
+                    include 'b.inc';
+                    ?> </code>
+
+        <p>
+          Here the $a variable will be available within the included b.inc script. However, within user-defined functions a local function scope is introduced. Any variable used inside a function is by default limited to the local function scope. For example:
+        </p>
+        <code> &lt; ?php
+                    $a = 1; /* global scope */
+
+                    function test()
+                    {
+                    echo $a; /* reference to local scope variable */
+                    }
+
+                    test();
+                    ?></code>
+      </article>
+    </section>
+    <section class="main-section" id="Constants">
+      <header>Constants</header>
+      <article>
+        <p>
+          A constant is an identifier (name) for a simple value. As the name suggests, that value cannot change during the execution of the script (except for magic constants, which aren't actually constants). A constant is case-sensitive by default. By convention,
+          constant identifiers are always uppercase.
+        </p>
+
+        <code>define("FOO", "something");</code>
+        <p>
+          A constant cannot change value through assignment or be re-declared while the code is running. It has to be initialized to a value.
+        </p>
+
+        <p>
+          Like superglobals, the scope of a constant is global. You can access constants anywhere in your script without regard to scope. For more information on scope, read the manual section on variable scope.
+        </p>
+
+        <p>
+          You cannot declare a constant with the same name as a function or variable in the same scope. For example:
+        </p>
+
+        <code>&lt;?php
+
+                    // Valid constant names
+                    define("FOO", "something");
+                    define("FOO2", "something else");
+                    define("FOO_BAR", "something more");
+
+                    // Invalid constant names
+                    define("2FOO", "something");
+
+                    // This is valid, but should be avoided:
+                    // PHP may one day provide a magical constant
+                    // that will break your script
+                    define("__FOO__", "something");
+
+                    ?></code>
+      </article>
+    </section>
+    <section class="main-section" id="Data_types">
+      <header>Data types</header>
+      <article>
+        <p>Variables can store data of different types, and different data types can do different things.</p>
+        <ul>
+          <li>
+            <p>PHP supports the following data types:</p>
+            <ul>
+              <li>Boolean. true and false.</li>
+              <li>
+                Null is a special data type which can have only one value: NULL. A variable of data type NULL is a variable that has no value assigned to it. Tip: If a variable is created without a value, it is automatically assigned a value of NULL..
+              </li>
+              <li>An array stores multiple values in one single variable. In the following example $cars is an array. The PHP var_dump() function returns the data type and value:</li>
+              <li>Integer.An integer data type is a non-decimal number between -2,147,483,648 and 2,147,483,647.
+              </li>
+              <li>String. A string is a sequence of characters, like "Howdy", "Hello, World"</li>
+              <li>
+                A float (floating point number) is a number with a decimal point or a number in exponential form. In the following example $x is a float. The PHP var_dump() function returns the data type and value:
+              </li>
+            </ul>
+          </li>
+
+          <li>Object</li>
+        </ul>
+        An object is a data type which stores data and information on how to process that data. In PHP, an object must be explicitly declared. First we must declare a class of object. For this, we use the class keyword. A class is a structure that can contain
+        properties and methods:
+
+        <li>Resource</li>
+        The special resource type is not an actual data type. It is the storing of a reference to functions and resources external to PHP. A common example of using the resource data type is a database call. We will not talk about the resource type here, since
+        it is an advanced topic.
+
+      </article>
+    </section>
+    <section class="main-section" id="if...else_statement">
+      <header>elseif statement</header>
+      <article>
+        elseif, as its name suggests, is a combination of if and else. Like else, it extends an if statement to execute a different statement in case the original if expression evaluates to FALSE. However, unlike else, it will execute that alternative expression
+        only if the elseif conditional expression evaluates to TRUE. For example, the following code would display a is bigger than b, a equal to b or a is smaller than b:
+
+        <code>&lt;?php
+                    if ($a > $b) {
+                    echo "a is bigger than b";
+                    } elseif ($a == $b) {
+                    echo "a is equal to b";
+                    } else {
+                    echo "a is smaller than b";
+                    }
+                    ?></code> There may be several elseifs within the same if statement. The first elseif expression (if any) that evaluates to TRUE would be executed. In PHP, you can also write 'else if' (in two words) and the behavior would
+        be identical to the one of 'elseif' (in a single word). The syntactic meaning is slightly different (if you're familiar with C, this is the same behavior) but the bottom line is that both would result in exactly the same behavior.
+        <p>
+          The elseif statement is only executed if the preceding if expression and any preceding elseif expressions evaluated to FALSE, and the current elseif expression evaluated to TRUE.
+        </p>
+        <code>&lt;?php
+
+                    /* Incorrect Method: */
+                    if ($a > $b):
+                    echo $a." is greater than ".$b;
+                    else if ($a == $b): // Will not compile.
+                    echo "The above line causes a parse error.";
+                    endif;
+
+
+                </code>
+
+        <code>/* Correct Method: */
+                    if ($a > $b):
+                    echo $a." is greater than ".$b;
+                    elseif ($a == $b): // Note the combination of the words.
+                    echo $a." equals ".$b;
+                    else:
+                    echo $a." is neither greater than or equal to ".$b;
+                    endif;
+
+                    ?></code>
+
+      </article>
+    </section>
+    <section class="main-section" id="while_statement">
+      <header>while statement</header>
+      <article>
+        (PHP 4, PHP 5, PHP 7) while loops are the simplest type of loop in PHP. They behave just like their C counterparts. The basic form of a while statement is:
+
+        <code>while (expr)
+                    statement</code> If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
+
+        <p>
+          The meaning of a while statement is simple. It tells PHP to execute the nested statement(s) repeatedly, as long as the while expression evaluates to TRUE. The value of the expression is checked each time at the beginning of the loop, so even if this value
+          changes during the execution of the nested statement(s), execution will not stop until the end of the iteration (each time PHP runs the statements in the loop is one iteration). Sometimes, if the while expression evaluates to FALSE from the
+          very beginning, the nested statement(s) won't even be run once.
+        </p>
+
+        <p>
+          Like with the if statement, you can group multiple statements within the same while loop by surrounding a group of statements with curly braces, or by using the alternate syntax:
+        </p>
+
+        Example:
+
+        <p>The following examples are identical, and both print the numbers 1 through 10:</p>
+
+        <code>&lt;?php
+                    /* example 1 */
+
+                    $i = 1;
+                    while ($i &lt;= 10) {
+                    echo $i++; /* the printed value would be
+                    $i before the increment
+                    (post-increment) */
+                    }
+
+                    /* example 2 */
+
+                    $i = 1;
+                    while ($i &lt;= 10):
+                    echo $i;
+                    $i++;
+                    endwhile;
+                    ?>
+                </code>
+      </article>
+    </section>
+    <section class="main-section" id="Function_declarations">
+      <header>Function declarations</header>
+      <article>
+        A function may be defined using syntax such as the following:
+
+        <code>
+                    &lt;?php
+                    function foo($arg_1, $arg_2, /* ..., */ $arg_n)
+                    {
+                    echo "Example function.\n";
+                    return $retval;
+                    }
+                    ?>
+                </code>
+
+        <ul>
+          <li>Conditional Function</li>
+          <code>
+                        &lt;?php
+
+                        $makefoo = true;
+
+                        /* We can't call foo() from here
+                        since it doesn't exist yet,
+                        but we can call bar() */
+
+                        bar();
+
+                        if ($makefoo) {
+                        function foo()
+                        {
+                        echo "I don't exist until program execution reaches me.\n";
+                        }
+                        }
+
+                        /* Now we can safely call foo()
+                        since $makefoo evaluated to true */
+
+                        if ($makefoo) foo();
+
+                        function bar()
+                        {
+                        echo "I exist immediately upon program start.\n";
+                        }
+
+                        ?>
+                    </code>
+          <li>All functions and classes in PHP have the global scope - they can be called outside a function even if they were defined inside and vice versa. PHP does not support function overloading, nor is it possible to undefine or redefine previously-declared
+            functions.</li>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <ul>
+          <li>
+            All the documentation in this page is taken from
+            <a href="https://www.php.net/manual/en/index.php" target="_blank">MDN</a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>

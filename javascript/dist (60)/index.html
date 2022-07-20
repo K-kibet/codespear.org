@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page freeCodeCamp Project 2018</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+1. User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
+
+2. User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
+
+3. User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
+
+4. User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "Javascript and Java" should have a corresponding id="Javascript_and_Java").
+
+5. User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+
+6. User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+
+7. User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+
+8. User Story #8: I can see a nav element with a corresponding id="navbar".
+
+9. User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
+
+10. User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
+
+11. User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
+
+12. User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+
+13. User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
+
+14. User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+
+15. User Story #15: My Technical Documentation page should use at least one media query.
+-->
+
+<nav class="large_menu" id="navbar">  
+<header>
+  <span class="list_title">Overview of Javascript Tips</span>
+  <ul><li><a href="#Introduction" class="nav-link">JS Introduction</a></li>
+    <li><a href="#Better_Helvetica" class="nav-link">Minimum Requirement</a></li>
+    <li><a href="#Blurry_Text" class="nav-link">Javascript Vocabulary</a></li>
+    <li><a 
+    <li><a href="#Typewriter_Effect" class="nav-link">Reference</a></li></ul>
+  </header>
+  
+</nav>
+
+
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header><h1>JS Introduction</h1></header>
+    <article>
+      <p>JavaScript is a scripting or programming language that allows you to implement complex things on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc.  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript" target="_blank">Mozilla Developer</a>.</p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="Better_Helvetica">
+    <header><h2>Minimum Knowledge & Skills Requirement</h2></header><span class="author">Resource by <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">Mozilla Developer</a></span>
+
+    <article>
+      <p>Before starting this module, you don't need any previous JavaScript knowledge, but you should have some familiarity with HTML and CSS.</p>
+      <pre><code class="css">     body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+      }</code></pre>
+        
+    </article>
+  </section>
+  
+  <section class="main-section" id="Blurry_Text">
+    <header><h2>Javascript Vocabulary Examples</h2></header>
+    <span class="author">Resource taken by <a href="https://codepen.io/Julie31/pen/oZYYXe">Julie Alary</a></span>
+    <article>
+      <p>Declaring Variables: You can declare a variable in three ways:
+With the keyword var. For example</p>
+      <pre><code class="css">      var x = 42.
+      x = 42.
+       let y = 13.
+      }</code></pre>
+        
+    </article>
+    
+  </section>
+  
+  <section class="main-section" id="CSS_Box_Shadow">
+    <header><h2>Reference</h2></header>
+    <span class="author">Comprehensive Javascript Documentation can be learned at <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">Mozilla Developer - Learn Javascript</a></span>
+  
+ 
+  
+</main>
+
+   <footer class="text-center">
+      <hr>
+      <p id="bottom_text"> <a href=" https://codepen.io/alexsjcho/" target="_blank">Alex Cho 2018 </a>| <a 
+                               href="https://alexsjcho.com" target="_blank">Blog</a> | <a href="https://www.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin-square"></i></a> | <a 
+     
+     href="https://github.com/alexsjcho" target="_blank"><i 
+class="fa fa-github-square"></i></a> | <a 
+                                                href="https://www.instagram.com/alexsjch0/" target="_blank"><i class="fa fa-instagram"></i></a></p>
+    </footer>
+<!-- partial -->
+  
+</body>
+</html>

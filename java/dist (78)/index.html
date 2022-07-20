@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - documentation page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script 
+        src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<div class='main-body'>
+
+  <nav id="navbar">
+    <header><h2>
+       JAVA Documentation
+      </h2></header>
+    <ul>
+      <li> <a href="#java_history" class="nav-link"><h3>java history</h3></a></li>
+      <li>  <a href="#JAVA_Introduction" class="nav-link"><h3>JAVA Introduction</h3></a></li>
+      <li>   <a href="#LOOPS_IN_JAVA" class="nav-link"><h3>LOOPS IN JAVA</h3></a></li>
+      <li>  <a href="#Packages_in_java" class="nav-link"><h3>Packages in java</h3></a></li>
+      <li><a href="#Inheritance_in_java" class="nav-link"><h3>Inheritance in java</h3></a></li>
+    </div>
+  </nav>
+<main id="main-doc">
+  <div id='JavaScript_and_Java'>
+    <section class="main-section" id="java_history">
+      <header><h3>java history</h3></header><article>
+      <p>Java’s history is very interesting. It is a programming language created in 1991. James Gosling, Mike Sheridan, and Patrick Naughton, a team of Sun engineers known as the Green team initiated the Java language in 1991.</p><p> Sun Microsystems released its first public implementation in 1996 as Java 1.0. It provides no-cost -run-times on popular platforms. Java1.0 compiler was re-written in Java by Arthur Van Hoff to strictly comply with its specifications. With the arrival of Java 2, new versions had multiple configurations built for different types of platforms.</p>
+<p>
+In 1997, Sun Microsystems approached the ISO standards body and later formalized Java, but it soon withdrew from the process. At one time, Sun made most of its Java implementations available without charge, despite their proprietary software status. Sun generated revenue from Java through the selling of licenses for specialized products such as the Java Enterprise System.</p></article>
+    </section>
+     <section class="main-section" id="JAVA_Introduction">
+       <header>JAVA Introduction</header>
+       <p>Java is one of the most popular programming languages out there. Released in 1995 and still widely used today, Java has many applications, including software development, mobile applications, and large systems development. Knowing Java opens a lot of possibilities for you as a developer.</p><p>JAVA was developed by James Gosling at Sun Microsystems Inc in the year 1991, later acquired by Oracle Corporation. It is a simple programming language. Java makes writing, compiling, and debugging programming easy. It helps to create reusable code and modular programs.</p><p>
+
+Java is a class-based, object-oriented programming language and is designed to have as few implementation dependencies as possible. A general-purpose programming language made for developers to write once run anywhere that is compiled Java code can run on all platforms that support Java. Java applications are compiled to byte code that can run on any Java Virtual Machine. The syntax of Java is similar to c/c++.</p>
+    </section>
+     <section class="main-section" id="LOOPS_IN_JAVA">
+       <header>LOOPS IN JAVA</header>
+       <p>Looping in programming languages is a feature which facilitates the execution of a set of instructions/functions repeatedly while some condition evaluates to true.
+Java provides three ways for executing the loops. While all the ways provide similar basic functionality, they differ in their syntax and condition checking time.</P><p>Types of loops
+    <ol><li>while loop</li>
+      <li>do while loop</li>
+      <li>for loop</li></ol></p>
+<P>
+while loop: A while loop is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition. The while loop can be thought of as a repeating if statement.</p><p>
+    Syntax :<code>while (boolean condition)
+{
+   loop statements...
+  }</code></p><p><code>for (initialization condition; testing condition; 
+                              increment/decrement)
+{
+    statement(s)
+  }</code></p><p><code>do
+{
+    statements..
+}
+  while (condition);</code></p>
+    </section>
+     <section class="main-section" id="Packages_in_java">
+       <header>Packages in java</header>
+       <p>Package in Java is a mechanism to encapsulate a group of classes, sub packages and interfaces. Packages are used for:</p>
+<ul><li>
+Preventing naming conflicts. For example there can be two classes with name Employee in two packages, college.staff.cse.Employee and college.staff.ee.Employee</li><li>
+  Making searching/locating and usage of classes, interfaces, enumerations and annotations easier</li><li>
+Providing controlled access: protected and default have package level access control. A protected member is accessible by classes in the same package and its subclasses. A default member (without any access specifier) is accessible by classes in the same package only.</li><li>
+Packages can be considered as data encapsulation (or data-hiding).</li><li>
+All we need to do is put related classes into packages. After that, we can simply write an import class from existing packages and use it in our program. A package is a container of a group of related classes where some of the classes are accessible are exposed and others are kept for internal purpose.</li><li>
+  We can reuse existing classes from the packages as many time as we need it in our program.</li></ul>
+
+</p>
+    </section>
+     <section class="main-section" id="Inheritance_in_java">
+       <header>Inheritance in java</header>
+       <p> <pre>Inheritance is an important pillar of OOP(Object-Oriented Programming). It is the mechanism in java by which one class is allowed to inherit the features(fields and methods) of another class. 
+
+Important terminology: 
+</pre>
+<P><ul><li><article>Super Class: The class whose features are inherited is known as superclass(or a base class or a parent class).</li>
+Sub Class: The class that inherits the other class is known as a subclass(or a derived class, extended class, or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.</li><li>
+Reusability: Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class.</li><br></ul>
+How to use inheritance in Java<br><br>
+
+       The keyword used for inheritance is extends. </p><p><pre><code>
+Syntax : 
+
+class derived-class extends base-class  
+{  
+   //methods and fields  
+} </code> </pre></p><p><code>interface <interface_name> {
+    
+    // declare constant fields
+    // declare methods that abstract 
+    // by default.
+}
+  </code></p>
+</section></article>
+  
+</main>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

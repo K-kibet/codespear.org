@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation V2</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+</head>
+<body>
+  <nav class="navbar col-3">
+    <h1 id="nav-title">Index</h1>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#variables">Declaring Variables</a></li>
+        <li><a href="#integ">Integer Data Types</a></li>
+        <li><a href="#fd">Floating Point Data Types</a></li>
+        <li><a href="#boolean">Boolean</a></li>
+        <li><a href="#chars">Chars</a></li>
+        <li><a href="#strings">Strings</a></li>
+      </ul>
+  </nav>
+  
+  <main class="main col-8">
+    <h1 id="title">Java Documentation: Variables & Data Types</h1>
+    
+    <section id="introduction">
+      <h2 class="section-title">Introduction</h2>
+      <p>Java is a static programming language. Static programming languages perform "type-checking" at compilation time. This is a contrast to dynamic programming languages like Javascript and Python that perform type-checking at run-time.</p>
+      <p>Type-checking is done by a type-checker, and it insures that the use of a construct (variables, arrays etc.) matches what is expected in its intended usage. For example, you would not expect a sentence (String Data Type) to perform a multiplication with a number (Integeral Data Type). Since Java performs these checks at compile time, it ensures that there are no type-errors during run time.</p>
+      <p>In Java there are 8 <i>Primitive</i> data types. These are boolean, chars, integeral data types and floating point data types. (These will be explained individually in greater detail later on.) Primitive types are the building blocks of data manipulation, and can be used to form <i>Composite</i> data types like Strings.</p>
+    </section>
+    
+    <section id="variables">
+      <h2 class="section-title">Declaring Variables</h2>
+      <p>Declaring variables in Java is rather simple. You must declare the data type of the variable, its identifier also known as its name, and it must end with a semi-colon. It is recommended that you set an initial value for the variable. Various examples are included below:</p>
+      <code>
+        int myNum = 9;<br>
+        String aString = "Hello World";<br>
+        boolean isValid = false;<br>
+        char aChar = 'a';<br>
+        double myDouble = 2.5;<br>
+      </code>
+      <p>It is possible, however, to declare a variable without providing an initial value like so:</p>
+      <code>
+        int myNum;
+      </code>
+      <p>Here are some rules and tips about variables:</p>
+      <ul>
+        <li>Two variables cannot have the same name. It will return an error if you have an int variable called "myNum" and a double also called "myNum".</li>
+        <li> Capitilisation counts. "myNum" is not the same as "MYNUM" - They will be two separate variables.</li>
+        <li>Once you declare a variable, it is no longer necessary to type the variable type when calling the variable. E.g.:<br>
+          <code>
+            int myNum;<br>
+            myNum = 13;
+          </code>
+        </li>
+        <li>The standard procedure for naming variables is to use <i>camelCase</i>. In camelCase, the first letter of every word is capitilised bar the first word. camelCase is used because it helps programmers read long variable names.</li>
+        <li>It is better to be specific with variable names. Choosing generic names can be very confusing in the long-run when you have dozens of different variables with similar names.</li>
+      </ul>
+    </section>
+    
+    <section id="integ">
+      <h2 class="section-title">Integer Data Types</h2>
+      <p>Integers can hold whole numbers like 4 or 126. There are four kind of integers, and the range of numbers they can store differs. This difference is based on the amount of bytes a number requires to be stored.</p>
+      <table>
+         <tr>
+          <th>Type</th>
+          <th>Size</th>
+          <th>Range of values</th>
+        </tr>
+        
+        <tr>
+          <td>byte</td>
+          <td>1 byte</td>
+          <td>-128 to 127</td>
+        </tr>
+        <tr>
+          <td>short</td>
+          <td>2 bytes</td>
+          <td>-32768 to 32767</td>
+        </tr>
+        <tr>
+          <td>int</td>
+          <td>4 bytes</td>
+          <td>−2,147,483,648 to 2,147,483,647</td>
+        </tr>
+        <tr>
+          <td>long</td>
+          <td>8 bytes</td>
+          <td>-9,223,372,036,854,775,808 to
+9,223,372,036,854,755,807</td>
+        </tr>  
+      </table>
+      <p>"int" is the most commonly used integer. It is only in rare cases that int won't have the number you need to store. However, you are certain of a variable's value because it is a fixed value - it can be beneficial to use a smaller unit like a short or byte. This will conserve memory.</p>
+    </section>
+    
+    <section id="fd">
+      <h2 class="section-title">Floating Point Data Types</h2>
+      <p>Floating Point data types are used to represent decimals and fractions in Java. There are two floating point types, floats and doubles. Like integers, each type can store a different range of values. Here are some examples of floating point types:</p>
+      <code>
+        float myFloat = 5.5;<br>
+        double myDouble = 667.6667;
+      </code>
+      <p>As stated in the Integer section, it is good to use the 'smaller' type, if you are sure the value will be within its range to converse memory space. In floating points, the float is the smaller value.</p>
+      <table>
+         <tr>
+          <th>Type</th>
+          <th>Size</th>
+          <th>Range of values</th>
+        </tr>
+        
+        <tr>
+          <td>float</td>
+          <td>4 bytes</td>
+          <td>3.4e−038 to 3.4e+038</td>
+        </tr>
+        
+        <tr>
+          <td>double</td>
+          <td>8 bytes</td>
+          <td>1.7e−308 to 1.7e+038</td>
+        </tr>
+      </table>
+    </section>
+    
+    <section id="boolean">
+      <h2 class="section-title">Boolean</h2>
+      <p>The boolean data type has only two possible values: <i>true</i> or <i>false</i>. This data type is often used for conditional statements like if/else statements, while loops and for loops. E.g.:</p>
+      <code>
+        boolean isValid = true;<br>
+        if(isValid) {<br>&emsp;/* some code */<br>}<br>
+        else {<br>&emsp;/* some code */<br>}
+      </code>
+    </section>
+    
+    <section id="chars">
+      <h2 class="section-title">Chars</h2>
+      <p>Chars are individuals characters and to assign a char to a char variable, you must enclose it in single quotes. here are a total of 65,535 possible char values. It has a minimum value of ‘u0000’ (or 0) and a maximum value of ‘uffff’ (or 65,535, inclusive). For every character there is a unicode equivalent. For example, as previously stated, '0' is the same as 'u0000'. To use this in Java, you must prefix the unicode value with a backslash. The full list of unicode characters can be found at this <a href="http://www.unicode.org/charts/" target="_blank">site</a>. Here are some char examples:
+      </p>
+      <code>
+        char aChar = 'Z';<br>
+        char aCharTwo = '\u20AC'; //The unicode for the Euro symbol
+      </code>
+    </section>
+    
+    <section id="strings">
+      <h2 class="section-title">Strings</h2>
+      <p>As stated previously, Strings are a composite data type, unlike all the other types that have been discussed so far. It is made up of a sequence of characters. Since it's a composite data type, Strings come from a class - the String class - and every String is an object of this class. String objects are immutable, which means that once created, their values cannot be changed unless you assign it a new value. The String class is implicit so you do not need to import it. Unlike chars, Strings are enclosed in double quotes like so:</p>
+      <code>
+        String stringOne = "Hello World";<br>
+        String stringTwo = new String("I am also a String!");
+      </code>
+      <hr style="margin-top: 40px; width: 100%">
+    </section>
+    <section id = "footer">
+      <p>Click these links for official documentation on <a href ="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html" target="_blank">Primitive Data Types</a> and <a target="_blank" href="https://docs.oracle.com/javase/tutorial/java/data/strings.html">Strings</a>.</p>
+      <p>Written and programmed by Carla Warde</p>
+    </section>
+    
+  </main>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

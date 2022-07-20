@@ -1,0 +1,76 @@
+nav, main, footer{
+  font-family:Open Sans, Arial;
+}
+nav header{
+  font-size:20px;
+  font-weight:700;
+  line-height:1.5em;
+}
+nav a{
+  display:block;
+  padding:0.8em 0.1em 0.8em 0.1em;
+}
+a:link, a:visited, a:hover, a:active {
+    color: black;
+  text-decoration:none;
+}
+nav a:hover{
+  background-color:#828282;
+}
+main{
+  line-height:1.5em
+}
+h2{
+  padding-top:1em
+}
+#navbar{
+  width:100%;
+  background-color:#a8a7a6;
+  margin:-1em;
+  padding:0.5em 1.5em 1.5em 1.5em;
+  top:0px;
+  left:0px;
+  line-height:0.5em
+}
+#main-doc{
+  margin-top:2.0em;
+}
+code{
+  background-color:#ededed;
+  padding:1em;
+  display:block;
+  word-wrap: break-word;
+}
+footer{
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+@media(min-width:800px){
+#navbar{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width: 10.7em;
+  height:100%;
+  margin:0em;
+  padding: 0.5em; 
+}
+ nav a, nav header{
+  text-align:center;
+}
+#main-doc{
+  display:block;
+  margin-left:12.5em;
+}
+  footer{
+  display:block;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  font-size: 0.5em;
+  text-align:right;
+    margin-left: 12.5em;
+}
+}

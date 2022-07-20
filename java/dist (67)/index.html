@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Java Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <nav id="navbar">
+        <header>Java Basics</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+        <a class="nav-link" href="#Javascript_and_Java">Javascript and Java</a>
+        <a class="nav-link" href="#Hello_world">Hello world</a>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <a class="nav-link" href="#Declaring_variables">Declaring variables</a>
+        <a class="nav-link" href="#Variable_scope">Variable scope</a>
+        <a class="nav-link" href="#Global_variables">Global variables</a>
+        <a class="nav-link" href="#Constants">Constants</a>
+        <a class="nav-link" href="#Data_types">Data types</a>
+        <a class="nav-link" href="#If...else_statement">If...else statement</a>
+        <a class="nav-link" href="#While_statement">While statement</a>
+        <a class="nav-link" href="#Method_declarations">Method declarations</a>
+        <a class="nav-link" href="#References">References</a>
+
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    Java is a high-level programming language originally developed by
+                    Sun Microsystems and released in 1995. Java runs on a variety of
+                    platforms, such as Windows, Mac OS, and the various versions of UNIX.
+                    This tutorial gives a complete understanding of Java.
+                    This reference will take you through simple and practical approaches while
+                    learning Java Programming language.
+                </p>
+                <p>
+                    Java is a MUST for students and working professionals to become a great Software
+                    Engineer specially when they are working in Software Development Domain. I will list
+                    down some of the key advantages of learning Java Programming:
+                </p>
+                <ul>
+                    <li>
+                        <b>Object Oriented</b> − In Java, everything is an Object. Java can be easily
+                        extended since it is based on the Object model.
+                    </li>
+                    <li>
+                        <b>Platform Independent</b> − Unlike many other programming languages including C and C++,
+                        when Java is compiled, it is not compiled into platform specific machine, rather into
+                        platform independent byte code. This byte code is distributed over the web and interpreted
+                        by the Virtual Machine (JVM) on whichever platform it is being run on.
+                    </li>
+                    <li>
+                        <b>Simple</b> − Java is designed to be easy to learn.
+                        If you understand the basic concept of OOP Java, it would be easy to master.
+                    </li>
+                    <li>
+                        <b>Secure</b> − With Java's secure feature it enables to develop virus-free, tamper-free systems.
+                        Authentication techniques are based on public-key encryption.
+                    </li>
+                    <li>
+                        <b>Architecture-neutral</b> − Java compiler generates an architecture-neutral object file format,
+                        which makes the compiled code executable on many processors, with the presence of Java runtime system.
+                    </li>
+                    <li>
+                        <b>Portable</b> − Being architecture-neutral and having no implementation dependent aspects
+                        of the specification makes Java portable. Compiler in Java is written in ANSI C with
+                        a clean portability boundary, which is a POSIX subset.
+                    </li>
+                    <li>
+                        <b>Robust</b> − Java makes an effort to eliminate error prone situations by emphasizing
+                        mainly on compile time error checking and runtime checking.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <article>
+                <p>
+                    This tutorial has been prepared for the beginners to help them understand\
+                    the basic to advanced concepts related to Java Programming language.
+                </p>
+                <p>
+                    Before you start practicing various types of examples given in this reference,
+                    we assume that you are already aware about computer programs and computer programming languages.
+                </p>
+                <p>
+                    If you are new to programming, try one of the tutorials linked on the resources section about Java.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Javascript_and_Java">
+            <header>Javascript and Java</header>
+            <article>
+                <p>
+                    JavaScript and Java are similar in some ways but fundamentallydifferent in some others.
+                    The JavaScript language resembles Java but does not have Java's static typing and strong type checking.
+                    JavaScript follows most Java expression syntax, naming conventions and basic control-flow
+                    constructs which was the reason why it was renamed from LiveScript to JavaScript.
+                </p>
+                <p>
+                    In contrast to Java's compile-time system of classes built by declarations, JavaScript
+                    supports a runtime system based on a small number of data types representing numeric,
+                    Boolean, and string values. JavaScript has a prototype-based object model instead of the
+                    more common class-based object model. The prototype-based model provides dynamic inheritance;
+                    that is, what is inherited can vary for individual objects. JavaScript also supports functions
+                    without any special declarative requirements. Functions can be properties of objects, executing
+                    as loosely typed methods.
+                </p>
+                <p>
+                    JavaScript is a very free-form language compared to Java. You do not have to declare all variables,
+                    classes, and methods. You do not have to be concerned with whether methods are public, private, or protected,
+                    and you do not have to implement interfaces. Variables, parameters, and function return types are not
+                    explicitly typed.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Hello_world">
+            <header>Hello world</header>
+            <article>
+                <p>
+                    Just to give you a little excitement about Java programming, here is a small conventional C Programming Hello World program example.
+                </p>
+                <code>
+                    <pre>
+                        public class MyFirstJavaProgram
+                        {
+                            /* This is my first java program.
+                             * This will print 'Hello World' as the output
+                             */
+                            public static void main(String []args)
+                            {
+                               System.out.println("Hello World"); // prints Hello World
+                            }
+                        }
+                    </pre>
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <article>
+                <p>
+                    You use variables as symbolic names for values in your application.
+                    The names of variables, called identifiers, conform to certain rules.
+                    Variables are nothing but reserved memory locations to store values.
+                    This means that when you create a variable you reserve some space in the memory.
+                </p>
+                <p>
+                    Based on the data type of a variable, the operating system allocates memory and decides what
+                    can be stored in the reserved memory. Therefore, by assigning different data types to variables,
+                    you can store integers, decimals, or characters in these variables.
+                </p>
+                <p>
+                    There are two data types available in Java −
+                </p>
+                <ul>
+                    <li>Primitive Data Types</li>
+                    <li>Reference/Object Data Types</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Declaring_variables">
+            <header>Declaring variables</header>
+            <article>
+                <ul>
+                    <li><code>byte sum;</code></li>
+                    <li><code>short sum;</code></li>
+                    <li><code>int sum;</code></li>
+                    <li><code>long sum;</code></li>
+                    <li><code>float balance;</code></li>
+                    <li><code>double balance;</code></li>
+                    <li><code>boolean done;</code></li>
+                    <li><code>char letter;</code></li>
+                    <li><code>String word;</code></li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Variable_scope">
+            <header>Variable scope</header>
+            <article>
+                <p>There are three kinds of variables in Java</p>
+                <ul>
+                    <li>Local variables</li>
+                    <li>Instance variables</li>
+                    <li>Class/Static variables</li>
+                </ul>
+                <p>Local variables</p>
+                <ul>
+                    <li>
+                        Local variables are declared in methods, constructors, or blocks.
+                    </li>
+                    <li>
+                        Local variables are created when the method, constructor or block is entered
+                        and the variable will be destroyed once it exits the method, constructor, or block.
+                    </li>
+                </ul>
+                <p>Instance variables</p>
+                <ul>
+                    <li>
+                        Instance variables are declared in a class, but outside a method, constructor or any block.
+                    </li>
+                    <li>
+                        Instance variables are created when an object is created with the use
+                        of the keyword 'new' and destroyed when the object is destroyed.
+                    </li>
+                </ul>
+                <p>Class/Static variables</p>
+                <ul>
+                    <li>
+                        Class variables also known as static variables are declared with the static
+                        keyword in a class, but outside a method, constructor or a block.
+                    </li>
+                    <li>
+                        Static variables are created when the program starts and destroyed when the program stops.
+                    </li>
+                    <li>
+                        Visibility is similar to instance variables. However, most static variables are
+                        declared public since they must be available for users of the class.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Global_variables">
+            <header>Global variables</header>
+            <article>
+                <p>
+                    If you have experience with other programming languages, such as C and C++, you have probably used global
+                    variables. A global variable is one that is accessible to all parts of a program and is usually declared
+                    as part of the first lines of code.
+                </p>
+                <p>
+                    Java doesn't technically support global variables. As a pure object-oriented language, everything needs to
+                    be part of a class. The reason is to protect data and members of classes from being changed, inadvertently
+                    or on purpose, by other parts of the program. However, you still may need to have variables that can be accessed
+                    across your program, and not confined to specific classes.
+                </p>
+                <p>
+                    Let's take a look at some ways to achieve this, starting with static variables.
+                    This code shows how we declare two variables within a class. Although we're declaring price and pages
+                    in the Openclass class, they are static variables and can now be used by instances of Openclass.
+                </p>
+                <code>
+                    <pre>
+                        public class Openclass
+                        {
+                            public static double price = 15.24;
+                            public static long pages = 1053;
+                        }
+                    </pre>
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Constants">
+            <header>Constants</header>
+            <article>
+                <p>
+                    A constant is a variable whose value cannot change once it
+                    has been assigned. Java doesn't have built-in support for constants.
+                    A constant can make our program more easily read and understood by others. In addition, a constant
+                    is cached by the JVM as well as our application, so using a constant can improve performance. To define
+                    a variable as a constant, we just need to add the keyword “final” in front of the variable declaration.
+                </p>
+                <code>
+                    <pre>
+                        final float pi = 3.14f;
+                    </pre>
+                </code>
+                <p>
+                    The above statement declares the float variable “pi” as a constant with a value of 3.14f. We cannot change the value
+                    of "pi" at any point in time in the program. Later if we try to do that by using a statement like “pi=5.25f”,
+                    Java will throw errors at compile time itself. It is not mandatory that we need to assign values of constants during
+                    initialization itself.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Data_types">
+            <header>Data types</header>
+            <article>
+                <p>
+                    There are eight primitive datatypes and objects supported by Java.
+                    Primitive datatypes are predefined by the language and named by a keyword.
+                    Objects have a state and a behavior. An object's state is stored in fields and behavior is shown via methods. 
+                    Let us now look into the eight primitive data types and object in detail:
+                </p>
+                <ul>
+                    <li>
+                        byte
+                        <ul><li><code>byte sum = 0;</code></li></ul>
+                    </li>
+                    <li>
+                        short
+                        <ul><li><code>short sum = 0;</code></li></ul>
+                    </li>
+                    <li>
+                        int
+                        <ul><li><code>int sum = 0;</code></li></ul>
+                    </li>
+                    <li>
+                        long
+                        <ul><li><code>long sum = 0;</code></li></ul>
+                    </li>
+                    <li>
+                        float
+                        <ul><li><code>float balance = 0.0;</code></li></ul>
+                    </li>
+                    <li>
+                        double
+                        <ul><li><code>double balance = 0.0;</code></li></ul>
+                    </li>
+                    <li>
+                        boolean
+                        <ul><li><code>boolean done = <red>false</red>;</code></li></ul>
+                    </li>
+                    <li>
+                        char
+                        <ul><li><code>char letter = 'M';</code></li></ul>
+                    </li>
+                    <li>
+                        Object (ex. String)
+                        <ul><li><code>String word = 'Mark';</code></li></ul>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="If...else_statement">
+            <header>If...else statement</header>
+            <article>
+                <p>
+                    Use the <code>if</code> statement to specify a block of Java code to be executed if a condition is <code>true</code>.
+                </p>
+                <code>
+                    <pre>
+                        if (condition1)
+                        {
+                            // block of code to be executed if condition1 is true
+                        }
+                        else if (condition2)
+                        {
+                            // block of code to be executed if the condition1 is false and condition2 is true
+                        }
+                        else
+                        {
+                            // block of code to be executed if the condition1 is false and condition2 is false
+                        }
+                    </pre>
+                </code>
+                <p>
+                    There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+                    It can be used to replace multiple lines of code with a single line. It is often used to replace simple
+                    if else statements:
+                </p>
+                <code>
+                    <pre>
+                        boolean variable = (condition) ? expressionTrue :  expressionFalse;
+                    </pre>
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="While_statement">
+            <header>While statement</header>
+            <article>
+                <p>
+                    There may be a situation when you need to execute a block of code several
+                    number of times. In general, statements are executed sequentially: The first
+                    statement in a function is executed first, followed by the second, and so on.
+                    Java programming language provides the while loop which repeats a statement or
+                    group of statements while a given condition is true. It tests the condition
+                    before executing the loop body.
+                </p>
+                <p>
+                    The <code>while</code> loop loops through a block of code as long as a specified condition is <code>true</code>:
+                </p>
+                <code>
+                    <pre>
+                        while (condition)
+                        {
+                            // code block to be executed
+                        }
+                    </pre>
+                </code>
+                <p>
+                    The <code>do/while</code> loop is a variant of the <code>while</code> loop. This loop will execute the code
+                    block once, before checking if the condition is true, then it will repeat the loop
+                    as long as the condition is true.
+                </p>
+                <code>
+                    <pre>
+                        do
+                        {
+                            // code block to be executed
+                        }
+                        while (condition);
+                    </pre>
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Method_declarations">
+            <header>Method declarations</header>
+            <article>
+                <p>
+                    A Java method is a collection of statements that are grouped together to perform an operation.
+                    When you call the System.out.println() method, for example, the system actually executes several
+                    statements in order to display a message on the console.
+                </p>
+                <p>
+                    Considering the following example to explain the syntax of a method:
+                </p>
+                <code>
+                    <pre>
+                        public static int methodName(int a, int b)
+                        {
+                            // body
+                        }
+                    </pre>
+                </code>
+                <p>
+                    Above,
+                    <ul>
+                        <li><b>public static </b>- modifier</li>
+                        <li><b>int </b>- return type</li>
+                        <li><b>methodName </b>- name of the method</li>
+                        <li><b>a, b </b>- formal parameters</li>
+                        <li><b>int a, int b</b>- list of parameters</li>
+                    </ul>
+                </p>
+                <p>The following code is used to simplify the method syntax: </p>
+                <code>
+                    <pre>
+                        modifier returnType nameOfMethod (Parameter List)
+                        {
+                            // method body
+                        }
+                    </pre>
+                </code>
+                <p>
+                    The syntax shown above includes:
+                    <ul>
+                        <li><b>modifier </b>- It defines the access type of the method and it is optional to use.</li>
+                        <li><b>returnType </b>- Method may return a value.</li>
+                        <li><b>nameOfMethod  </b>- This is the method name. The method signature consists of the methodname and the parameter list.</li>
+                        <li><b>Parameter List </b>- The list of parameters, it is the type, order, and number of parameters of a method. These are optional, method may contain zero parameters.</li>
+                        <li><b>method body </b>- The method body defines what the method does with the statements.</li>
+                    </ul>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="References">
+            <header>References</header>
+            <article id="references">
+                <ul>
+                    <li><a target="_blank" href="https://www.tutorialspoint.com/java/index.htm">tutorialspoint.com/java</a></li>
+                    <li><a target="_blank" href="https://www.w3schools.com/java/default.asp">w3schools.com/java</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <small>&copy; Copyright 2020, Mark Shaheen<small></small>
+    </footer>
+</body>
+<!-- partial -->
+  
+</body>
+</html>

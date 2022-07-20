@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+}
+#main-doc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left:18%;
+    padding:1%;
+    margin-bottom:5%;
+}
+#main-doc header {
+    text-align: left;
+    margin:2%;
+}
+
+#main-doc i {
+    background-color: #c7ccbe;
+    padding: 0%;
+}
+section {
+    display: block;
+}
+section article {
+    color: black;
+    margin:1% 5%;
+    font-size: 1.25rem;  
+}
+section article h2{
+    color:#970EB8;
+    border-bottom: 3px solid #c7ccbe;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar{
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    border-right: 2px solid black;
+}
+
+header{
+    font-size: 1.5rem;
+    margin-top:2%;
+    font-weight: bold;
+    color:#4CAF50 ;
+    text-align: center;
+}
+#navbar a{
+    left: 0;
+    display: block;
+    padding: 6% 18%;
+    font-size: 2rem;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+#navbar ul{
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#navbar li{
+    color: #4d4e53;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#navbar li :hover{
+    background-color: #4CAF50;
+    color: white;
+}
+
+table.alt {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+table.alt th {
+    color: #000;
+    background-color: #c7ccbe;
+    font-size: 17px;
+    font-family: times new roman;
+    padding: 12px;
+    vertical-align: top;
+    text-align: left;
+}
+table.alt td {
+    padding: 8px;
+    vertical-align: top;
+}
+table.alt, table.alt td {
+    border: 1px solid black;
+    text-align: left;
+}
+table.alt tr:nth-child(odd) {
+    background-color: #eff1eb;
+}
+@media only screen and (max-width: 815px){
+    #navbar{
+        background-color: white;
+        position:absolute;
+        top:0%;
+        padding:0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+    #main-doc article{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 40%;
+    }
+    #navbar a {
+        padding:2% 5%;
+    }
+    header{
+        top: 0;
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - C++ Documentation page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+  <nav  id="navbar">
+  <header> C++ Documentation</header>
+  <ul>
+    <li><a class="nav-link" href=#Introduction> Introduction</a></li>
+    <li><a class="nav-link" href=#ReasonToLearn>
+      Reason to learn C++ </a></li>
+    <li><a class="nav-link" href=#prerequisites>
+      Prerequisites </a></li>
+    <li><a class="nav-link" href=#CVsC++>
+      C vs C++ </a></li>
+    <li><a class="nav-link" href=#basics>
+      Basics </a></li>
+     <li><a class="nav-link" href=#operators>
+      Operators </a></li>
+     <li><a class="nav-link" href=#arraysAndStrings>
+      Arrays and Strings </a></li>
+     <li><a class="nav-link" href=#functions>
+      Functions </a></li>
+     <li><a class="nav-link" href=#pointersAndReferences>
+     Pointers</a></li>
+     <li><a class="nav-link" href=#object>
+     Object Oriented Programming </a></li>
+     <li><a class="nav-link" href=#referencesAndPuzzles>
+     References And Puzzles </a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header> Introduction </header>
+        <p>C++ is a general purpose programming language and widely used now a days for competitive programming. It has imperative, object-oriented and generic programming features. C++ runs on lots of platform like Windows, Linux, Unix, Mac etc...</br>
+        C++ is known to be a very powerful language. C++ allows you to have a lot of control as to how you use computer resources, so in the right hands its speed and ability to cheaply use resources should be able to surpass other languages.</br>
+        Since C++ is rather lower level, the language is huge and you will need to handle a lot of complex things such as memory management and more. You also need to write a lot of code before you can get a working prototype if you're planning on building an app from scratch. Since it will be difficult to grasp how all features in C++ works, you can easily shoot yourself in the foot.</p>
+</section>
+<section class="main-section" id="ReasonToLearn">
+  <header>Reason to Learn </header>
+  C++ has a longer history with game development in general.</br>
+    Apps that are very resource intensive are usually built with it. Graphics require a lot of resource, which is why the most beautiful 3D games you happily feast your eyes on are often built with C++.</br>
+      Almost all other modern programming languages and popular libraries are built by C/C++. Here are some typical examples:</br>
+    <li>
+    <u>Java:</u> The core of Java Virtual Machine hotspot is implemented in C++.</li>
+<li><u>Python:</u> The Python interpreter is implemented in C.</li>
+<li><u>Javascript:</u> The most popular Javascript engine V8 is implemented in C++.</li>
+     <li><u>Numpy:</u>One of the most popular scientific libraries in Python and it is widely used in AI and ML, but its core module is implemented in C.</li>
+So it is necessary to learn C++,which is the basic foundation for learning and building other languages. 
+</section>
+<section class="main-section" id="prerequisites"> <header> Prerequisites </header>
+<p> No prerequisites are needed.</p>
+<p> Just a basic knowledge of computer programming is needed.</p>
+<section class="main-section" id="CVsC++">
+  <header> C vs C++ </header>
+  <p>C++ is everything C is, and more. It’s not new, either, and has itself been the inspiration for many languages that have come behind it like Python, Perl, and PHP. It does however add in a few modern elements that make it a step up from C.</p>
+<p>
+For a C++ developer to know the language, they’ll also know C—and quite a bit more, which can make it difficult to learn.</p>
+  <ul>
+<table>
+  <thead>
+  <tr> 
+    <th scope="col">C</th> 
+    <th scope="col">C++ </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td>Procedural</td>
+  <td>Supports object-oriented</td>
+    </tr>
+  <td>Lowest level of abstraction</td>
+    <td>Low level of abstraction </td>
+  </tr>
+    <tr>
+  <td>Good for embedded devices and system level code </td>
+      <td>Good for server-side applications,networking,gaming and device-drivers.</td></tr>
+  </tbody>
+    </table>
+</section>
+<section class="main-section" id="basics">
+  <header> Basics </header>
+  <p>
+    The simple basics in C++ includes learning the basic syntax for input and output,commenting the codes,data types, using basic operators etc...Learning these will be quite easy if you are strong at C.</p>
+</section>
+<section class="main-section" id="operators">
+  <header>Operators</header>
+  <p> Operators in C++ include:</p>
+  <ul><li><u>Arithmetic Operators:</u> These are the operators used to perform arithmetic/mathematical operations on operands. Examples: (+, -, *, /, %,++,–).</li>
+    <li><u>Relational Operators:</u> Relational operators are used for comparison of the values of two operands.Examples:(==, >= etc.. )</li>
+    <li><u>Logical Operators: </u> Logical Operators are used to combine two or more conditions to complement the evaluation of the original condition in consideration.</li>
+    <li><u>Bitwise Operators:</u> The Bitwise operators is used to perform bit-level operations on the operands. </li>
+    <li><u>Assignment Operators:</u> Assignment operators are used to assign value to a variable. </li></ul>
+    </section>
+  <section class="main-section" id="arraysAndStrings">
+    <header>Arrays and Strings </header>
+    <p>An array is collection of items stored at continuous memory locations.</p>
+    <ul><li>Array declaration by specifying size:
+      <code>int arr1[10];</code>
+      </li>
+      <li>Array declaration by initializing elements:
+        <code>int arr[] = { 10, 20, 30, 40 } </code></li>
+        <li>Array declaration by specifying size and initializing elements:
+          <code>int arr[6] = { 10, 20, 30, 40 } </code></li>
+    </ul>
+    <p>Array of Strings can be created in C++, which can be quite handy. There are 3 ways to create Array of Strings.They are:
+    </p>
+    <ul><li>Using 2D array </li>
+      <li>Using string Keyword</li>
+      <li>Using Vectors</li></ul>
+</section>
+<section class="main-section" id="functions">
+  <header>Functions</header>
+  <p>A function is a set of statements that take inputs, do some specific computation and produces output.</p>
+<p>
+The idea is to put some commonly or repeatedly done task together and make a function, so that instead of writing the same code again and again for different inputs, we can call the function.</p>
+  <h3>Some important points</h3>
+  <ul><li> Every C++ program has a function called main() that is called by operating system when a user runs the program.</li>
+    <li> Every function has a return type. If a function doesn’t return any value, then void is used as return type.</li>
+    <li>Empty parameter list in C++ mean that the parameter list is not specified and function can be called with any parameters. </li>
+    <li>If in a C++ program, a function is called before its declaration then the C compiler automatically assumes the declaration of that function in the following way:
+      <code>int function name();</code>
+    </section>
+  <section class="main-section" id="pointersAndReferences">
+    <header>Pointers</header>
+    <p>Pointers store address of variables or a memory location.</p>
+    <code>int *ptr;</code>
+   <p> To access address of a variable to a pointer, we use the unary operator & (ampersand) that returns the address of that variable. </p>
+    <h3>Array name as pointers</h3>
+    <p>An array name acts like a pointer constant. The value of this pointer constant is the address of the first element.</p>
+  </section>
+  <section class="main-section" id="object">
+    <header>Object Oriented Programming</header>
+    <p>Object oriented programming – As the name suggests uses objects in programming. Object oriented programming aims to implement real world entities like inheritance, hiding, polymorphism etc in programming. The main aim of OOP is to bind together the data and the functions that operates on them so that no other part of code can access this data except that function.</p>
+    <h3><u>Encapsulation:</u></h3>
+    <p>Wrapping up(combing) of data and functions into a single unit is known as encapsulation. </p>
+    <h3><u>Inheritance:</u></h3>
+    <p>inheritance is the process by which objects of one class acquire the properties of objects of another class.</p>
+    <h3><u>Polymorphism:</u></h3>
+    <p> polymorphism means ability to take more than one form. An operation may exhibit different behaviors in different instances.</p>
+  </section>
+  <section class="main-section" id="referencesAndPuzzles">
+    <header>References and Puzzles</header>
+    <p>  For more reference and puzzles,refer <a href="https://www.geeksforgeeks.org/c-plus-plus/" target="_blank">here.</a>
+  </section>
+  </body>
+  </main>
+<!-- partial -->
+  
+</body>
+</html>

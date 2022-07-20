@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - freeCodeCamp Project - Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">      </script>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Java Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#intro">Introduction to Java</a></li>
+        <li><a class="nav-link" href="#features">Features of Java</a></li>
+        <li><a class="nav-link" href="#hello">Hello World in Java</a></li>
+        <li><a class="nav-link" href="#vars">Variables in Java</a></li>
+        <li><a class="nav-link" href="#datatypes">Data Types in Java</a></li>
+        <li><a class="nav-link" href="#operators">Operators in Java</a></li>
+        <li><a class="nav-link" href="#loops">Loops in Java</a></li>
+        <li><a class="nav-link" href="#oops">OOPs Concepts in Java</a></li>
+        <li><a class="nav-link" href="#refer">Further Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="intro">
+        <header>Introduction to Java</header>
+        <article>
+          <p>
+            Java is a programming language and a platform. Java is a high level, robust, 
+            object-oriented and secure programming language. Java was developed by Sun 
+            Microsystems (which is now the subsidiary of Oracle) in the year 1995. James 
+            Gosling is known as the father of Java. Before Java, its name was Oak. Since 
+            Oak was already a registered company, so James Gosling and his team changed 
+            the Oak name to Java.<br>
+            <b>Platform:</b> Any hardware or software environment in which a program runs, 
+            is known as a platform. Since Java has a runtime environment (JRE) and an API, 
+            it is called a platform.
+          </p>
+          <p>
+            There are mainly 4 types of applications that can be created using Java 
+            programming:-<br>
+            <ul>
+              <li><b>Standalone Application:</b>
+              Standalone applications are also known as desktop applications or window-based 
+              applications. These are traditional software that we need to install on every 
+              machine. Examples of standalone application are Media player, antivirus, etc. 
+              AWT and Swing are used in Java for creating standalone applications.</li>
+              <li><b>Web Application:</b>
+              An application that runs on the server side and creates a dynamic page is 
+              called a web application. Technologies like Servlet, JSP, Struts, Spring, 
+              Hibernate, JSF, etc. are used for creating web applications in Java.</li>
+              <li><b>Enterprise Application:</b>
+              An application that is distributed in nature, such as banking applications, 
+              etc. is called enterprise application. It has advantages of the high-level 
+              security, load balancing, and clustering. In Java, EJB is used for creating 
+              enterprise applications.</li>
+              <li><b>Mobile Application</b>
+              An application which is created for mobile devices is called a mobile 
+              application. Currently, Android and Java ME are used for creating mobile 
+              applications.</li>
+            </ul>
+          </p>
+          <p>
+            There are 4 major platforms or editions of Java:-
+            <br>
+            <ul>
+              <li><b>Java SE (Java Standard Edition):</b>
+              It is a Java programming platform. It includes Java programming APIs such as 
+              java.lang, java.io, java.net, java.util, java.sql, java.math etc. It includes 
+              core topics like OOPs, String, Regex, Exception, Inner classes, Multithreading, 
+              I/O Stream, Networking, AWT, Swing, Reflection, Collection, etc.</li>
+              <li><b>Java EE (Java Enterprise Edition):</b>
+              It is an enterprise platform which is mainly used to develop web an enterprise 
+              application. It is built on the top of the Java SE platform. It includes topics 
+              like Servlet, JSP, Web Services, EJB, JPA, etc.</li>
+              <li><b>Java ME (Java Micro Edition):</b>
+              It is a micro platform which is mainly used to develop mobile applications.</li>
+              <li><b>JavaFX:</b>
+              It is used to develop rich internet applications. It uses a light-weight user 
+              interface API.</li>
+            </ul>
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="features">
+        <header>Features of Java</header>
+          <article>
+            <p>The primary objective of Java programming language creation was to make it 
+            portable, simple and secure programming language. Apart from this, there are 
+            also some excellent features which play an important role in the popularity of 
+            this language. The features of Java are also known as java buzzwords.</p>
+            <p>
+            <b>A list of most important features of the Java language is given below:-</b>
+            <br>
+            <ul>
+              <li>Simple</li>
+              <li>Object-Oriented</li>
+              <li>Portable</li>
+              <li>Platform independent</li>
+              <li>Secured</li>
+              <li>Robust</li>
+              <li>Architecture neutral</li>
+              <li>Interpreted</li>
+              <li>High Performance</li>
+              <li>Multithreaded</li>
+              <li>Distributed</li>
+              <li>Dynamic</li>
+            </ul>
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="hello">
+          <header>Hello World in Java</header>
+          <article>
+            Here, we will learn how to write the simple program of Java. We can 
+            write a simple hello java program easily after installing the JDK.<br>
+            To create a simple java program, you need to create a class that contains the 
+            main method.
+            <code>
+            class Simple{  
+              public static void main(String args[]){  
+                System.out.println("Hello World");  
+               }  
+              }  
+            </code>
+            <br><b>Compilation Flow:-</b><br>
+            When we compile Java program, the Java compiler converts the source code into 
+            byte code.
+          </article>
+        </section>
+        <section class="main-section" id="vars">
+          <header>Variables in Java</header>
+          <p>
+            A variable is a container which holds the value while the Java program is 
+            executed. A variable is assigned with a data type. Variable is a name of a
+            memory location.<br><br>
+            <b>These are the types of variables in Java:-</b><br>
+            <ul>
+              <li>Local variables</li>
+              <li>Instance variables</li>
+              <li>Static variables</li>
+            </ul>
+            <b>There are the types of data types in Java:-</b><br>
+            <ul>
+              <li>Primitive data types</li>
+              <li>Non-Primitive data types</li>
+            </ul>
+            <b>Example of declaring variables in Java:-</b>
+            <code>
+                class A{  
+                  int data=50;   //instance variable  
+                  static int m=100;    //static variable  
+                  void method()
+                  {  
+                    int n=90;    //local variable  
+                  }  
+                }    //end of class  
+            </code>
+          </p>
+        </section>
+        <section class="main-section" id="datatypes">
+          <header>Data types in Java</header>
+          <article>
+            <p>Data types specify the different sizes and values that can be stored in 
+            the variable.<br><br>
+            <b>There are two types of data types in Java:-</b><br><br>
+            <b>Primitive data types:</b>The primitive data types include boolean, char, 
+            byte, short, int, long, float and double.<br><br>
+            <b>Non-primitive data types:</b>The non-primitive data types include Classes, 
+            Interfaces, and Arrays.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="operators">
+          <header>Operators in Java</header>
+          <article>
+            <p>
+              Operator in Java is a symbol which is used to perform operations. <br><br>
+              <b>For example:</b> +, -, *, /, etc.
+              <br><br>
+              <b>The types of operators in Java are given below:-</b>
+              <br>
+              <ul>
+                <li><b>Unary Operators:</b>  ++,  --,  ~,  !</li>
+                <li><b>Arithmetic Operators:</b>  +,  -,  /,  *,  %</li>
+                <li><b>Shift Operators:</b>  <<,  >>,  <<>></li>
+                <li><b>Relational Operators:</b>  <,  >,  <=,  >=.  ==.  !=</li>
+                <li><b>Bitwise Operators:</b>  &,  ^,  |</li>
+                <li><b>Logical Operators:</b>  &&,  ||</li>
+                <li><b>Ternary Operators:</b>  ?:</li>
+                <li><b>Assignment Operators:</b>  =,  +=,  -=,  *=,  /=,  %=,  &=,  !=</li>
+             </ul>
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="loops">
+          <header>Loops in Java</header>
+          <article>
+            <p>
+              In programming languages, loops are used to execute a set of instructions or 
+              functions repeatedly when some conditions become true.<br><br>
+              <b>There are three basic types of loops in Java:-</b><br><br>
+              <b>for loop</b><br>
+              The Java for loop is a control flow statement that iterates a part of the 
+              programs multiple times. If the number of iteration is fixed, it is recommended 
+              to use for loop.<br>
+              <b>Example of for loop in Java:-</b>
+              <code>
+                for(int i=1;i<=10;i++)
+                {  
+                    System.out.println(i);  
+                }  
+              </code><br>
+              <b>while loop</b><br>
+              The Java while loop is a control flow statement that executes a part of the 
+              programs repeatedly on the basis of given boolean condition. If the number 
+              of iteration is not fixed, it is recommended to use while loop.<br>
+              <b>Example of while loop in Java:-</b>
+              <code>
+                int i=1;  
+                while(i<=10)
+                {  
+                System.out.println(i);  
+                i++;  
+                }  
+              </code><br>
+              <b>do-white loop</b><br>
+              The Java do while loop is a control flow statement that executes a part of 
+              the programs at least once and the further execution depends upon the given 
+              boolean condition. If the number of iteration is not fixed and you must have 
+              to execute the loop at least once, it is recommended to use the do-while loop.
+              <br>
+              <b>Example of do-while loop in Java:-</b>
+              <code>
+              int i=1;  
+              do
+              {  
+                System.out.println(i);  
+                i++;  
+              }while(i<=10); 
+              </code><br>
+            </p>
+
+            <p>
+              Consequently, you can access global variables declared in one window or
+              frame from another window or frame by specifying the window or frame
+              name. For example, if a variable called phoneNumber is declared in a
+              document, you can refer to this variable from an iframe as
+              parent.phoneNumber.
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="oops">
+          <header>OOPs Concepts in Java</header>
+          <article>
+            <p>
+             OOP stands for Object-Oriented Programming. It is a methodology or paradigm 
+             to design a program using classes and objects. It simplifies software 
+             development and maintenance by providing some concepts:-<br>
+             <ul>
+              <li>Objects</li>
+              <li>Classes</li>
+              <li>Inheritance</li>
+              <li>Polymorphism</li>
+              <li>Abstraction</li>
+              <li>Encapsulation</li>
+             </ul>
+            </p>
+            <p>Apart from these concepts, there are some other terms which are used in 
+            Object-Oriented design:-<br>
+            <ul>
+              <li>Coupling</li>
+              <li>Cohesion</li>
+              <li>Association</li>
+              <li>Aggregation</li>
+              <li>Composition</li>
+            </p>
+          </article>
+        </section>
+        <section class="main-section" id="refer">
+          <header>Further Reference</header>
+          <article>
+            For much more information, refer to the following resources from 
+            <a href ="https://www.javatpoint.com/java-tutorial"
+                target="_blank"
+            >javaTpoint</a>
+          </article>
+        </section>
+    </main>
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

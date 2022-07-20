@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - JavaScript Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Documentation</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+
+  <main id="main-doc">
+
+    <!-- Fixed left 100vh -->
+    <nav id="navbar">
+      <header>
+        <h1 id="mainHeading">JavaScript</h1>
+      </header>
+      <div>
+        <a href="#history" class="nav-link">History</a>
+      </div>
+      <div>
+        <a href="#data_types" class="nav-link">Data Types</a>
+      </div>
+      <div>
+        <a href="#variables" class="nav-link">Variables</a>
+      </div>
+      <div>
+        <a href="#functions" class="nav-link">Functions</a>
+      </div>
+      <div>
+        <a href="#higher_order_functions" class="nav-link">Higher-order functions</a>
+      </div>
+      <div>
+        <a href="#closures" class="nav-link">Closures</a>
+      </div>
+      <div>
+        <a href="#objects" class="nav-link">Objects</a>
+      </div>
+      <div>
+        <a href="#prototypes" class="nav-link">Prototypes</a>
+      </div>
+      <div>
+        <a href="#constructors_and_classes" class="nav-link">Constructors and classes</a>
+      </div>
+      <div>
+        <a href="#inheritance" class="nav-link">Inheritance</a>
+      </div>
+    </nav>
+
+    <article>
+      <section id="history" class="main-section">
+        <header>
+          <h2>History</h2>
+        </header>
+        <p>JavaScript was created back in 1995 by a guy named Brendan Eich. Its purpose was to add functionality to web pages.
+          As far as I know Brendan was first promised he could make Scheme for the browser (a functional programming language),
+          but later on asked to make it look more like Java. That's why sometimes the functional part of JavaScript clashes
+          with its Object Oriented part. In the next 2 years (1995-1997) JavaScript becomes more and more popular. However,
+          an issue arises - different browsers, which claim to support JavaScript, can (and even did) support different implementations
+          of it. There was no standard. So in 1997 ECMAScript came to be, named after the organization that did the standartization.
+          From 1997-1999 there came 3 ECMAScript versions, the most popular of which was ES3 (December 1999-2009). This version
+          persisted throughout JavaScript's ascend to dominance. An ES4 with massive updates was envisioned, but it turned
+          out that changing a living breathing language wasn't so east, so it was abandoned in 2008 and in 2009 we saw ES5.
+          Then in 2015 came ES6, which brought about major updates to the language. Since then we've had a small update each
+          year. </p>
+        <br>
+        <p>Where is Javascript used</p>
+        <ul>
+          <li>Client-side (in the browser)</li>
+          <li>Server-side (as a server)</li>
+          <li>Desktop cross-platform (Electron & Proton native)</li>
+          <li>Mobile devices (React Native, NativeScript..)</li>
+        </ul>
+      </section>
+      <hr>
+      <section id="data_types" class="main-section">
+        <header>
+          <h2>Data Types</h2>
+        </header>
+        <p>JavaScript is a dynamically typed language, meaning you don't need to choose the variable type during declaration,
+          but rather the type is inferred during runtime. There are 6 mutable types - string, number (1 type shared by both
+          integers and floats), boolean, null, undefined and symbol (new in ES6). The immutable data type is an object, from
+          it spawn arrays functions and others. Before we start, it makes sense to mention comments. Comments are pieces
+          of a program not interpreted by the computer. They are purely for the developer's benefit. There are 2 types of
+          comments in JavaScript - single line comments (//) and multi line comments (/* ... */).</p>
+        <code>// I am a single line comment</code>
+        <code>/*<br>
+             * I am a<br>
+             * multi line<br>
+             * comment<br>
+             */
+          </code>
+        <p>Throughout this documentation I'll display the returned or console.log-ged value like so // -></p>
+        <ul>
+          <li>
+            <h3>String</h3>
+            <p>A string is made up of characters, most often letters and is surrouned by either 'single quotes', "double quotes"
+              or `backticks`.</p>
+            <code>
+              'I am a string'<br>
+              "I'm a string too"<br>
+              `I can compute ${2+2}`
+            </code>
+            <p>A string is made up of individual code units, which themselves are 16-bit chunks. The initial idea was to contain
+              any Unicode character inside a single code unit. When it became obvious that was not going to happen, UTF-16
+              was implemented, which uses one code unit for most characters, but two for some. I won't go into more detail,
+              but you can look into it if you'd like. This is also why .charCodeAt and .codePointAt exist.</p>
+          </li>
+          <li>
+            <h3>Number</h3>
+            <p>Made up of 64 bits, so it can contain most integers, but maybe don't assume it's absolutely precide for floats.</p>
+            <code>1 + 1 //-> 2</code>
+          </li>
+          <li>
+            <h3>Boolean</h3>
+            <p>A binary value - either true or false, 1 or 0.</p>
+            <code>true != false // -> true</code>
+          </li>
+          <li>
+            <h3>null</h3>
+            <p>A purposeful lack of value</p>
+          </li>
+          <li>
+            <h3>undefined</h3>
+            <p>A lack of value. Declared variables (!= initialized) have a value of undefined.</p>
+          </li>
+          <li>
+            <h3>Symbol</h3>
+            <p>Symbols arrived with ES6 (2015). A symbol is a unique value created by passing a string to the `Symbol` function.
+              The string is there for your sake, because symbols are unique. Creating 2 Symbols by passing the same string
+              to each would still create two different symbols, regardless of the string passed.</p>
+            <code>Symbol('string') == Symbol('string') // -> false</code>
+          </li>
+        </ul>
+      </section>
+      <hr>
+      <section id="variables" class="main-section">
+        <header>
+          <h2>Variables</h2>
+        </header>
+        <p>A variable is a reference to a value (chunk of bits stored in memory). Currently, we have 3 ways to define a variable:
+          var, let and const. Each has their own set of unique qualities. var was the only way programmers could define a
+          variable in pre-ES6 JavaScript. There are some issues with declaring a binding with var, which don't exist in variables
+          created by any of the other 2 keywords. Most notably hoisting, redeclaration and lack of block scope, which I won't
+          get into. let and const became available in ES6. Both of them support block scope. Let is essentially the new var.
+          It can be declared only once and is not hoisted. const on the other side can only be initialized and doesn't support
+          re-assignment, unlike let.</p>
+        <code>console.log(x) // -> this will log undefined<br>
+              var x = 5
+        </code>
+        <p>The way the above code actually executes is the following:</p>
+        <code>var x;<br>
+              console.log(x)<br>
+              x = 5;
+        </code>
+        <p>let can be declared without having a value assigned, but it cannot be redeclared:</p>
+        <code>let a; // -> perfectly fine<br>
+              a = 5; // so far so good<br>
+              let a = 6; // -> no no, re-declaration?... no can do error
+        </code>
+        <p>const as mentioned previously can only be initialized and doesn't support re-assignment:</p>
+        <code>const a; // -> nope<br>
+              const a = 1; // -> now you're talking<br>
+              a = 2; // -> not happening, I can be assigned a value only once
+        </code>
+      </section>
+      <hr>
+      <section id="functions" class="main-section">
+        <header>
+          <h2>Functions</h2>
+        </header>
+        <p>In JavaScript functions are just values, they can be assigned to variables, passed to or returned from functions.
+          A function iis invoked by adding '()' after it. You can also pass values to the function inside those parentheses.</p>
+        <code>function hello(name) {<br>
+            &ensp;return `Hello ${name}`<br>
+              }<br>
+              hello('Nova'); // -> Hello Nova
+        </code>
+      </section>
+      <hr>
+      <section id="higher_order_functions" class="main-section">
+        <header>
+          <h2>Higher-order functions</h2>
+        </header>
+        <p>Higher-order functions are just functions that either accept other functions as arguments or that return functions.</p>
+        <code>function test(value, action) {<br>
+              &ensp; return action(value)<br>
+        }<br>
+        test(5, console.log); // -> 5
+        </code>
+      </section>
+      <hr>
+      <section id="closures" class="main-section">
+        <header>
+          <h2>Closures</h2>
+        </header>
+        <p>A closure is one of two things:
+          <br> 1. A feature whereby the inner scope has access to the outer scope
+          <br> 2. A function's ability to always have access to the context in which it was created.
+          <br> Let me demonstrate:
+          <br>
+        </p>
+
+        <code>
+          /* Here the inner function has access to the argument 'a' of the outer function */<br>
+          function combine(a) {<br>
+            &ensp;return function(b) {<br>
+              &ensp;&ensp;return a + b<br>
+              &ensp;}<br>
+          }<br>
+          let add5 = combine(5) /* this is a closure, we have a function that has access to the context in which it was created */<br>
+          add5(3) // -> 8
+        </code>
+      </section>
+      <hr>
+      <section id="objects" class="main-section">
+        <header>
+          <h2>Objects</h2>
+        </header>
+        <p>The 2 most common objects in JavaScript are the array and the object. An array is a sequenced storage of values,
+          whereas an object is a key-value storage of values.</p>
+        <code>
+          let arr = [1, 2, 3, 4]<br>
+          arr[0]; /* -> 1  , this is called bracket notation and is used to access the first element in an array */<br><br>
+          let obj = {name: 'Ryan'}<br>
+          obj.name /* -> Ryan  , this is called dot notation and is used to access an object's property. */
+        </code>
+        <p>Bracket notation evaluates the provided value(s), converts them to a string and tries to access a property with that
+          key. Because dot notation works only on strings that are proper variable names (no spaces, can't start with a number...),
+          we have to use bracket notation to get an element from an array. Though we can't use dot notation for arrays, it's
+          perfectly fine to use bracket notation for objects.</p>
+      </section>
+      <hr>
+      <section id="prototypes" class="main-section">
+        <header>
+          <h2>Prototypes</h2>
+        </header>
+        <p>A prototype is just an object that acts as a fallback source of properties. Almost everything in JavaScript has an
+          object. When a you try to access a property that an object doesn't have, its prototype is searched for that property,
+          and then its prototype's prototype and so on. I'll build on top of the previous example in order to not repeat
+          myself.
+        </p>
+        <code>
+          Gamer.prototype.name = 'unknown';<br>
+          aurora.name // -> unknown
+        </code>
+        <p>In the above code the following happens:
+          <br>
+          <br> 1. the aurora object gets searched for the name property, but no such property is found on the object
+          <br> 2. then its prototype gets searched and the property is found there (the prototype of aurora is the prototype
+          property of the constructor function, through which aurora was defined. In this case - Gamer).
+        </p>
+      </section>
+      <hr>
+      <section id="constructors_and_classes" class="main-section">
+        <header>
+          <h2>Constructors and classes</h2>
+        </header>
+        <p>A constructor is just a streamlined way to create an object with a specific structure. A constructor has 2 jobs:
+          <br>
+          <br> &ensp;1. Make sure the object has the needed own properties (properties found on the object itself, i.e. not on
+          the prototype)
+          <br> &ensp;2. Make sure the object derives from the correct prototype.
+          <br>
+          <br> The prototype of instances created through the constructor is by default the constructor property of the constructor
+          function itself. Note, the prototype property is different to the prototype of something. A class is just syntactic
+          sugar on top of a constructor function. The downside is that classes currently support only methods (that is only
+          properties that hold function values). Instances (objects created through constructor functions) are created by
+          adding the keyword new before calling a constructor function.
+        </p>
+        <code>
+          constructor Human(name) {<br>
+            &ensp;this.name = name;<br>
+          }<br>
+          let jordan = new Human('Jordan');<br>
+          jordan.name; // -> Jordan
+          <br><br>
+          class Gamer {<br>
+            &ensp;constructor(game) {<br>
+              &ensp;&ensp;this.game = game<br>
+            &ensp;}<br>
+            &ensp;goOut() {<br>
+              &ensp;&ensp;return 'I prefer to stay in, thanks.'<br>
+              &ensp;}<br>
+          }<br>
+          let aurora = new Gamer('Aurora');<br>
+          aurora.goOut(); // -> I prefer to stay in, thanks.
+        </code>
+        <p></p>
+      </section>
+      <hr>
+      <section id="inheritance" class="main-section">
+        <header>
+          <h2>Inheritance</h2>
+        </header>
+        <p>Inheritance is when functionality is passed from parent (supertype) to child (subtype).</p>
+        <code>
+          class Human {<br>
+          &ensp;constructor(name) {<br>
+          &ensp;&ensp;this.name = name<br>
+          &ensp;}<br>
+        }<br>
+        <br>
+        class Gamer extends Human {<br>
+        &ensp;constructor(name, game) {<br>
+          &ensp;&ensp;super(name)<br>
+          &ensp;&ensp;this.game = game<br>
+          &ensp;}<br>
+        }<br>
+        <br>
+        let gamer = new Gamer('STPeach', 'Overwatch')<br>
+        gamer // -> {name: 'STPeach', game: 'Overwatch'}<br>
+        <br>
+        /* Currently our gamer has 2 own properties, notice how we called super(name) earlier, this called the constructor function of the parent with the name argument provided. */
+        <br>
+        <br>
+        /* Now lets have some fun with the prototypes */<br>
+        Human.prototype.species = 'Homo Sapiens'<br>
+        Gamer.prototype.social = false<br>
+        <br>
+        gamer.species // -> Homo Sapiens<br>
+        gamer.social // -> false
+
+        </code>
+        <p>The above are examples of inheritance and the prototype chain (a chain of objects that act as fallback property providers).</p>
+        <p>To check the prototype property of your constructor functions (classes), you can use either dot or bracket notation):</p>
+        <code>
+          Human.prototype // -> { species: 'Homo Sapiens', ... }<br>
+          Gamer['prototype'] // -> { social: false, ... }
+        </code>
+        <p>To get the prototype of something, use Object.getPrototypeOf(something)</p>
+        <code>
+          Object.getPrototypeOf(Gamer) // -> function Human() 
+
+          /* the above returns the constructor function of the prototype, instead of the whole prototype as an object */
+          <br>
+          <br>
+          // So the following is true<br>
+          Object.getPrototypeOf(Gamer) == Human.prototype.constructor // -> true
+        </code>
+        <p>I think that should be enough, for now...</p>
+      </section>
+    </article>
+
+  </main>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

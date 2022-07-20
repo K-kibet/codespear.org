@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Java Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<nav id="navbar">
+  <header>JAVA Docummentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+    <li><a class="nav-link" href="#Get_Started">Get Started</a></li>
+    <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+    <li><a class="nav-link" href="#Comments">Comments</a></li>
+    <li><a class="nav-link" href="#Variables">Variables</a></li>
+    <li><a class="nav-link" href="#Data_types">Data Types</a></li>
+    <li><a class="nav-link" href="#Type_Casting">Type Casting</a></li>
+    <li><a class="nav-link" href="#Operators">Operators</a></li>
+    <li><a class="nav-link" href="#Strings">Strings</a></li>
+    <li><a class="nav-link" href="#Math">Math</a></li>
+    <li><a class="nav-link" href="#Booleans">Booleans</a></li>
+    <li><a class="nav-link" href="#If_..._Else_Statement">If ... Else Statement</a></li>
+    <li><a class="nav-link" href="#Switch">Switch</a></li>
+    <li><a class="nav-link" href="#While_Loop">While Loop</a></li>
+    <li><a class="nav-link" href="#For_Loop">For Loop</a></li>
+    <li><a class="nav-link" href="#Break_and_Continue">Break and Continue</a></li>
+    <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+    <li><a class="nav-link" href="#Reference">Reference</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+<article>
+    <h3>What is Java?</h3>
+    <p>Java is a popular programming language, created in 1995.</p>
+    <p>It is owned by Oracle, and more than 3 billion devices run Java.</p>
+    <p>It is used for:</p>
+    <ul>
+      <li>Mobile applications (specially Android apps)</li>
+      <li>Desktop applications</li>
+      <li>Web applications</li>
+      <li>Web servers and application servers</li>
+      <li>Games</li>
+      <li>Database connection</li>
+      <li>And much, much more!</li>
+    </ul>
+</article>
+<article>
+    <h3>Why Use Java?</h3>
+    <ul>
+      <li>Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)</li>
+      <li>It is one of the most popular programming language in the world</li>
+      <li>It is easy to learn and simple to use</li>
+      <li>It is open-source and free</li>
+      <li>It is secure, fast and powerful</li>
+      <li>It has a huge community support (tens of millions of developers)</li>
+      <li>Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs</li>
+      <li>As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa</li>
+    </ul>
+</article>
+  </section> 
+  <section class="main-section" id="Get_Started">
+    <header>Get started</header>
+    <article>
+    <h3>Java Install</h3>
+    <p>Some PCs might have Java already installed.</p>
+    <p>To check if you have Java installed on a Windows PC, search in the start bar for Java or type the following in Command Prompt (cmd.exe):</p>
+    <code>C:\Users\Your Name>java -version</code>
+    <p>If Java is installed, you will see something like this (depending on version):</p>
+    <code>java version "11.0.1" 2018-10-16 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)</code></article>
+    <article>
+    <h3>Setup for Windows</h3>
+      <p>To install Java on Windows:</p>
+      <ol><li>Go to "System Properties" (Can be found on Control Panel > System and Security > System > Advanced System Settings)</li>
+        <li>Click on the "Environment variables" button under the "Advanced" tab</li>
+          <li>Then, select the "Path" variable in System variables and click on the "Edit" button</li>
+          <li>Click on the "New" button and add the path where Java is installed, followed by <strong>/bin</strong>.By default, Java is installed in C:\Program Files\Java\jdk-11.0.1 (If nothing else was specified when you installed it). In that case, You will have to add a new path with: <strong>C:\Program Files\Java\jdk-11.0.1\bin</strong></li>
+        <li>At last, open Command Prompt (cmd.exe) and type <strong>java -version</strong> to see if Java is running on your machine</li>
+        </ol>
+    </article>
+    <article>
+    <h3>Java Quickstart</h3>
+      <p>In Java, every application begins with a class name, and that class must match the filename.</p>
+      <p>Let's create our first Java file, called Main.java, which can be done in any text editor (like Notepad).</p>
+      <p>The file should contain a "Hello World" message, which is written with the following code:</p>
+      <code>public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+        }
+      </code>
+      <p>Don't worry if you don't understand the code above - we will discuss it in detail in later chapters. For now, focus on how to run the code above.</p>
+      <p>Save the code in Notepad as "Main.java". Open Command Prompt (cmd.exe), navigate to the directory where you saved your file, and type "javac Main.java":</p>
+      <code>C:\Users\Your Name>javac Main.java</code>
+      <p>This will compile your code. If there are no errors in the code, the command prompt will take you to the next line. Now, type "java Main" to run the file:</p>
+      <code>C:\Users\Your Name>java Main</code>
+      <p>The output should read:</p>
+      <code>Hello World</code>
+    </article>
+    
+  </section>
+  <section class="main-section" id="Syntax">
+    <header>Syntax</header>
+    <article>
+    <h3>Java Syntax</h3>
+      <p>In the previous chapter, we created a Java file called <code style="color:red">Main.java</code>, and we used the following code to print "Hello World" to the screen:</p>
+      <code>public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}</code>
+    </article>
+    <article>
+      <h3>The main Method</h3>
+      <p>The <code style="color:red">main()</code> method is required and you will see it in every Java program:</p>
+      <code>public static void main(String[] args)</code>
+      <p>Any code inside the <code style="color:red">main()</code> method will be executed. You don't have to understand the keywords before and after main. You will get to know them bit by bit while reading this tutorial.</p>
+      <p>For now, just remember that every Java program has a <code style="color:red">class</code> name which must match the filename, and that every program must contain the <code style="color:red">main()</code> method.</p>
+      
+    </article>
+    <article>
+      <h3>System.out.println()</h3>
+      <p>Inside the <code style="color:red">main()</code> method, we can use the <code style="color:red">println()</code> method to print a line of text to the screen:</p>
+      <code>public static void main(String[] args) {
+  System.out.println("Hello World");
+}</code>
+    </article>
+     
+  </section>
+  <section class="main-section" id="Comments">
+    <header>Comments</header>
+    <article>
+      <h3>Single-line Comments</h3>
+      <p>Single-line comments start with two forward slashes (<code style="color:red">//</code>).</p>
+      <p>Any text between <code style="color:red">//</code> and the end of the line is ignored by Java (will not be executed).</p>
+      <p>Any text between // and the end of the line is ignored by Java (will not be executed).</p>
+      <code>// This is a comment
+System.out.println("Hello World");</code>
+      <p>This example uses a single-line comment at the end of a line of code:</p>
+      <code>System.out.println("Hello World");
+        // This is a comment</code>
+    </article>
+    <article>
+      <h3>Java Multi-line Comments</h3>
+      <p>Multi-line comments start with <code style="color:red">/*</code> and ends with <code style="color:red">*/</code>.</p>
+      <p>Any text between <code style="color:red">/*</code> and <code style="color:red">*/</code> will be ignored by Java.</p>
+      <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+      <code>/* The code below will print the words Hello World
+to the screen, and it is amazing */
+System.out.println("Hello World");</code>
+    </article>
+  </section>
+  <section class="main-section" id="Variables">
+    <header>Variables</header>
+    <article>
+      <h3>Java Variables</h3>
+      <p>Variables are containers for storing data values.</p>
+      <p>In Java, there are different <strong>types</strong> of variables, for example:</p>
+      <ul>
+        <li>
+          <code style="color:red">String</code> - stores text, such as "Hello". String values are surrounded by double quotes
+        </li>
+        <li>
+          <code style="color:red">int</code> - stores integers (whole numbers), without decimals, such as 123 or -123
+        </li>
+        <li>
+          <code style="color:red">float</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99
+        </li>
+        <li>
+          <code style="color:red">char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+        </li>
+        <li>
+          <code style="color:red">boolean</code> - stores values with two states: true or false
+        </li>
+      </ul>
+    </article>
+    <article>
+      <h3>Declaring (Creating) Variables</h3>
+      <p>To create a variable, you must specify the type and assign it a value:</p>
+      <code>type variable = value;</code>
+      <p>Where type is one of Java's types (such as <code style="color:red">int</code> or <code style="color:red">String</code>), and variable is the name of the variable (such as <strong>x</strong> or <strong>name</strong>). The <strong>equal sign</strong> is used to assign values to the variable.</p>
+      <p>To create a variable that should store text, look at the following example:</p>
+      <code>String name = "John";
+System.out.println(name);</code>
+      <p>To create a variable that should store a number, look at the following example:</p>
+      <code>int myNum = 15;
+System.out.println(myNum);</code>
+      <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+        <code>int myNum;
+myNum = 15;
+System.out.println(myNum);</code>
+        <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+        <code>int myNum = 15;
+myNum = 20;  // myNum is now 20
+System.out.println(myNum);</code>
+    </article>
+    <article>
+      <h3>Final Variables</h3>
+      <p>However, you can add the <code style="color:red">final</code> keyword if you don't want others (or yourself) to overwrite existing values (this will declare the variable as "final" or "constant", which means unchangeable and read-only):</p>
+       <code>final int myNum = 15;
+myNum = 20;  // will generate an error: cannot assign a value to a final variable</code>
+    </article> 
+    <article>
+      <h3>Other Types</h3>
+      <p>A demonstration of how to declare variables of other types:</p>
+      <code>int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";</code>
+    </article>
+    
+  </section>
+  <section class="main-section" id="Data_Types">
+    <header>Data Types</header>
+    <article>
+      <h3>Java Data Types</h3>
+      <p>As explained in the previous chapter, a variable in Java must be a specified data type:</p>
+      <code>int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String</code>
+      <p>Data types are divided into two groups:</p>
+      <ul>
+        <li>Primitive data types - includes <code style="color:red">byte</code>, <code style="color:red">short</code>, <code style="color:red">int</code>, <code style="color:red">long</code>, <code style="color:red">float</code>, <code style="color:red">double</code>, <code style="color:red">boolean</code> and <code style="color:red">char</code></li>
+        <li>Non-primitive data types - such as String, Arrays and Classes (you will learn more about these in a later chapter)</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Primitive Data Types</h3>
+      <p>A primitive data type specifies the size and type of variable values, and it has no additional methods.</p>
+      <p>There are eight primitive data types in Java:</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Data Type</th>
+            <th>Size</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <th>byte</th>
+            <th>1 byte</th>
+            <th>Stores whole numbers from -128 to 127</th>
+          </tr>
+          <tr>
+            <th>short</th>
+            <th>2 bytes</th>
+            <th>Stores whole numbers from -32,768 to 32,767</th>
+          </tr>
+          <tr>
+            <th>int</th>
+            <th>4 bytes</th>
+            <th>Stores whole numbers from -2,147,483,648 to 2,147,483,647</th>
+          </tr>
+          <tr>
+            <th>long</th>
+            <th>8 bytes</th>
+            <th>Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</th>
+          </tr>
+          <tr>
+            <th>float</th>
+            <th>4 bytes</th>
+            <th>Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</th>
+          </tr>
+          <tr>
+            <th>double</th>
+            <th>8 bytes</th>
+            <th>Stores fractional numbers. Sufficient for storing 15 decimal digits</th>
+          </tr>
+          <tr>
+            <th>boolean</th>
+            <th>1 bit</th>
+            <th>Stores true or false values</th>
+          </tr>
+          <tr>
+            <th>char</th>
+            <th>2 bytes</th>
+            <th>Stores a single character/letter or ASCII values</th>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article>
+      <h3>Numbers</h3>
+      <p>Primitive number types are divided into two groups:</p>
+      <p><trong>Integer types</strong> stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are <code style="color:red">byte</code>, <code style="color:red">short</code>, <code style="color:red">int</code> and <code style="color:red">long</code>. Which type you should use, depends on the numeric value.</p>
+      <p>Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: <code style="color:red">float</code> and <code style="color:red">double</code>.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Type_Casting">
+    <header>Type Casting</header>
+    <article>
+      <h3>Java Type Casting</h3>
+        <p>Type casting is when you assign a value of one primitive data type to another type.</p>
+        <p>In Java, there are two types of casting:</p>
+        
+        <ul>
+          <li>
+            <strong>Widening Casting</strong> (automatically) - converting a smaller type to a larger type size
+            <br><code style="color:red">byte</code> -> <code style="color:red">short</code> -> <code style="color:red">char</code> -> <code style="color:red">int</code>-> <code style="color:red">long</code> -> <code style="color:red">float</code> -> <code style="color:red">double</code>
+          </li>
+          <li>
+            <strong>Narrowing Casting</strong> (manually) - converting a larger type to a smaller size type
+            <br><code style="color:red">double</code> -> <code style="color:red">float</code> -> <code style="color:red">long</code> -> <code style="color:red">int</code> -> <code style="color:red">char</code> -> <code style="color:red">short</code> -> <code style="color:red">byte</code>
+            </li>
+        </ul>
+      </article>
+    <article>
+      <h3>Widening Casting</h3>
+      <p>Widening casting is done automatically when passing a smaller size type to a larger size type:</p>
+      <code>public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}</code>
+    </article>
+    <article>
+      <h3>Narrowing Casting</h3>
+      <p>Narrowing casting must be done manually by placing the type in parentheses in front of the value:</p>
+      <code>public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}</code>
+    </article>
+  </section>
+  <section class="main-section" id="Operators">
+    <header>Operators</header>
+    <article>
+      <h3>Java Operators</h3>
+      <p>Operators are used to perform operations on variables and values.</p>
+      <p>n the example below, we use the <code style="color:red">+</code> <strong>operator</strong> to add together two values:</p>
+      <code>int x = 100 + 50;</code>
+      <p>Although the <code style="color:red">+</code> operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:</p>
+      <code>int sum1 = 100 + 50;        // 150 (100 + 50)
+int sum2 = sum1 + 250;      // 400 (150 + 250)
+int sum3 = sum2 + sum2;     // 800 (400 + 400)</code>
+      <p>Java divides the operators into the following groups:</p>
+      <ul>
+        <li>Arithmetic operators
+</li>
+        <li>Assignment operators
+</li>
+        <li>Comparison operators
+</li>
+        <li>Logical operators
+</li>
+        <li>Bitwise operators
+</li>
+      </ul>
+      
+    </article>
+    <article>
+      <h3>Arithmetic Operators</h3>
+      <p>Arithmetic operators are used to perform common mathematical operations.</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <th>+</th>
+            <th>Addition</th>
+            <th>Adds together two values</th>
+            <th>x + y</th>
+          </tr>
+          <tr>
+            <th>*</th>
+            <th>Multiplication</th>
+            <th>Multiplies two values</th>
+            <th>x * y</th>
+          </tr>
+          <tr>
+            <th>/</th>
+            <th>Division</th>
+            <th>Divides one value by another</th>
+            <th>x / y</th>
+          </tr>
+          <tr>
+            <th>%</th>
+            <th>Modulus</th>
+            <th>Returns the division remainder</th>
+            <th>x % y</th>
+          </tr>
+          <tr>
+            <th>++</th>
+            <th>Increment</th>
+            <th>Increases the value of a variable by 1</th>
+            <th>++x</th>
+          </tr>
+          <tr>
+            <th>--</th>
+            <th>Decrement</th>
+            <th>Decreases the value of a variable by 1</th>
+            <th>--x</th>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article>
+      <h3>Java Assignment Operators</h3>
+      <p>Assignment operators are used to assign values to variables.</p>
+      <p>
+        In the example below, we use the <strong>assignment</strong> operator (<code style="color:red">=</code>) to assign the value <strong>10</strong> to a variable called <strong>x</strong>:
+      </p>
+      <code>int x = 10;</code>
+      <p>The <strong>addition assignment</strong> operator (<code style="color:red">+=</code>) adds a value to a variable:</p>
+      <code>int x = 10;
+        x += 5;</code>
+    </article>
+  </section> 
+  <section class="main-section" id="String">
+    <header>Strings</header>
+    <article>
+      <h3>Java Strings</h3>
+      <p>Strings are used for storing text.</p>
+      <p>A <code style="color:red">String</code> variable contains a collection of characters surrounded by double quotes:</p>
+      <code>String greeting = "Hello";</code>
+    </article>
+    <article>
+      <h3>String Length</h3>
+      <p>A String in Java is actually an object, which contain methods that can perform certain operations on strings. For example, the length of a string can be found with the <code style="color:red">length()</code> method:</p>
+      <code>String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        System.out.println("The length of the txt string is: " + txt.length());</code>
+    </article>
+    <article>
+      <h3>More String Methods</h3>
+      <p>There are many string methods available, for example <code style="color:red">toUpperCase()</code> and <code style="color:red">toLowerCase()</code>:</p>
+      <code>String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"</code>
+    </article>
+    <article>
+      <h3>Finding a Character in a String</h3>
+      <p>The <code style="color:red">indexOf()</code> method returns the <strong>index</strong> (the position) of the first occurrence of a specified text in a string (including whitespace):</p>
+      <code>String txt = "Please locate where 'locate' occurs!";
+System.out.println(txt.indexOf("locate")); // Outputs 7</code>
+    </article>
+    <article>
+      <h3>String Concatenation</h3>
+      <p>The <code style="color:red">+</code> operator can be used between strings to combine them. This is called <strong>concatenation</strong>:</p>
+      <code>String firstName = "John";
+String lastName = "Doe";
+        System.out.println(firstName + " " + lastName);</code>
+      <p>You can also use the <code style="color:red">concat()</code> method to concatenate two strings:</p>
+      <code>String firstName = "John ";
+String lastName = "Doe";
+System.out.println(firstName.concat(lastName));</code>
+    </article>
+    <article>
+      <h3>Special Characters</h3>
+      <p>Because strings must be written within quotes, Java will misunderstand this string, and generate an error:</p>
+      <code>String txt = "We are the so-called "Vikings" from the north.";</code>
+      <p>The solution to avoid this problem, is to use the <strong>backslash escape character</strong>.</p>
+      <p>The backslash (<code style="color:red">\</code>) escape character turns special characters into string characters:</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Escape character</th>
+            <th>Result</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <th>\'</th>
+            <th>'</th>
+            <th>Single quote</th>
+          </tr>
+          <tr>
+            <th>\"</th>
+            <th>"</th>
+            <th>Double quote</th>
+          </tr>
+          <tr>
+            <th>\\</th>
+            <th>\</th>
+            <th>Backslash</th>
+          </tr>
+        </tbody>
+      </table>
+      <p>The sequence <code style="color:red">\'</code>  inserts a single quote in a string:</p>
+      <code>String txt = "It\'s alright.";</code>
+      <p>The sequence <code style="color:red">\\</code>  inserts a single backslash in a string:</p>
+      <code>String txt = "The character \\ is called backslash.";</code>
+      <p>Six other escape sequences are valid in Java:</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Code</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <th>\n</th>
+            <th>New Line</th>
+          </tr>
+          <tr>
+            <th>\r</th>
+            <th>Carriage Return</th>
+          </tr>
+          <tr>
+            <th>\t</th>
+            <th>Tab</th>
+          </tr>
+          <tr>
+            <th>\b</th>
+            <th>Backspace</th>
+          </tr>
+          <tr>
+            <th>\f</th>
+            <th>Form Feed</th>
+          </tr>
+        </tbody>
+      </table>
+      
+    </article>
+    <article>
+      <p>If you add two numbers, the result will be a number:</p>
+      <code>int x = 10;
+int y = 20;
+int z = x + y;      // z will be 30 (an integer/number)
+      </code>
+      <p>If you add two strings, the result will be a string concatenation:</p>
+      <code>String x = "10";
+int y = 20;
+String z = x + y;   // z will be 1020 (a String)
+      </code>
+    </article>
+  </section>
+  <section class="main-section" id="Math">
+    <header>Java Math</header>
+    <article>
+      <h3>Math.max(x,y)</h3>
+      <p>The <code style="color:red">Math.max(x,y)</code> method can be used to find the highest value of x and y:</p>
+      <code>Math.max(5, 10);</code>
+    </article>
+    <article>
+      <h3>Math.min(x,y)</h3>
+      <p>The <code style="color:red">Math.min(x,y)</code> method can be used to find the lowest value of x and y:</p>
+      <code>Math.min(5, 10);</code>
+    </article>
+    <article>
+      <h3>Math.sqrt(x)</h3>
+      <p>The <code style="color:red">Math.sqrt(x)</code> method returns the square root of x:</p>
+      <code>Math.sqrt(64);</code>
+    </article>
+    <article>
+      <h3>Math.abs(x)</h3>
+      <p>The <code style="color:red">Math.abs(x)</code> method returns the absolute (positive) value of x:</p>
+      <code>Math.abs(-4.7);</code>
+    </article>
+    <article>
+      <h3>Random Numbers</h3>
+      <p><code style="color:red">Math.random()</code> returns a random number between 0.0 (inclusive), and 1.0 (exclusive):</p>
+      <code>Math.random();</code>
+      <p>To get more control over the random number, e.g. you only want a random number between 0 and 100, you can use the following formula:</p>
+      <code>int randomNum = (int)(Math.random() * 101);  // 0 to 100</code>
+    </article>
+  </section>
+  <section class="main-section" id="Booleans">
+    <header>Booleans</header>
+    <article>
+      <h3>Java Booleans</h3>
+      <p>Very often, in programming, you will need a data type that can only have one of two values, like:</p>
+      <ul>
+        <li>YES / NO</li>
+        <li>ON / OFF</li>
+        <li>TRUE / FALSE</li>
+      </ul>
+      <p>For this, Java has a <code style="color:red">boolean</code> data type, which can take the values <code style="color:red">true</code> or <code style="color:red">false
+</code>.</p>
+    </article>
+    <article>
+      <h3>Boolean Values</h3>
+      <p>A boolean type is declared with the <code style="color:red">boolean</code> keyword and can only take the values <code style="color:red">true</code> or <code style="color:red">false</code>:</p>
+      <code>boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // Outputs true
+System.out.println(isFishTasty);   // Outputs false
+      </code>
+        <p>However, it is more common to return boolean values from boolean expressions, for conditional testing (see below).</p>
+    </article>
+    <article>
+      <h3>Boolean Expression</h3>
+      <p>A <strong>Boolean expression</strong> is a Java expression that returns a Boolean value: <code style="color:red">true</code> or <code style="color:red">false</code>.</p>
+      <p>You can use a comparison operator, such as the <strong>greater than</strong> (<code style="color:red"> > </code>) operator to find out if an expression (or a variable) is true:</p>
+      <code>int x = 10;
+int y = 9;
+System.out.println(x > y); // returns true, because 10 is higher than 9
+      </code>
+      <p>Or even easier:</p>
+      <code>System.out.println(10 > 9); // returns true, because 10 is higher than 9</code>
+      <p>In the examples below, we use the <strong>equal to</strong> (<code style="color:red">==</code>) operator to evaluate an expression:</p>
+      <code>int x = 10;
+System.out.println(x == 10); // returns true, because the value of x is equal to 10</code>
+      <code>System.out.println(10 == 15); // returns false, because 10 is not equal to 15</code>
+      <p></p>
+    </article>
+  </section>
+  <section class="main-section" id="If_..._Else_Statement">
+    <header>If ... Else Statement</header>
+    <article>
+      <h3>Java Conditions and If Statements</h3>
+      <p>Java supports the usual logical conditions from mathematics:</p>
+      <ul>
+        <li>Less than: <code style="color:red">a < b </code></li>
+        <li>Less than or equal to: <code style="color:red">a <= b</code></li>
+        <li>Greater than: <code style="color:red">a > b</code></li>
+        <li>Greater than or equal to: <code style="color:red">a >= b</code></li>
+        <li>Equal to: <code style="color:red">a == b</code></li>
+        <li>Not Equal to: <code style="color:red">a != b</code></li>
+      </ul>
+      <p>You can use these conditions to perform different actions for different decisions.</p>
+      <p>Java has the following conditional statements:</p>
+      <ul>
+        <li>Use <code style="color:red">if</code> to specify a block of code to be executed, if a specified condition is true</li>
+        <li>Use <code style="color:red">else</code> to specify a block of code to be executed, if the same condition is false
+</li>
+        <li>Use <code style="color:red">else if</code> to specify a new condition to test, if the first condition is false
+</li>
+        <li>Use <code style="color:red">switch</code> to specify many alternative blocks of code to be executed
+</li>
+      </ul>
+    </article>
+    <article>
+      <h3>The if Statement</h3>
+      <p>Use the <code style="color:red">if</code> statement to specify a block of Java code to be executed if a condition is <code style="color:red">true</code>.</p>
+      <code>if (condition) {
+  // block of code to be executed if the condition is true
+}</code>
+      <p>In the example below, we test two values to find out if 20 is greater than 18. If the condition is <code style="color:red">true</code>, print some text:</p>
+      <code>if (20 > 18) {
+  System.out.println("20 is greater than 18");
+}</code>
+      <p>We can also test variables:</p>
+      <code>int x = 20;
+int y = 18;
+if (x > y) {
+  System.out.println("x is greater than y");
+}</code>
+      <h4>Example explained</h4>
+      <p>In the example above we use two variables, <strong>x</strong> and <strong>y</strong>, to test whether x is greater than y (using the <code style="color:red">></code> operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".</p>
+    </article>
+    <article>
+      <h3>The else Statement</h3>
+      <p>Use the <code style="color:red">else</code> statement to specify a block of code to be executed if the condition is <code style="color:red">false</code>.</p>
+      <code>if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}</code>
+      <br>
+      <code>int time = 20;
+if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."</code>
+      <h4>Example explained</h4>
+      <p>In the example above, time (20) is greater than 18, so the condition is <code style="color:red">false</code>. Because of this, we move on to the <code style="color:red">else</code> condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".</p>
+    </article>
+    <article>
+      <h3>The else if Statement</h3>
+      <p>Use the <code style="color:red">else if</code> statement to specify a new condition if the first condition is <code style="color:red">false</code>.</p>
+      <code>if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}</code><br>
+      <code>int time = 22;
+if (time < 10) {
+  System.out.println("Good morning.");
+} else if (time < 20) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."</code>
+      <h4>Example explained</h4>
+      <p>In the example above, time (22) is greater than 10, so the <strong>first condition</strong> is <code style="color:red">false</code>. The next condition, in the <code style="color:red">else if</code> statement, is also <code style="color:red">false</code>, so we move on to the <code style="color:red">else</code> condition since <strong>condition1</strong> and <strong>condition2</strong> is both <code style="color:red">false</code> - and print to the screen "Good evening".</p>
+      <p>However, if the time was 14, our program would print "Good day."</p>
+    </article>
+    <article>
+      <h3>Short Hand If...Else (Ternary Operator)</h3>
+      <p>There is also a short-hand if else, which is known as the <strong>ternary operator</strong> because it consists of three operands. It can be used to replace multiple lines of code with a single line. It is often used to replace simple if else statements:</p>
+      <code>variable = (condition) ? expressionTrue :  expressionFalse;</code>
+      <p>Instead of writing:</p>
+      <code>int time = 20;
+if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}</code>
+      <p>You can simply write:</p>
+      <code>int time = 20;
+String result = (time < 18) ? "Good day." : "Good evening.";
+System.out.println(result);</code>
+    </article>
+  </section>
+  <section class="main-section" id="Switch">
+    <header>Switch</header>
+    <article>
+      <h3>Java Switch Statements</h3>
+      <p>Use the <code style="color:red">switch</code> statement to select one of many code blocks to be executed.</p>
+      <code>switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}</code>
+      <p>This is how it works:</p>
+      <ul>
+        <li>The <code style="color:red">switch</code> expression is evaluated once.</li>
+        <li>The value of the expression is compared with the values of each <code style="color:red">case</code></li>
+        <li>If there is a match, the associated block of code is executed.</li>
+        <li>The <code style="color:red">break</code> and <code style="color:red">default</code> keywords are optional, and will be described later in this chapter</li>
+      </ul>
+      <p>The example below uses the weekday number to calculate the weekday name:</p>
+      <code>int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+    break;
+  case 5:
+    System.out.println("Friday");
+    break;
+  case 6:
+    System.out.println("Saturday");
+    break;
+  case 7:
+    System.out.println("Sunday");
+    break;
+}
+// Outputs "Thursday" (day 4)</code>
+    </article>
+    <article>
+      <h3>The break Keyword</h3>
+      <p>When Java reaches a <code style="color:red">break</code> keyword, it breaks out of the switch block.</p>
+      <p>This will stop the execution of more code and case testing inside the block.</p>
+      <p>When a match is found, and the job is done, it's time for a break. There is no need for more testing.</p>
+    </article>
+    <article>
+      <h3>The default Keyword</h3>
+      <p>The <code style="color:red">default</code> keyword specifies some code to run if there is no case match:</p>
+      <code>int day = 4;
+switch (day) {
+  case 6:
+    System.out.println("Today is Saturday");
+    break;
+  case 7:
+    System.out.println("Today is Sunday");
+    break;
+  default:
+    System.out.println("Looking forward to the Weekend");
+}
+// Outputs "Looking forward to the Weekend"</code>
+    </article>
+  </section>
+  <section class="main-section" id="While_Loop">
+    <header>While Loop</header>
+    <article>
+      <h3>Java While Loop</h3>
+      <p>The <code style="color:red">while</code> loop loops through a block of code as long as a specified condition is <code style="color:red">true</code>:</p>
+      <code>while (condition) 
+  // code block to be executed
+}</code>
+      <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
+      <code>int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}</code>
+    </article>
+    <article>
+      <h3>The Do/While Loop</h3>
+      <p>The <code style="color:red">do/while</code> loop is a variant of the <code style="color:red">while</code> loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+      <code>do {
+  // code block to be executed
+}
+while (condition);</code>
+      <p>The example below uses a <code style="color:red">do/while</code> loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+      <code>int i = 0;
+do {
+  System.out.println(i);
+  i++;
+}
+while (i < 5);</code>
+    </article>
+  </section>
+  <section class="main-section" id="For_Loop">
+    <header>For Loop</header>
+    <article>
+      <h3>Java For Loop</h3>
+      <p>When you know exactly how many times you want to loop through a block of code, use the <code style="color:red">for</code> loop instead of a <code style="color:red">while</code> loop:</p>
+      <code>for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}</code>
+      <p><strong>Statement 1</strong> is executed (one time) before the execution of the code block.</p>
+      <p><strong>Statement 2</strong> defines the condition for executing the code block.</p>
+      <p><strong>Statement 3</strong> is executed (every time) after the code block has been executed.</p>
+      <p>The example below will print the numbers 0 to 4:</p>
+      <code>for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}</code>
+      <h4>Example explained</h4>
+      <p>Statement 1 sets a variable before the loop starts (int i = 0).</p>
+      <p>Statement 2 defines the condition for the loop to run (i must be less than 5). If the condition is true, the loop will start over again, if it is false, the loop will end.</p>
+      <p>Statement 3 increases a value (i++) each time the code block in the loop has been executed.</p>
+    </article>
+    <article>
+      <h3>Another Example</h3>
+      <p>This example will only print even values between 0 and 10:</p>
+      <code>for (int i = 0; i <= 10; i = i + 2) {
+  System.out.println(i);
+}</code>
+    </article>
+    <article>
+      <h3>For-Each Loop</h3>
+      <p>There is also a <strong>"for-each"</strong> loop, which is used exclusively to loop through elements in an <strong>array</strong>:</p>
+      <code>for (type variableName : arrayName) {
+  // code block to be executed
+}</code>
+      <p>The following example outputs all elements in the <strong>cars</strong> array, using a <strong>"for-each"</strong> loop:</p>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}</code>
+    </article>
+  </section>
+  <section class="main-section" id="Break_and_Continue">
+    <header>Break and Continue</header>
+    <article>
+      <h3>Java Break</h3>
+      <p>You have already seen the <code style="color:red">break</code> statement used in an earlier chapter of this tutorial. It was used to "jump out" of a <code style="color:red">switch</code> statement.</p>
+      <p>The <code style="color:red">break</code> statement can also be used to jump out of a <strong>loop</strong>.</p>
+      <p>This example stops the loop when i is equal to 4:</p>
+      <code>for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    break;
+  }
+  System.out.println(i);
+}</code>
+    </article>
+    <article>
+      <h3>Java Continue</h3>
+      <p>The <code style="color:red">continue</code> statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+      <p>This example skips the value of 4:</p>
+      <code>for (int i = 0; i < 10; i++) {
+  if (i == 4) {
+    continue;
+  }
+  System.out.println(i);
+}</code>
+    </article>
+    <article>
+      <h3>Break and Continue in While Loop</h3>
+      <p>You can also use <code style="color:red">break</code> and <code style="color:red">continue</code> in while loops:</p>
+      <code>int i = 0;
+while (i < 10) {
+  System.out.println(i);
+  i++;
+  if (i == 4) {
+    break;
+  }
+}</code>
+        <br>
+      <code>int i = 0;
+while (i < 10) {
+  if (i == 4) {
+    i++;
+    continue;
+  }
+  System.out.println(i);
+  i++;
+}</code>
+    </article>
+  </section>
+  <section class="main-section" id="Arrays">
+    <header>Arrays</header>
+    <article>
+      <h3>Java Arrays</h3>
+      <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+      <p>To declare an array, define the variable type with <strong>square brackets</strong>:</p>
+      <code>String[] cars;</code>
+      <p>We have now declared a variable that holds an array of strings. To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:</p>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};</code>
+      <p>To create an array of integers, you could write:</p>
+      <code>int[] myNum = {10, 20, 30, 40};</code>
+    </article>
+    <article>
+      <h3>Access the Elements of an Array</h3>
+      <p>You access an array element by referring to the index number.</p>
+      <p>This statement accesses the value of the first element in cars:</p>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+// Outputs Volvo</code>
+    </article>
+    <article>
+      <h3>Change an Array Element</h3>
+      <p>To change the value of a specific element, refer to the index number:</p>
+      <code>cars[0] = "Opel";</code>
+      <br>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Opel";
+System.out.println(cars[0]);
+// Now outputs Opel instead of Volvo</code>
+    </article>
+    <article>
+      <h3>Array Length</h3>
+      <p>To find out how many elements an array has, use the <code style="color:red">length</code> property:</p>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4</code>
+    </article>
+    <article>
+      <h3>Loop Through an Array</h3>
+      <p>You can loop through the array elements with the <code style="color:red">for</code> loop, and use the <code style="color:red">length</code> property to specify how many times the loop should run.</p>
+      <p>The following example outputs all elements in the <strong>cars</strong> array:</p>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+}</code>
+    </article>
+    <article>
+      <h3>Loop Through an Array with For-Each</h3>
+      <p>There is also a <strong>"for-each"</strong> loop, which is used exclusively to loop through elements in arrays:</p>
+      <code>for (type variable : arrayname) {
+  ...
+}</code>
+      <p>The following example outputs all elements in the <strong>cars</strong> array, using a <strong>"for-each"</strong> loop:</p>
+      <code>String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}</code>
+      <p>The example above can be read like this: <strong>for each</strong> <code style="color:red">String</code> element (called <strong>i</strong> - as in index) in <strong>cars</strong>, print out the value of <strong>i</strong>.</p>
+      <p>If you compare the <code style="color:red">for</code> loop and <strong>for-each</strong> loop, you will see that the <strong>for-each</strong> method is easier to write, it does not require a counter (using the length property), and it is more readable.
+
+</p>
+    </article>
+    <article>
+      <h3>Multidimensional Arrays</h3>
+      <p>A multidimensional array is an array containing one or more arrays.</p>
+      <p>To create a two-dimensional array, add each array within its own set of <strong>curly braces</strong>:</p>
+      <code>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };</code>
+      <p><strong>myNumbers</strong> is now an array with two arrays as its elements.</p>
+      <p>To access the elements of the <strong>myNumbers</strong> array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:</p>
+      <code>int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+int x = myNumbers[1][2];
+System.out.println(x); // Outputs 7</code>
+      <p>We can also use a <code style="color:red">for loop</code> inside another <code style="color:red">for loop</code> to get the elements of a two-dimensional array (we still have to point to the two indexes):</p>
+      <code>public class Main {
+  public static void main(String[] args) {
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+  }
+}</code>
+    </article>
+  </section>
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a href="https://www.w3schools.com/java/default.asp" 
+        target="_blank">W3schools</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
